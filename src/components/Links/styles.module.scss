@@ -1,0 +1,152 @@
+// link unitaire
+.link {
+  display: flex;
+  align-items: center;
+  a {
+    color: #000;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 4px 7px 11px 0px;
+    width: 100%;
+    &:hover {
+      opacity: 0.75;
+    }
+  }
+}
+
+details {
+  color: #000;
+  padding-top: 4px;
+  padding-right: 5px;
+  margin-bottom: 9px;
+  flex-wrap: wrap;
+  cursor: pointer;
+  -webkit-user-select: none; /* Chrome all / Safari all */
+  -moz-user-select: none; /* Firefox all */
+  -ms-user-select: none; /* IE 10+ */
+  user-select: none; /* Likely future */
+  z-index: 777;
+
+  summary {
+    display: block;
+    font-size: 18px;
+    list-style-type: none;
+    padding-bottom: 3px;
+    &::-webkit-details-marker {
+      display: none;
+    }
+    &:hover {
+      opacity: 0.75;
+    }
+  }
+
+  ul {
+    flex-wrap: wrap;
+    flex-direction: column;
+    display: flex;
+    list-style-type: none;
+    padding-top: 9px;
+    margin-bottom: 0;
+
+    li {
+      display: block;
+      padding-bottom: 9px;
+      width: 100%;
+      font-size: 18px;
+      a {
+        color: #000;
+        &:hover {
+          opacity: 0.75;
+        }
+      }
+    }
+  }
+}
+
+//############## RESPONSIVE  ###############
+// Desktop
+@media only screen and (min-width: 1224px) {
+  .link {
+    width: 100%;
+  }
+  details {
+    summary {
+      list-style-type: none;
+      &::-webkit-details-marker {
+        display: none;
+      }
+    }
+  }
+}
+
+// Tablet
+@media (max-width: 768px) {
+  .link {
+    width: 100%;
+  }
+  details {
+    summary {
+      list-style-type: none;
+      &::-webkit-details-marker {
+        display: none;
+      }
+    }
+  }
+}
+
+@media (max-width: 960px) {
+  .link {
+    width: 100%;
+  }
+  details {
+    summary {
+      list-style-type: none;
+      &::-webkit-details-marker {
+        display: none;
+      }
+    }
+  }
+}
+
+// Mobile
+@media (max-width: 501px) {
+  .link {
+    width: 100%;
+  }
+  details {
+    summary {
+      list-style-type: none;
+      &::-webkit-details-marker {
+        display: none;
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) and (min-width: 400px) {
+  .link {
+    width: 100%;
+  }
+  details {
+    summary {
+      list-style-type: none;
+      &::-webkit-details-marker {
+        display: none;
+      }
+    }
+  }
+}
+
+@media (max-width: 501px) and (min-width: 320px) {
+  .link {
+    width: 100%;
+  }
+  details {
+    summary {
+      list-style-type: none;
+      &::-webkit-details-marker {
+        display: none;
+      }
+    }
+  }
+}
