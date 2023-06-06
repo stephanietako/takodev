@@ -20,27 +20,11 @@ const Navbar = () => {
       "--scroll-padding",
       navigationHeight
     );
-
-    // Handle resize
-    const handleResize = () => {
-      if (window.innerWidth >= 1200) {
-        setIsMobile(false);
-      } else {
-        setIsMobile(true);
-      }
-    };
-
-    window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
   }, [navbarElement]);
-
+  ////////////////////////////////////////////////////////
   // navbar color state change managment
   const [fix, setFix] = useState(false);
   const setFixed = () => {
-    console.log(window.scrollY);
     if (window.scrollY >= 111) {
       setFix(true);
     } else {
@@ -48,51 +32,29 @@ const Navbar = () => {
     }
   };
   window.addEventListener("scroll", setFixed);
-
+  ///////////////////////////////////////////////////////////
   // menu state change management
   const [isOpen, setIsOpen] = useState(false);
   const toggleMenu = () => setIsOpen(!isOpen);
-
-  // Mobile menu detection
-  const [isMobile, setIsMobile] = useState(false);
-  useEffect(() => {
-    const handleInitialResize = () => {
-      if (window.innerWidth >= 1200) {
-        setIsMobile(false);
-      } else {
-        setIsMobile(true);
-      }
-    };
-
-    handleInitialResize();
-
-    // Cleanup function
-    return () => {
-      window.removeEventListener("resize", handleInitialResize);
-    };
-  }, []);
-
-  //////////
+  ///////////////////////////////////////////////////////////////
   // Main navbar menu
   const links = [
     { name: "Accueil", target: "#welcome" },
     { name: "A propos", target: "#about" },
-    { name: "Showroom", target: "#showroom" },
-    { name: "Produits", target: "", dropdown: true },
     { name: "Projets", target: "#projects" },
+    { name: "Produits", target: "", dropdown: true },
     { name: "Contact", target: "#contact" },
   ];
   // Main navbar menu for mobile
   const linksMobile = [
     { name: "Accueil", target: "#welcome" },
     { name: "A propos", target: "#about" },
-    { name: "Tarifs", target: "#tarifs" },
+    { name: "Projets", target: "#projects" },
     {
       name: "Produits",
       target: "",
       dropdown: true,
     },
-    { name: "Projets", target: "#projects" },
     { name: "Contact", target: "#contact" },
   ];
 
@@ -114,12 +76,15 @@ const Navbar = () => {
         <img className={styles.__logo} src={logo} alt="Tako dev logo" />
       </a>
       {/* MOBILE MENU */}
-      <div
-        className={
-          isMobile ? `${styles.__nav_burger_menu} ` : `${styles.__nav_menu}`
-        }
-      >
-        {isOpen && isMobile && (
+      <div className={styles.__nav_burger_menu}>
+        <button
+          className={styles.__summ}
+          onClick={toggleMenu}
+          onMouseEnter={toggleMenu}
+        >
+          <img src={isOpen ? cross : menu} alt={isOpen ? "Menu" : "Cross"} />
+        </button>
+        {isOpen && (
           <div>
             {linksMobile.map((link, index) => {
               return (
@@ -134,36 +99,27 @@ const Navbar = () => {
             })}
           </div>
         )}
-        <button
-          className={styles.__summ}
-          onClick={toggleMenu}
-          onMouseEnter={toggleMenu}
-        >
-          <img src={isOpen ? cross : menu} alt={isOpen ? "Menu" : "Cross"} />
-        </button>
       </div>
       {/* DESKTOP MENU */}
-      {!isMobile && (
-        <ul className={styles.__nav_menu}>
-          {links.map((link, index) => {
-            let dropdownPosition = 0;
-            const ddList = links.filter((lnk) => lnk.dropdown === true);
-            ddList.map((lnk, index) => {
-              if (link.name === lnk.name) dropdownPosition = index;
-              return null;
-            });
-            return (
-              <Links
-                key={uuidv4()}
-                link={link}
-                sublinks={sublinks}
-                dropdownPosition={dropdownPosition}
-                onClick={toggleMenu}
-              />
-            );
-          })}
-        </ul>
-      )}
+      <div className={styles.__nav_menu}>
+        {links.map((link, index) => {
+          let dropdownPosition = 0;
+          const ddList = links.filter((lnk) => lnk.dropdown === true);
+          ddList.map((lnk, index) => {
+            if (link.name === lnk.name) dropdownPosition = index;
+            return null;
+          });
+          return (
+            <Links
+              key={uuidv4()}
+              link={link}
+              sublinks={sublinks}
+              dropdownPosition={dropdownPosition}
+              onClick={toggleMenu}
+            />
+          );
+        })}
+      </div>
     </nav>
   );
 };
