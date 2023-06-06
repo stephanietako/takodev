@@ -2,8 +2,9 @@
 .link {
   display: flex;
   align-items: center;
+
   a {
-    color: #000;
+    color: #fff;
     text-decoration: none;
     font-size: 18px;
     padding: 4px 7px 11px 0px;
@@ -15,7 +16,7 @@
 }
 
 details {
-  color: #000;
+  color: #fff;
   padding-top: 4px;
   padding-right: 5px;
   margin-bottom: 9px;
@@ -28,6 +29,7 @@ details {
   z-index: 777;
 
   summary {
+    color: #fff;
     display: block;
     font-size: 18px;
     list-style-type: none;
@@ -47,14 +49,17 @@ details {
     list-style-type: none;
     padding-top: 9px;
     margin-bottom: 0;
+    color: #fff;
+    position: absolute;
 
     li {
       display: block;
       padding-bottom: 9px;
       width: 100%;
       font-size: 18px;
+      color: #fff;
       a {
-        color: #000;
+        color: #fff;
         &:hover {
           opacity: 0.75;
         }
@@ -85,6 +90,23 @@ details {
     width: 100%;
   }
   details {
+    ul {
+      flex-wrap: wrap;
+      flex-direction: column;
+      display: flex;
+      list-style-type: none;
+      padding-top: 9px;
+      margin-bottom: 0;
+      color: #fff;
+      position: relative;
+
+      li {
+        display: block;
+        padding-bottom: 9px;
+        width: 100%;
+        font-size: 24px;
+      }
+    }
     summary {
       list-style-type: none;
       &::-webkit-details-marker {
