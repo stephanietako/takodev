@@ -5,6 +5,7 @@ $pure-black: hsla(0, 0%, 0%, 1); // #000
 // $dark-jungle-green: hsla(210, 3%, 11%, 1); //1c1d1e
 $dark-jungle-green: hsl(210, 72%, 37%); //1a5da1
 $grey-dark: hsla(0, 0%, 25%, 1); // #404040
+$lectric-color: hsl(279, 30%, 31%); // #1f1c1c;
 $white-dark: hsla(0, 0%, 95%, 1); /// #f1f1f1
 $fuel-yellow: hsla(36, 100%, 49%, 1); // #f89500
 // transition
@@ -53,19 +54,19 @@ $transition-fast: 0.2s cubic-bezier(0.77, 0, 0.175, 1);
   .container_glitch:hover &:nth-child(2) {
     animation-name: glitch-anim-1;
     background-blend-mode: overlay;
-    background-color: #f89500;
+    background-color: #573868;
   }
 
   .container_glitch:hover &:nth-child(3) {
     animation-name: glitch-anim-2;
     background-blend-mode: overlay;
-    background-color: #f89500;
+    background-color: #573868;
   }
 
   .container_glitch:hover &:nth-child(4) {
     animation-name: glitch-anim-3;
     background-blend-mode: overlay;
-    background-color: #f89500;
+    background-color: #573868;
   }
 
   .container_glitch:hover &:nth-child(5) {
