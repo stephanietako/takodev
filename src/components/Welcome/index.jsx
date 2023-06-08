@@ -17,7 +17,9 @@ const Welcome = ({ img, alt, text, textmobile, logo, altLogo, link }) => {
           </div>
 
           <div className={styles.__text}>
-            <p>{text}</p>
+            <span className={styles.home_text}>
+              <p>{text}</p>
+            </span>
           </div>
           {/* <div className={styles.__text_mobile}>
             <p>{textmobile}</p>

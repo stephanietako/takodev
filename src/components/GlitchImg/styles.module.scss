@@ -21,17 +21,21 @@ $transition-fast: 0.2s cubic-bezier(0.77, 0, 0.175, 1);
 }
 
 .container_glitch {
-  background-image: url("../../assets/images/picthome.jpg");
-  height: calc(100vh - 200px);
+  background-image: url(http://localhost:3000/static/media/picthome.de3dbe5….jpg);
+  height: calc(100vh - 42px);
   margin: 0 auto;
   position: relative;
   width: 60vw;
+  width: 100%;
+  /* height: auto; */
+  border: 5px solid whitesmoke;
 }
 
 .container_glitch__img {
   //   background-blend-mode: none;
   //   background-color: transparent;
-  height: calc(100% + 5px * 2);
+  //   height: calc(100% + 5px * 2);
+  height: calc(100% + 340px);
   left: 0;
   pointer-events: none;
   position: absolute;
@@ -43,34 +47,35 @@ $transition-fast: 0.2s cubic-bezier(0.77, 0, 0.175, 1);
   background-color: #573868;
   filter: blur(2px);
 
-  .container_glitch:hover &:nth-child(n + 2) {
-    animation-duration: 2s;
-    animation-delay: 0;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    animation-fill-mode: forwards;
+  &:nth-child(n + 2) {
+    // animation-duration: 2s;
+    // animation-delay: 0;
+    // animation-timing-function: linear;
+    // animation-iteration-count: infinite;
+    // animation-fill-mode: forwards;
+    opacity: 0;
   }
 
-  .container_glitch:hover &:nth-child(2) {
-    animation-name: glitch-anim-1;
+  &:nth-child(2) {
+    animation: glitch-anim-1 2s infinite linear;
     background-blend-mode: overlay;
     background-color: #573868;
   }
 
-  .container_glitch:hover &:nth-child(3) {
-    animation-name: glitch-anim-2;
+  &:nth-child(3) {
+    animation: glitch-anim-2 2s infinite linear;
     background-blend-mode: overlay;
     background-color: #573868;
   }
 
-  .container_glitch:hover &:nth-child(4) {
-    animation-name: glitch-anim-3;
+  &:nth-child(4) {
+    animation: glitch-anim-3 2s infinite linear;
     background-blend-mode: overlay;
     background-color: #573868;
   }
 
-  .container_glitch:hover &:nth-child(5) {
-    animation-name: glitch-anim-4;
+  &:nth-child(5) {
+    animation: glitch-anim-4 2s infinite linear;
     background-blend-mode: overlay;
     background-color: #f89500;
   }
