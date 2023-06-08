@@ -18,7 +18,6 @@
 details {
   color: #fff;
   padding: 4px 5px 9px 45px;
-  flex-wrap: wrap;
   cursor: pointer;
   -webkit-user-select: none; /* Chrome all / Safari all */
   -moz-user-select: none; /* Firefox all */
@@ -72,7 +71,7 @@ details {
   }
   details {
     summary {
-      padding-right: 73px;
+      padding-right: 46px;
       list-style-type: none;
       &::-webkit-details-marker {
         display: none;
@@ -104,45 +103,46 @@ details {
         padding-right: 0px;
       }
     }
-    // summary {
-    //   list-style-type: none;
-    //   &::-webkit-details-marker {
-    //     display: none;
-    //   }
-    // }
-  }
-}
-@media (min-width: 768px) {
-  .link {
-    width: 100%;
-  }
-  details {
-    ul {
-      flex-wrap: wrap;
-      flex-direction: column;
-      display: flex;
+    summary {
       list-style-type: none;
-      padding-top: 9px;
-      margin-bottom: 0;
-      color: #fff;
-      position: relative;
-
-      li {
-        display: block;
-        padding-bottom: 9px;
-        width: 100%;
-        justify-content: right;
-        padding-right: 0px;
+      &::-webkit-details-marker {
+        display: none;
       }
     }
-    // summary {
-    //   list-style-type: none;
-    //   &::-webkit-details-marker {
-    //     display: none;
-    //   }
-    // }
   }
 }
+
+// @media (min-width: 768px) {
+//   .link {
+//     width: 100%;
+//   }
+//   details {
+//     ul {
+//       flex-wrap: wrap;
+//       flex-direction: column;
+//       display: flex;
+//       list-style-type: none;
+//       padding-top: 9px;
+//       margin-bottom: 0;
+//       color: #fff;
+//       position: relative;
+
+//       li {
+//         display: block;
+//         padding-bottom: 9px;
+//         width: 100%;
+//         justify-content: right;
+//         padding-right: 0px;
+//       }
+//     }
+//     // summary {
+//     //   list-style-type: none;
+//     //   &::-webkit-details-marker {
+//     //     display: none;
+//     //   }
+//     // }
+//   }
+// }
 
 // @media (max-width: 501px) {
 //   .link {

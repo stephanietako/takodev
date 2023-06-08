@@ -1,5 +1,5 @@
 import styles from "./styles.module.scss";
-
+import GlitchImg from "../GlitchImg";
 const Welcome = ({ img, alt, text, textmobile, logo, altLogo, link }) => {
   return (
     <div className={styles.blocs}>
@@ -12,17 +12,16 @@ const Welcome = ({ img, alt, text, textmobile, logo, altLogo, link }) => {
               </a>
             </div>
           </div>
-          <div className={styles.text_box}>
-            <div className={styles.__img}>
-              <img src={img} alt={alt} />
-            </div>
-            <div className={styles.__text}>
-              <p>{text}</p>
-            </div>
-            {/* <div className={styles.__text_mobile}>
+          <div className={styles.__img}>
+            <GlitchImg />
+          </div>
+
+          <div className={styles.__text}>
+            <p>{text}</p>
+          </div>
+          {/* <div className={styles.__text_mobile}>
             <p>{textmobile}</p>
           </div> */}
-          </div>
         </div>
       </div>
     </div>

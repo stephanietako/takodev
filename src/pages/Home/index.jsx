@@ -6,6 +6,7 @@ import logotako from "../../assets/logo/takodev-logo-white.png";
 import picthome from "../../assets/images/picthome.jpg";
 // Styles
 import styles from "./styles.module.scss";
+import Projects from "../../components/Projects";
 
 const Home = () => {
   return (
@@ -34,7 +35,9 @@ const Home = () => {
         <div className={styles.sections}></div>
       </section>
       <section id="projects">
-        <div className={styles.sections}></div>
+        <div className={styles.sections}>
+          <Projects />
+        </div>
       </section>
       <section id="contact">
         <div className={styles.sections}></div>
