@@ -1,63 +1,68 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import styles from "./styles.module.scss";
+const GlitchImg = () => {
+  const GlitchContainer = ({ numImages }) => {
+    const glitchRef = useRef(null);
+    const [isAnimating, setIsAnimating] = useState(true);
 
-function GlitchContainer({ imageUrl, numImages }) {
-  const glitchRef = useRef(null);
-
-  useEffect(() => {
-    const glitchContainer = glitchRef.current;
-
-    if (glitchContainer) {
-      const glitchImages = glitchContainer.querySelectorAll(
-        `.${styles.container_glitch__img}`
-      );
+    useEffect(() => {
+      const glitchContainer = glitchRef.current;
 
       const observerOptions = {
-        root: null,
-        rootMargin: "0px",
-        threshold: 0.5, // Adjust the threshold as needed
+        root: document.querySelector(".main"),
+        rootMargin: "10px",
+        threshold: 0.2,
       };
 
       const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
-          const { isIntersecting, target } = entry;
-
-          if (isIntersecting) {
-            target.classList.add(styles.animate);
-            console.log("running");
+          const { isIntersecting, intersectionRatio } = entry;
+          if (isIntersecting && intersectionRatio >= 0.2) {
+            setIsAnimating(true);
+            console.log("Element fully visible");
           } else {
-            target.classList.remove(styles.animate);
-            console.log("paused");
+            setIsAnimating(false);
+            console.log("Element not fully visible");
           }
         });
       }, observerOptions);
 
-      glitchImages.forEach((image) => {
-        observer.observe(image); // Observe each glitch image
-      });
+      observer.observe(glitchContainer);
 
-      observer.observe(glitchContainer); // Observe the glitch container itself
-    }
-  }, []);
+      return () => {
+        observer.unobserve(glitchContainer);
+        setIsAnimating(false);
+        console.log("Animation observer cleaned up");
+      };
+    }, []);
 
-  const glitchImages = Array.from({ length: numImages }).map((_, index) => (
-    <div key={index} className={styles.container_glitch__img}></div>
-  ));
+    const glitchImages = Array.from({ length: numImages }).map((_, index) => {
+      const isActive = isAnimating;
+
+      return (
+        <div
+          key={index}
+          id={styles.glitchImage}
+          className={`${styles.container_glitch__img} ${
+            isActive ? styles.activeAnimation : ""
+          }`}
+        ></div>
+      );
+    });
+
+    return (
+      <div ref={glitchRef} className={styles.container_glitch}>
+        {glitchImages}
+      </div>
+    );
+  };
 
   return (
-    <div ref={glitchRef} className={styles.container_glitch}>
-      {glitchImages}
+    <div className={styles.container}>
+      <main className={`${styles.container} ${styles.activeAnimation}`}>
+        <GlitchContainer numImages={5} />
+      </main>
     </div>
-  );
-}
-
-const GlitchImg = () => {
-  const glitchImageUrl = "../../assets/images/picthome.jpg";
-
-  return (
-    <main>
-      <GlitchContainer imageUrl={glitchImageUrl} numImages={5} />
-    </main>
   );
 };
 
