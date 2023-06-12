@@ -1,17 +1,17 @@
-@mixin flexCenter($direction) {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: $direction;
-}
+// @mixin flexCenter($direction) {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   flex-direction: $direction;
+// }
 
-@mixin mobile {
-  @media (max-width: 350px) {
-    flex-direction: column;
-    flex-wrap: wrap;
-    @content;
-  }
-}
+// @mixin mobile {
+//   @media (max-width: 350px) {
+//     flex-direction: column;
+//     flex-wrap: wrap;
+//     @content;
+//   }
+// }
 
 @mixin blocsTxt($height, $width, $left) {
   height: $height;
@@ -23,5 +23,4 @@
   transform: translate(-50%, -50%);
   bottom: 0;
   right: 0;
-  // color: #fff;
 }
