@@ -7,23 +7,22 @@ const Welcome = ({ img, alt, text, textmobile, logo, altLogo, link }) => {
         <div className={styles.__bloc}>
           <div className={styles.logo_box}>
             <div className={styles.__logo}>
-              <a href={link}>
+              <div>
                 <img src={logo} alt={altLogo} />
-              </a>
+              </div>
             </div>
           </div>
           <div className={styles.__img}>
             <GlitchImg />
           </div>
-
           <div className={styles.__text}>
             <span className={styles.home_text}>
               <p>{text}</p>
             </span>
+            <span className={styles.__text_mobile}>
+              <p>{textmobile}</p>
+            </span>
           </div>
-          {/* <div className={styles.__text_mobile}>
-            <p>{textmobile}</p>
-          </div> */}
         </div>
       </div>
     </div>

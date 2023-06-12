@@ -15,16 +15,14 @@ const Home = () => {
       <section id="welcome">
         <div className={styles.sections}>
           <Welcome
-            text={
-              "Tako Dev votre partenaire en développement web sur mesure. Des solutions web personnalisées, créées par notre équipe de développeurs expérimentés. Faites confiance à Tako Dev pour des résultats de qualité, adaptés à vos besoins."
+            text={"votre partenaire en développement web sur mesure"}
+            textmobile={
+              "votre partenaire \n en développement web \n sur mesure"
             }
-            // textmobile={
-            //   " Tako Dev votre partenaire en développement web sur mesure. Des solutions web personnalisées, créées par notre équipe de développeurs expérimentés. Faites confiance à Tako Dev pour des résultats de qualité, adaptés à vos besoins.."
-            // }
             logo={logotako}
             altLogo="logo Tako Dev"
             img={picthome}
-            alt="photographie portrait de présentation"
+            alt="présentation créatrice su studio Tako Dev"
           />
         </div>
       </section>
