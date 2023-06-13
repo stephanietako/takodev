@@ -16,9 +16,7 @@ const Home = () => {
         <div className={styles.sections}>
           <Welcome
             text={"votre partenaire en développement web sur mesure"}
-            textmobile={
-              "votre partenaire \n en développement web \n sur mesure"
-            }
+            textmobile={"votre partenaire en développement web sur mesure"}
             logo={logotako}
             altLogo="logo Tako Dev"
             img={picthome}
