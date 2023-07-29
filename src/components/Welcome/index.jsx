@@ -23,6 +23,11 @@ const Welcome = ({ text, textmobile, logo, altLogo, link }) => {
           </div>
         </div>
       </div>
+      <div className={styles.__btn_contact}>
+        <button className={styles.__glow_on_hover} type="button">
+          CONTACT
+        </button>
+      </div>
     </div>
   );
 };
