@@ -1,5 +1,9 @@
+// Styles
 import styles from "./styles.module.scss";
+// Components
 import GlitchImg from "../GlitchImg";
+import ButtonStyle from "../Button";
+
 const Welcome = ({ text, textmobile, logo, altLogo, link }) => {
   return (
     <div className={styles.blocs}>
@@ -23,11 +27,12 @@ const Welcome = ({ text, textmobile, logo, altLogo, link }) => {
           </div>
         </div>
       </div>
-      <div className={styles.__btn_contact}>
+      <ButtonStyle />
+      {/* <div className={styles.__btn_contact}>
         <button className={styles.__glow_on_hover} type="button">
           CONTACT
         </button>
-      </div>
+      </div> */}
     </div>
   );
 };
