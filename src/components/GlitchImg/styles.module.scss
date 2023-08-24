@@ -15,7 +15,8 @@ $transition-fast: 0.2s cubic-bezier(0.77, 0, 0.175, 1);
 .container,
 .activeAnimation {
   display: block;
-  width: 100%;
+  width: auto;
+  // width: 100%;
   height: 100%;
 
   .container_glitch,
@@ -27,14 +28,13 @@ $transition-fast: 0.2s cubic-bezier(0.77, 0, 0.175, 1);
   }
 
   .container_glitch {
-    background-image: url("../../assets/images/picthome.jpg");
+    background-image: url(http://localhost:3000/static/media/picthome.b3ff58a….jpg);
     height: calc(100vh - 42px);
-    // margin: 0 auto;
     position: relative;
-    // width: 60vw;
-    width: 100%;
+    width: 97%;
     /* height: auto; */
-    // border: 5px solid whitesmoke;
+    filter: sepia(0.2);
+    /* background: rgb(193 28 28 / 75%); */
   }
 
   .container_glitch__img {
@@ -47,8 +47,10 @@ $transition-fast: 0.2s cubic-bezier(0.77, 0, 0.175, 1);
     width: calc(100% + 10px * 2);
     background-blend-mode: overlay;
     //   background-color: #1a5da1;
-    background-color: #573868;
-    filter: blur(2px);
+    background-color: #463052;
+    // filter: blur(3px);
+    filter: blur(3px);
+    // filter: rgba(255, 255, 255, 0.75);
 
     &:nth-child(n + 2) {
       opacity: 0;
