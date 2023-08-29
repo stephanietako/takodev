@@ -1,5 +1,3 @@
-@import "../../style/_mixins";
-
 .blocs {
   display: flex;
   width: 100%;
@@ -8,38 +6,49 @@
   align-items: center;
   background-color: rgba(0, 0, 0, 0.8);
   position: relative;
+}
+.__container {
+  overflow: hidden;
+  width: 100%;
+  margin: 0 auto;
+  height: 100%;
+  max-height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
-  .__container {
-    overflow: hidden;
+  .__bloc {
     width: 100%;
-    margin: 0 auto;
     height: 100%;
-    max-height: 100%;
-    position: relative;
     display: flex;
+    border: 4px solid turquoise;
 
-    .__bloc {
-      @include blocsTxt(100%, 100%, 50%);
-      position: absolute;
+    .box {
+      // border: 1px solid pink;
+      padding: 20px;
+      margin: 10px;
+      text-align: center;
 
-      .logo_box {
+      &.logo_container {
+        flex: 2;
         display: flex;
-        width: 41%;
-        height: 100%;
+        height: auto;
         margin: auto;
         z-index: 999;
-        position: absolute;
-        border: 2px solid red;
-        flex: 1;
+        // position: absolute;
+        // border: 2px solid red;
 
         .__logo {
           display: flex;
           height: auto;
           width: 100%;
           align-self: center;
-          position: absolute;
+          // position: absolute;
           justify-content: flex-end;
           padding: 10px;
+          // border: 3px solid yellow;
           img {
             max-width: 30rem;
             height: auto;
@@ -47,25 +56,25 @@
           }
         }
       }
+      &.button_box {
+        flex: 1;
+        // border: 2px solid violet;
+      }
 
-      .__text {
-        display: flex;
-        width: 34%;
-        height: 100%;
+      &.home_text {
+        flex: 2;
+        height: auto;
         justify-content: flex-end;
         z-index: 11;
-        flex: 3;
-        border: 3px solid yellow;
-        height: auto;
+        // border: 5px solid green;
 
-        .home_text {
-          // border: 4px solid turquoise;
+        .__regular_text {
           width: 100%;
           height: auto;
-          display: flex;
           justify-content: flex-end;
           align-self: center;
           padding-right: 10%;
+          color: red;
           p {
             font-size: 47px;
             line-height: 47px;
@@ -74,10 +83,8 @@
         }
 
         .__text_mobile {
-          border: 5px solid pink;
           width: 30%;
           height: auto;
-          display: none;
           align-content: center;
           right: 0;
           padding: 7px;
@@ -86,6 +93,7 @@
           top: 65%;
           left: 50%;
           transform: translate(-50%, -50%);
+          display: none;
           p {
             font-size: 48px;
             line-height: 55px;
@@ -97,149 +105,3 @@
     }
   }
 }
-// ############## RESPONSIVE  ###############
-// @media screen and (max-width: 1440px) {
-//   .blocs {
-//     .__container {
-//       .__bloc {
-//         .logo_box {
-//           .__logo {
-//             img {
-//               width: 18rem;
-//             }
-//           }
-//         }
-//         .__text {
-//           .home_text {
-//             display: block;
-//             p {
-//               font-size: 33px;
-//             }
-//           }
-//           .__text_mobile {
-//             display: none;
-//           }
-//         }
-//       }
-//     }
-//   }
-// }
-
-// @media screen and (min-width: 1024px) {
-//   .blocs {
-//     .__container {
-//       .__bloc {
-//         .logo_box {
-//           .__logo {
-//             img {
-//               width: 18rem;
-//             }
-//           }
-//         }
-//         .__text {
-//           .home_text {
-//             display: flex;
-//           }
-//           .__text_mobile {
-//             display: none;
-//           }
-//         }
-//       }
-//     }
-//   }
-// }
-
-@media screen and (min-width: 768px) and (max-width: 1023px) {
-  .blocs {
-    .__container {
-      .__bloc {
-        .logo_box {
-          width: 100%;
-          .__logo {
-            justify-content: center;
-            border: 5px solid red;
-            top: 73px;
-            img {
-              width: 17rem;
-              height: auto;
-              object-fit: cover;
-            }
-          }
-        }
-        .__text {
-          .home_text {
-            display: none;
-          }
-          .__text_mobile {
-            display: block;
-
-            p {
-              font-size: 28px;
-              line-height: 35px;
-            }
-          }
-        }
-      }
-    }
-  }
-}
-
-// @media screen and (max-width: 767px) {
-//   .blocs {
-//     .__container {
-//       .__bloc {
-//         @include blocsTxt(100%, 100%, 50%);
-//         .logo_box {
-//           width: 100%;
-//           .__logo {
-//             justify-content: center;
-//             top: 43px;
-//             img {
-//               width: 16rem;
-//             }
-//           }
-//         }
-//         .__text {
-//           .home_text {
-//             display: none;
-//           }
-//           .__text_mobile {
-//             display: block;
-//             p {
-//               font-size: 22px;
-//               line-height: 35px;
-//             }
-//           }
-//         }
-//       }
-//     }
-//   }
-// }
-
-// @media screen and (max-width: 375px) {
-//   .blocs {
-//     .__container {
-//       @include blocsTxt(100%, 100%, 50%);
-//       .__bloc {
-//         .logo_box {
-//           width: 100%;
-//           .__logo {
-//             justify-content: center;
-//             top: 45px;
-//             img {
-//               width: 11rem;
-//             }
-//           }
-//         }
-//         .__text {
-//           .home_text {
-//             display: none;
-//           }
-//           .__text_mobile {
-//             display: block;
-//           }
-//         }
-//       }
-//     }
-//   }
-// }

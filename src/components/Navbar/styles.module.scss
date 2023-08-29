@@ -79,16 +79,60 @@
     }
   }
 }
+/* style pour l'effet de la croix en hover */
 
-/* Keyframes */
-@keyframes change-background {
-  0% {
-    background: transparent;
-  }
-  100% {
-    background: #000;
-  }
-}
+//   .__hoverContainer {
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//   }
+
+//   .hoverItem {
+//     position: relative;
+//     cursor: pointer;
+//     display: flex;
+//     align-items: center;
+//     margin: 0 20px;
+//     transition: transform 0.3s ease;
+
+//     &:hover {
+//       transform: scale(1.1);
+
+//       .hoverText {
+//         background-color: #ddd;
+//       }
+
+//       .hoverImage {
+//         opacity: 1;
+//       }
+//     }
+//   }
+
+//   .hoverText {
+//     margin: 0;
+//     padding: 5px 10px;
+//     background-color: #f0f0f0;
+//     transition: background-color 0.3s ease;
+//   }
+
+//   .hoverImage {
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     opacity: 0;
+//     transition: opacity 0.3s ease;
+//   }
+// }
+
+// /* Keyframes */
+// @keyframes change-background {
+//   0% {
+//     background: transparent;
+//   }
+//   100% {
+//     background: #000;
+//   }
+// }
 
 // ############## RESPONSIVE  ###############
 @media (min-width: 1200px) {

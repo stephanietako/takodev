@@ -4,64 +4,11 @@
   align-items: center;
 
   a {
-    // color: #fff;
     text-decoration: none;
     font-size: 21px;
     padding: 4px 7px 11px 0px;
     width: 100%;
     font-weight: bolder;
-    &:hover {
-      opacity: 0.75;
-    }
-  }
-}
-
-details {
-  color: #fff;
-  padding: 4px 5px 9px 45px;
-  cursor: pointer;
-  -webkit-user-select: none; /* Chrome all / Safari all */
-  -moz-user-select: none; /* Firefox all */
-  -ms-user-select: none; /* IE 10+ */
-  user-select: none; /* Likely future */
-  z-index: 777;
-
-  summary {
-    color: #fff;
-    display: block;
-    font-size: 22px;
-    list-style-type: none;
-    padding-bottom: 3px;
-    &::-webkit-details-marker {
-      display: none;
-    }
-    &:hover {
-      opacity: 0.75;
-    }
-  }
-
-  ul {
-    display: flex;
-    list-style-type: none;
-    padding-top: 9px;
-    margin-bottom: 0;
-    color: #fff;
-    position: absolute;
-
-    li {
-      display: block;
-      padding-bottom: 9px;
-      width: 100%;
-      font-size: 18px;
-      color: #fff;
-      padding-right: 25px;
-      a {
-        color: #fff;
-        &:hover {
-          opacity: 0.75;
-        }
-      }
-    }
   }
 }
 
@@ -70,46 +17,11 @@ details {
   .link {
     width: 100%;
   }
-  details {
-    summary {
-      padding-right: 46px;
-      list-style-type: none;
-      &::-webkit-details-marker {
-        display: none;
-      }
-    }
-  }
 }
 
 @media only screen and (max-width: 980px) {
   .link {
     width: 100%;
-  }
-  details {
-    ul {
-      flex-wrap: wrap;
-      flex-direction: column;
-      display: flex;
-      list-style-type: none;
-      padding-top: 9px;
-      margin-bottom: 0;
-      color: #fff;
-      position: relative;
-
-      li {
-        display: block;
-        padding-bottom: 9px;
-        width: 100%;
-        justify-content: right;
-        padding-right: 0px;
-      }
-    }
-    summary {
-      list-style-type: none;
-      &::-webkit-details-marker {
-        display: none;
-      }
-    }
   }
 }
 
@@ -149,40 +61,16 @@ details {
 //   .link {
 //     width: 100%;
 //   }
-//   details {
-//     summary {
-//       list-style-type: none;
-//       &::-webkit-details-marker {
-//         display: none;
-//       }
-//     }
-//   }
 // }
 
 // @media (max-width: 500px) and (min-width: 400px) {
 //   .link {
 //     width: 100%;
 //   }
-//   details {
-//     summary {
-//       list-style-type: none;
-//       &::-webkit-details-marker {
-//         display: none;
-//       }
-//     }
 //   }
-// }
 
 // @media (max-width: 501px) and (min-width: 320px) {
 //   .link {
 //     width: 100%;
 //   }
-//   details {
-//     summary {
-//       list-style-type: none;
-//       &::-webkit-details-marker {
-//         display: none;
-//       }
-//     }
 //   }
-// }
