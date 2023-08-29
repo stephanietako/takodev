@@ -1,10 +1,15 @@
 // Styles
 import styles from "./styles.module.scss";
 // Components
-import GlitchImg from "../GlitchImg";
+//import GlitchImg from "../GlitchImg";
 import ButtonStyle from "../Button";
 
-const Welcome = ({ text, textmobile, logo, altLogo, link }) => {
+const Welcome = ({ text, textmobile, logo, altLogo }) => {
+  const linkToAbout = {
+    name: "À propos",
+    target: "#about",
+  };
+
   return (
     <div className={styles.blocs}>
       <div className={styles.__container}>
@@ -13,9 +18,6 @@ const Welcome = ({ text, textmobile, logo, altLogo, link }) => {
             <div className={styles.__logo}>
               <img src={logo} alt={altLogo} />
             </div>
-          </div>
-          <div className={styles.__img}>
-            <GlitchImg />
           </div>
           <div className={styles.__text}>
             <span className={styles.home_text}>
@@ -26,7 +28,7 @@ const Welcome = ({ text, textmobile, logo, altLogo, link }) => {
             </span>
           </div>
         </div>
-        <ButtonStyle />
+        <ButtonStyle link={linkToAbout} />
       </div>
     </div>
   );

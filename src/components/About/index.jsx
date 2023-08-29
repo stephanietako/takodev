@@ -1,16 +1,19 @@
+// Styles
 import styles from "./styles.module.scss";
-import logo from "../../assets/logo/takodev-logo-white.png";
+// Imports
+// import logo from "../../assets/logo/takodev-logo-white.png";
+import GlitchImg from "../GlitchImg";
 
-const About = ({ img, alt, text, textmobile }) => {
+const About = ({ text, textmobile }) => {
   return (
-    <div className={styles.about}>
+    <div className={styles.about} id="about">
       <div className={styles.__container}>
-        <div className={styles.__img}>
-          <img src={img} alt={alt} />
-        </div>
         <div className={styles.__about_content}>
-          <div className={styles.__logo}>
+          {/* <div className={styles.__logo}>
             <img src={logo} alt=" logo Tako Dev" />
+          </div> */}
+          <div className={styles.__img}>
+            <GlitchImg />
           </div>
           <div className={styles.__text}>
             <p>{text}</p>

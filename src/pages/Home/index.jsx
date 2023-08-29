@@ -1,5 +1,7 @@
 import Navbar from "../../components/Navbar";
 import Welcome from "../../components/Welcome";
+import LinesSection from "../../components/LinesSection";
+import About from "../../components/About";
 // Logos
 import logotako from "../../assets/logo/takodev-logo-white.png";
 // Images
@@ -9,11 +11,11 @@ import styles from "./styles.module.scss";
 import Projects from "../../components/Projects";
 
 const Home = () => {
-  return (
-    <>
-      <Navbar />
-      <section id="welcome">
-        <div className={styles.sections}>
+  const sections = [
+    {
+      id: "welcome",
+      content: (
+        <div className={styles.sections} id="welcome">
           <Welcome
             text={"Votre créateur de solutions web sur-mesure"}
             textmobile={"Votre créateur de solutions web sur-mesure"}
@@ -23,31 +25,41 @@ const Home = () => {
             alt="présentation créatrice su studio Tako Dev"
           />
         </div>
-      </section>
-      <div className></div>
-      <section id="about">
-        <div className={styles.sections}></div>
-      </section>
-      <section id="prices">
-        <div className={styles.sections}></div>
-      </section>
-      <section id="projects">
-        <div className={styles.sections}>
+      ),
+    },
+
+    {
+      id: "about",
+      content: (
+        <div className={styles.sections} id="about">
+          <About
+            text={"Je suis sur le composant ABOUT"}
+            textmobile={"Je suis sur le composant ABOUT"}
+            logo={logotako}
+            altLogo="logo Tako Dev"
+            img={picthome}
+            alt="présentation créatrice su studio Tako Dev"
+          />
+        </div>
+      ),
+    },
+
+    {
+      id: "projects",
+      content: (
+        <div className={styles.sections} id="projects">
           <Projects />
         </div>
-      </section>
-      <section id="contact">
-        <div className={styles.sections}></div>
-      </section>
-      <section id="exemple1">
-        <div className={styles.sections}></div>
-      </section>
-      <section id="exemple2">
-        <div className={styles.sections}></div>
-      </section>
-      <section id="exemple3">
-        <div className={styles.sections}></div>
-      </section>
+      ),
+    },
+  ];
+
+  return (
+    <>
+      <Navbar />
+      <div>
+        <LinesSection sections={sections} />
+      </div>
     </>
   );
 };

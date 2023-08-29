@@ -1,15 +1,26 @@
 // Styles
 import styles from "./styles.module.scss";
-import { Link } from "react-router-dom";
 
-const ButtonStyle = () => {
+const ButtonStyle = ({ text, link }) => {
+  const handleClick = (e) => {
+    e.preventDefault();
+    console.log("Button 'À propos' clicked. Target:", target);
+    window.location.href = target;
+  };
+
+  const { name, target } = link;
+
   return (
     <div className={styles.container}>
-      <Link to="/">
-        <button className={styles.__btn} type="button">
-          <span>contact</span>
-        </button>
-      </Link>
+      <a
+        href={target}
+        className={styles.__btn}
+        type="button"
+        onClick={handleClick}
+      >
+        <span>{text}</span>
+        {name}
+      </a>
     </div>
   );
 };

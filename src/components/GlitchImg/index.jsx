@@ -17,7 +17,7 @@ const GlitchImg = () => {
       const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
           const { isIntersecting, intersectionRatio } = entry;
-          if (isIntersecting && intersectionRatio >= 0.2) {
+          if (isIntersecting && intersectionRatio >= 0.1) {
             setIsAnimating(true);
             console.log("Element fully visible");
           } else {
