@@ -17,9 +17,6 @@ const Welcome = ({ text, textmobile, logo, altLogo }) => {
               <img src={logo} alt={altLogo} />
             </div>
           </div>
-          <div className={`${styles.box} ${styles.button_box} `}>
-            <ButtonStyle link={linkToAbout} />
-          </div>
           <div className={`${styles.box} ${styles.home_text} `}>
             <span className={styles.__regular_text}>
               <p>{text}</p>
@@ -27,6 +24,9 @@ const Welcome = ({ text, textmobile, logo, altLogo }) => {
             <span className={styles.__text_mobile}>
               <p>{textmobile}</p>
             </span>
+          </div>
+          <div className={`${styles.box} ${styles.button_box} `}>
+            <ButtonStyle link={linkToAbout} />
           </div>
         </div>
       </div>

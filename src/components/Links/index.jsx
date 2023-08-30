@@ -8,18 +8,20 @@ const Links = ({ link, onClick }) => {
   const [isHovered, setIsHovered] = useState(false); // État pour gérer le survol
 
   return (
-    <li
-      className={styles.link}
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
-    >
-      <a href={target} onClick={onClick}>
-        {isHovered ? null : name}
-      </a>
-      {isHovered && (
-        <img className={styles.hoverImage} src={crossImage} alt="Cross" />
-      )}
-    </li>
+    <>
+      <li
+        className={styles.link}
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
+      >
+        <a href={target} onClick={onClick}>
+          {name}
+        </a>
+        {isHovered && (
+          <img className={styles.hoverImage} src={crossImage} alt="Cross" />
+        )}
+      </li>
+    </>
   );
 };
 

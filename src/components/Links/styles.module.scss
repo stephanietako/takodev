@@ -1,7 +1,7 @@
-// link unitaire
 .link {
   display: flex;
   align-items: center;
+  position: relative;
 
   a {
     text-decoration: none;
@@ -9,9 +9,24 @@
     padding: 4px 7px 11px 0px;
     width: 100%;
     font-weight: bolder;
+    position: relative; /* Ajoutez cette propriété pour le positionnement absolu de l'image */
+    z-index: 2; /* Assurez-vous que le lien est au-dessus de l'image */
+    &:hover {
+      opacity: 0; /* Le texte du lien devient transparent au survol */
+    }
   }
+
   .hoverImage {
-    border: 3px solid red;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    transition: opacity 0.3s ease;
+
+    /* Pas besoin de :hover ici, car l'opacité est gérée par l'état isHovered dans le composant React */
   }
 }
 

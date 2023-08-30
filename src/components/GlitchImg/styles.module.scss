@@ -5,9 +5,9 @@ $pure-black: hsla(0, 0%, 0%, 1); // #000
 // $dark-jungle-green: hsla(210, 3%, 11%, 1); //1c1d1e
 $dark-jungle-green: hsl(210, 72%, 37%); //1a5da1
 $grey-dark: hsla(0, 0%, 25%, 1); // #404040
-$lectric-color: hsl(279, 30%, 31%); // #1f1c1c;
+$lectric-color: hsl(220, 72%, 45%); // #1f1c1c;
 $white-dark: hsla(0, 0%, 95%, 1); /// #f1f1f1
-$fuel-yellow: hsla(36, 100%, 49%, 1); // #f89500
+$fuel-yellow: rgb(32, 23, 135); // #f89500
 // transition
 $transition: 0.5s cubic-bezier(0.77, 0, 0.175, 1);
 $transition-fast: 0.2s cubic-bezier(0.77, 0, 0.175, 1);
@@ -21,19 +21,22 @@ $transition-fast: 0.2s cubic-bezier(0.77, 0, 0.175, 1);
 
   .container_glitch,
   .container_glitch__img {
-    background-image: url("../../assets/images/picthome.jpg");
+    background-image: url("../../assets/images/black.png");
+    //background-image: url("../../assets/images/picthome.jpg");
     background-repeat: no-repeat;
     background-position: 50% 50%;
     background-size: cover;
   }
 
   .container_glitch {
-    background-image: url(http://localhost:3000/static/media/picthome.b3ff58a….jpg);
+    // background-image: url("../../assets/images/transp.png");
+    background-image: url(http://localhost:3000/static/media/transp.png);
     height: calc(100vh - 42px);
     position: relative;
-    width: 97%;
+    width: 57%;
     /* height: auto; */
-    filter: sepia(0.2);
+    // filter: sepia(0.2);
+    background: rgb(61 96 200 / 75%);
     /* background: rgb(193 28 28 / 75%); */
   }
 
@@ -47,7 +50,7 @@ $transition-fast: 0.2s cubic-bezier(0.77, 0, 0.175, 1);
     width: calc(100% + 10px * 2);
     background-blend-mode: overlay;
     //   background-color: #1a5da1;
-    background-color: #463052;
+    background-color: #0a0e41;
     // filter: blur(3px);
     filter: blur(3px);
     // filter: rgba(255, 255, 255, 0.75);
@@ -60,36 +63,36 @@ $transition-fast: 0.2s cubic-bezier(0.77, 0, 0.175, 1);
       &:not(.activeAnimation) {
         animation: none;
       }
-      animation: glitch-anim-1 2s infinite linear;
+      animation: glitch-anim-1 4s infinite linear;
       background-blend-mode: overlay;
-      background-color: #573868;
+      background-color: #6d6c75;
     }
 
     &:nth-child(3) {
       &:not(.activeAnimation) {
         animation: none;
       }
-      animation: glitch-anim-2 2s infinite linear;
+      animation: glitch-anim-2 4s infinite linear;
       background-blend-mode: overlay;
-      background-color: #573868;
+      background-color: #403e5a;
     }
 
     &:nth-child(4) {
       &:not(.activeAnimation) {
         animation: none;
       }
-      animation: glitch-anim-3 2s infinite linear;
+      animation: glitch-anim-3 4s infinite linear;
       background-blend-mode: overlay;
-      background-color: #573868;
+      background-color: #514880;
     }
 
     &:nth-child(5) {
       &:not(.activeAnimation) {
         animation: none;
       }
-      animation: glitch-anim-4 2s infinite linear;
+      animation: glitch-anim-4 4s infinite linear;
       background-blend-mode: overlay;
-      background-color: #f89500;
+      background-color: #43425a;
     }
   }
 

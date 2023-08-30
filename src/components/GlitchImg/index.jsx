@@ -1,5 +1,7 @@
 import React, { useRef, useEffect, useState } from "react";
+// Styles
 import styles from "./styles.module.scss";
+
 const GlitchImg = () => {
   const GlitchContainer = ({ numImages }) => {
     const glitchRef = useRef(null);
