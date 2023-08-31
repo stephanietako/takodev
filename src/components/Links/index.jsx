@@ -1,5 +1,5 @@
 import { useState } from "react";
-import crossImage from "../../assets/icon/cross.svg";
+import crossImage from "../../assets/icon/crossGray.svg";
 import styles from "./styles.module.scss";
 
 const Links = ({ link, onClick }) => {

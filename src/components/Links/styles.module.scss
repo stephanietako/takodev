@@ -2,6 +2,7 @@
   display: flex;
   align-items: center;
   position: relative;
+  width: 100%;
 
   a {
     text-decoration: none;
@@ -24,71 +25,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     opacity: 1;
-    transition: opacity 0.3s ease;
-
+    transition: opacity 0.3s ease-in-out;
     /* Pas besoin de :hover ici, car l'opacité est gérée par l'état isHovered dans le composant React */
   }
 }
-
-//############## RESPONSIVE  ###############
-@media only screen and (min-width: 1200px) {
-  .link {
-    width: 100%;
-  }
-}
-
-@media only screen and (max-width: 980px) {
-  .link {
-    width: 100%;
-  }
-}
-
-// @media (min-width: 768px) {
-//   .link {
-//     width: 100%;
-//   }
-//   details {
-//     ul {
-//       flex-wrap: wrap;
-//       flex-direction: column;
-//       display: flex;
-//       list-style-type: none;
-//       padding-top: 9px;
-//       margin-bottom: 0;
-//       color: #fff;
-//       position: relative;
-
-//       li {
-//         display: block;
-//         padding-bottom: 9px;
-//         width: 100%;
-//         justify-content: right;
-//         padding-right: 0px;
-//       }
-//     }
-//     // summary {
-//     //   list-style-type: none;
-//     //   &::-webkit-details-marker {
-//     //     display: none;
-//     //   }
-//     // }
-//   }
-// }
-
-// @media (max-width: 501px) {
-//   .link {
-//     width: 100%;
-//   }
-// }
-
-// @media (max-width: 500px) and (min-width: 400px) {
-//   .link {
-//     width: 100%;
-//   }
-//   }
-
-// @media (max-width: 501px) and (min-width: 320px) {
-//   .link {
-//     width: 100%;
-//   }
-//   }
