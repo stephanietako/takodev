@@ -27,19 +27,16 @@
     flex-direction: column;
 
     .box {
-      // border: 1px solid pink;
-      /* padding: 20px; */
-      /* margin: 10px; */
       text-align: center;
-
       &.logo_container {
-        flex: 2;
+        flex: 1.5;
         display: flex;
         height: auto;
         margin: auto;
         z-index: 999;
-        // position: absolute;
-        // border: 2px solid red;
+        justify-content: flex-end;
+        border: 2px solid red;
+        flex-direction: column;
 
         .__logo {
           display: flex;
@@ -47,10 +44,10 @@
           width: 100%;
           align-self: center;
           justify-content: flex-end;
-          padding: 58px;
-          // border: 3px solid yellow;
+          /* padding: 58px; */
+          border: 3px solid fuchsia;
           img {
-            max-width: 30rem;
+            max-width: 27rem;
             height: auto;
             object-fit: cover;
           }
@@ -75,7 +72,7 @@
           align-self: center;
           justify-content: center;
           display: flex;
-          padding: 20px 0;
+          padding: 20px;
           p {
             font-size: 47px;
             line-height: 47px;
@@ -84,25 +81,145 @@
         }
 
         .__text_mobile {
-          width: 30%;
+          width: 100%;
           height: auto;
-          align-content: center;
-          right: 0;
-          padding: 7px;
-          position: absolute;
-          justify-content: flex-start;
-          top: 65%;
-          left: 50%;
-          transform: translate(-50%, -50%);
+          justify-content: flex-end;
+          align-self: center;
+          justify-content: center;
+          display: flex;
+          padding: 40px 0;
           display: none;
+          border: 3px solid violet;
           p {
-            font-size: 48px;
-            line-height: 55px;
+            font-size: 38px;
+            line-height: 47px;
             white-space: pre-wrap;
-            width: 100%;
           }
         }
       }
     }
   }
 }
+
+////////////////////////RESPONSIVE////////////////////////////////
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .__container {
+    .__bloc {
+      .box {
+        &.logo_container {
+          .__logo {
+            img {
+              max-width: 30rem;
+              height: auto;
+              object-fit: cover;
+            }
+          }
+        }
+        &.button_box {
+          flex: 1;
+        }
+        &.home_text {
+          flex: 0.2;
+          .__regular_text {
+            display: flex;
+          }
+          .__text_mobile {
+            display: none;
+            p {
+              font-size: 47px;
+              line-height: 47px;
+              white-space: pre-wrap;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Small devices such as large phones (640px and up) */
+@media only screen and (max-width: 1445px) {
+  .__container {
+    .__bloc {
+      .box {
+        &.logo_container {
+          .__logo {
+            img {
+              width: 23rem;
+              height: auto;
+              object-fit: cover;
+            }
+          }
+        }
+        &.button_box {
+          flex: 1;
+        }
+        &.home_text {
+          flex: 0.2;
+          .__regular_text {
+            display: flex;
+            p {
+              font-size: 44px;
+              line-height: 47px;
+              white-space: pre-wrap;
+            }
+          }
+          .__text_mobile {
+            display: none;
+            p {
+              font-size: 38px;
+              line-height: 47px;
+              white-space: pre-wrap;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// /* Medium devices such as tablets (768px and up) */
+@media only screen and (max-width: 48em) {
+  .__container {
+    .__bloc {
+      .box {
+        text-align: center;
+        &.logo_container {
+          flex: 1;
+          .__logo {
+            border: 3px solid turquoise;
+            img {
+              width: 16rem;
+              height: auto;
+              object-fit: cover;
+            }
+          }
+        }
+        &.button_box {
+          flex: 1;
+        }
+        &.home_text {
+          .__regular_text {
+            display: none;
+          }
+          .__text_mobile {
+            display: block;
+            padding: 16px;
+            p {
+              font-size: 34px;
+              line-height: 47px;
+              white-space: pre-wrap;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// /* Large devices such as laptops (1024px and up) */
+// @media only screen and (min-width: 64em) {...}
+
+// /* Largest devices such as desktops (1280px and up) */
+// @media only screen and (min-width: 80em) {...}
