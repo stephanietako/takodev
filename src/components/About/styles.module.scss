@@ -1,10 +1,9 @@
-@import "../../style/_mixins";
-
 .about {
   display: flex;
   width: 100%;
   align-items: center;
   height: 100%;
+  justify-content: center;
 
   .__container {
     overflow: hidden;
@@ -12,252 +11,160 @@
     height: 100%;
     max-height: 100%;
     position: relative;
-    display: block;
-
-    .__img {
-      display: block;
-      width: 100%;
-      height: 100%;
-      position: relative;
-      img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        object-position: 0 28%;
-      }
-    }
+    display: flex;
+    // border: 5px solid pink;
+    justify-content: center;
+    align-items: center;
 
     .__about_content {
-      // @include blocsTxt(100%, 40%, 20%);
       width: 100%;
-      display: flex;
       height: 100%;
-      flex-direction: column;
-      // padding: 20px 20px 0 20px;
+      display: flex;
+      // border: 4px solid turquoise;
 
-      .__logo {
+      .box {
+        text-align: center;
         display: flex;
-        max-width: 12rem;
-        height: auto;
-        align-self: center;
-        img {
-          justify-content: center;
-          width: 100%;
+        border: 4px solid pink;
+        &.__anime_container {
+          flex: 1;
           height: auto;
-          object-fit: cover;
-          display: block;
-          margin-left: auto;
-          margin-right: auto;
+          margin: auto;
+          z-index: 999;
+          justify-content: flex-end;
+          border: 2px solid red;
+          .__anime {
+            display: block;
+            width: 100%;
+            height: 100%;
+            position: relative;
+          }
+        }
+
+        &.__text {
+          flex: 1;
+          height: auto;
+          justify-content: flex-end;
+          z-index: 11;
+          border: 3px solid fuchsia;
+
+          .__regular_text {
+            width: 100%;
+            height: auto;
+            justify-content: flex-end;
+            align-self: center;
+            justify-content: center;
+            display: flex;
+            padding: 20px;
+            border: 3px solid green;
+            p {
+              font-size: 38px;
+              line-height: 47px;
+              white-space: pre-wrap;
+            }
+          }
+          .__text_mobile {
+            width: 100%;
+            height: auto;
+            justify-content: flex-end;
+            align-self: center;
+            justify-content: center;
+            display: flex;
+            padding: 40px 0;
+            display: none;
+            border: 3px solid violet;
+            p {
+              font-size: 38px;
+              line-height: 47px;
+              white-space: pre-wrap;
+            }
+          }
         }
       }
-      .__text {
-        position: relative;
+    }
+  }
+}
+//////////////////RESPONSIVE/////////////////////////////////
+// /* Medium devices such as tablets (768px and up) */
+@media only screen and (max-width: 48em) {
+  .about {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    height: 100%;
+
+    .__container {
+      overflow: hidden;
+      width: 100%;
+      height: 100%;
+      max-height: 100%;
+      position: relative;
+      display: block;
+
+      .__img {
         display: block;
         width: 100%;
-        height: auto;
-        padding: 23px;
-        margin-top: 31px;
-        p {
-          position: relative;
-          width: 100%;
-          overflow: hidden;
-          font-size: 18px;
-          line-height: 22px;
-          white-space: pre-wrap;
-        }
-      }
-      .__text_mobile {
-        display: none;
+        height: 100%;
         position: relative;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: 0 28%;
+        }
+      }
+
+      .__about_content {
         width: 100%;
-        height: auto;
-        p {
+        display: flex;
+        height: 100%;
+        flex-direction: column;
+        border: 3px solid fuchsia;
+
+        .__logo {
+          display: flex;
+          max-width: 12rem;
+          height: auto;
+          align-self: center;
+          img {
+            justify-content: center;
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+          }
+        }
+        .__text {
+          position: relative;
+          display: block;
+          width: 100%;
+          height: auto;
+          padding: 23px;
+          margin-top: 31px;
+          p {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            font-size: 18px;
+            line-height: 22px;
+            white-space: pre-wrap;
+          }
+        }
+        .__text_mobile {
+          display: none;
           position: relative;
           width: 100%;
-          overflow: hidden;
-          font-size: 16px;
-          line-height: 24px;
-          white-space: pre-wrap;
-        }
-      }
-    }
-  }
-}
-
-// ############## RESPONSIVE  ###############
-@media (min-width: 768px) and (max-width: 1900px) {
-  .about {
-    .__container {
-      .__img {
-        img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-          object-position: 39% 28%;
-        }
-      }
-      .__about_content {
-        .__logo {
-          width: 8rem;
-        }
-        .__text {
-          display: block !important;
-        }
-        .__text_mobile {
-          display: none !important;
-
-          margin-top: 23px;
-        }
-      }
-    }
-  }
-}
-
-@media screen and (max-width: 500px) {
-  .about {
-    .__container {
-      .__img {
-        img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-          object-position: 43% 0;
-        }
-      }
-      .__about_content {
-        @include blocsTxt(100%, 45%, 22%);
-        .__logo {
-          width: 7rem;
-        }
-      }
-      .__text {
-        display: none !important;
-      }
-      .__text_mobile {
-        display: block !important;
-
-        margin-top: 23px;
-      }
-    }
-  }
-}
-
-@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
-  .about {
-    .__container {
-      .__img {
-        img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-          object-position: 0 31%;
-        }
-      }
-      .__about_content {
-        @include blocsTxt(100%, 44%, 22%);
-        padding: 8px;
-        .__logo {
-          width: 8rem;
-        }
-        .__text {
-          display: none !important;
-        }
-        .__text_mobile {
-          display: block !important;
-
-          margin-top: 23px;
-        }
-      }
-    }
-  }
-}
-
-@media (max-width: 375px) and (min-width: 360px) {
-  .about {
-    .__container {
-      .__img {
-        img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-          object-position: 45% 0;
-        }
-      }
-      .__about_content {
-        @include blocsTxt(100%, 55%, 27%);
-        .__logo {
-          width: 5rem;
-        }
-        .__text {
-          display: none !important;
-        }
-        .__text_mobile {
-          display: block !important;
-
-          margin-top: 20px;
-        }
-      }
-    }
-  }
-}
-
-@media (min-width: 320px) and (max-width: 360px) {
-  .about {
-    .__container {
-      .__img {
-        img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-          object-position: 39% 0;
-        }
-      }
-      .__about_content {
-        @include blocsTxt(72%, 100%, 50%);
-        padding: 8px;
-        .__logo {
-          width: 6rem;
-          margin-top: 18px;
-        }
-        .__text {
-          display: none;
-        }
-        .__text_mobile {
-          display: block;
-          margin-top: 23px;
-        }
-      }
-    }
-  }
-}
-
-@media (min-width: 320px) and (max-width: 321px) {
-  .about {
-    .__container {
-      .__img {
-        img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-
-          object-position: 45% 0;
-        }
-      }
-      .__about_content {
-        @include blocsTxt(90%, 100%, 50%);
-        padding: 8px;
-        .__logo {
-          width: 6rem;
-
-          margin-top: 18px;
-        }
-        .__text {
-          display: none;
-        }
-        .__text_mobile {
-          display: block;
-
-          margin-top: 23px;
+          height: auto;
+          p {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            font-size: 16px;
+            line-height: 24px;
+            white-space: pre-wrap;
+          }
         }
       }
     }

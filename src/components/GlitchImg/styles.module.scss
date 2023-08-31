@@ -1,16 +1,16 @@
-//Variables
-//Colors
-$pure-white: hsla(0, 0%, 100%, 1); // #fff
-$pure-black: hsla(0, 0%, 0%, 1); // #000
-// $dark-jungle-green: hsla(210, 3%, 11%, 1); //1c1d1e
-$dark-jungle-green: hsl(210, 72%, 37%); //1a5da1
-$grey-dark: hsla(0, 0%, 25%, 1); // #404040
-$lectric-color: hsl(220, 72%, 45%); // #1f1c1c;
-$white-dark: rgb(197, 195, 208); /// #f1f1f1
-$fuel-yellow: rgb(32, 23, 135); // #f89500
-// transition
-$transition: 0.5s cubic-bezier(0.77, 0, 0.175, 1);
-$transition-fast: 0.2s cubic-bezier(0.77, 0, 0.175, 1);
+// //Variables
+// //Colors
+// $pure-white: hsla(0, 0%, 100%, 1); // #fff
+// $pure-black: hsla(0, 0%, 0%, 1); // #000
+// // $dark-jungle-green: hsla(210, 3%, 11%, 1); //1c1d1e
+// $dark-jungle-green: hsl(210, 72%, 37%); //1a5da1
+// $grey-dark: hsla(0, 0%, 25%, 1); // #404040
+// $lectric-color: hsl(220, 72%, 45%); // #1f1c1c;
+// $white-dark: rgb(197, 195, 208); /// #f1f1f1
+// $fuel-yellow: rgb(32, 23, 135); // #f89500
+// // transition
+// $transition: 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+// $transition-fast: 0.2s cubic-bezier(0.77, 0, 0.175, 1);
 
 .container,
 .activeAnimation {
@@ -30,10 +30,10 @@ $transition-fast: 0.2s cubic-bezier(0.77, 0, 0.175, 1);
 
   .container_glitch {
     // background-image: url("../../assets/images/transp.png");
-    background-image: url(http://localhost:3000/static/media/black.png);
+    // background-image: url(http://localhost:3000/static/media/black.png);
     height: calc(100vh - 42px);
     position: relative;
-    width: 57%;
+    width: 80%;
     /* height: auto; */
     // filter: sepia(0.2);
     background: rgba(3, 8, 28, 0.75);

@@ -9,17 +9,18 @@ const About = ({ text, textmobile }) => {
     <div className={styles.about} id="about">
       <div className={styles.__container}>
         <div className={styles.__about_content}>
-          {/* <div className={styles.__logo}>
-            <img src={logo} alt=" logo Tako Dev" />
-          </div> */}
-          <div className={styles.__img}>
-            <GlitchImg />
+          <div className={`${styles.box} ${styles.__anime_container} `}>
+            <div className={styles.__anime}>
+              <GlitchImg />
+            </div>
           </div>
-          <div className={styles.__text}>
-            <p>{text}</p>
-          </div>
-          <div className={styles.__text_mobile}>
-            <p>{textmobile}</p>
+          <div className={`${styles.box} ${styles.__text} `}>
+            <div className={styles.__regular_text}>
+              <p>{text}</p>
+            </div>
+            <div className={styles.__text_mobile}>
+              <p>{textmobile}</p>
+            </div>
           </div>
         </div>
       </div>

@@ -33,8 +33,12 @@ const Home = () => {
       content: (
         <div className={styles.sections} id="about">
           <About
-            text={"Je suis sur le composant ABOUT"}
-            textmobile={"Je suis sur le composant ABOUT"}
+            text={
+              "Je suis Stéphanie, une développeuse web passionnée et créative, dotée d'une double compétence en art et en développement web JavaScript. Mon atout réside dans la fusion entre mon expertise artistique et mes compétences techniques. Cette synergie unique me permet d'apporter une perspective innovante à chaque projet, tout en tenant compte de vos préférences et envies en matière de design. Diplômée dans ces deux domaines, je marie habilement créativité et technicité pour donner vie à vos idées."
+            }
+            textmobile={
+              "Je suis Stéphanie, une développeuse web passionnée et créative, dotée d'une double compétence en art et en développement web JavaScript. Mon atout réside dans la fusion entre mon expertise artistique et mes compétences techniques. Cette synergie unique me permet d'apporter une perspective innovante à chaque projet, tout en tenant compte de vos préférences et envies en matière de design. Diplômée dans ces deux domaines, je marie habilement créativité et technicité pour donner vie à vos idées."
+            }
             logo={logotako}
             altLogo="logo Tako Dev"
             img={picthome}
