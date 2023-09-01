@@ -33,6 +33,7 @@
           z-index: 999;
           justify-content: flex-end;
           border: 2px solid red;
+
           .__anime {
             display: block;
             width: 100%;
@@ -47,23 +48,40 @@
           justify-content: flex-end;
           z-index: 11;
           border: 3px solid fuchsia;
+          text-align: start;
 
+          span {
+            padding: 0 35px;
+            white-space: normal;
+            word-break: break-word;
+            display: flex;
+            align-items: center;
+            border: 2px solid blue;
+            height: auto;
+            text-align: center;
+            width: 79%;
+            margin: auto;
+            /* padding: 0 35px 37px; */
+            height: 12rem;
+          }
           .__regular_text {
+            flex-direction: column;
             width: 100%;
             height: auto;
-            justify-content: flex-end;
             align-self: center;
             justify-content: center;
             display: flex;
-            padding: 20px;
+            padding: 0 35px 0;
             border: 3px solid green;
+            text-align: start;
             p {
-              font-size: 38px;
+              font-size: 28px;
               line-height: 47px;
               white-space: pre-wrap;
             }
           }
           .__text_mobile {
+            flex-direction: column;
             width: 100%;
             height: auto;
             justify-content: flex-end;
@@ -74,7 +92,7 @@
             display: none;
             border: 3px solid violet;
             p {
-              font-size: 38px;
+              font-size: 22px;
               line-height: 47px;
               white-space: pre-wrap;
             }

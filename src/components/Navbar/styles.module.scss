@@ -12,7 +12,7 @@
   justify-content: space-between;
   border: 3px solid gray;
   &.fixed {
-    z-index: 11;
+    z-index: 1;
     background: rgba(0, 0, 0, 1);
     animation: change-background 4s ease-out;
   }
@@ -59,7 +59,7 @@
       width: auto;
 
       img {
-        width: 35px;
+        width: 52px;
       }
     }
 
@@ -77,63 +77,20 @@
       display: flex;
       text-align: end;
       padding-right: 14px;
+      border: 3px solid green;
+      background: rgba(0, 0, 0, 1);
     }
   }
 }
-/* style pour l'effet de la croix en hover */
-
-//   .__hoverContainer {
-//     display: flex;
-//     align-items: center;
-//     justify-content: center;
-//   }
-
-//   .hoverItem {
-//     position: relative;
-//     cursor: pointer;
-//     display: flex;
-//     align-items: center;
-//     margin: 0 20px;
-//     transition: transform 0.3s ease;
-
-//     &:hover {
-//       transform: scale(1.1);
-
-//       .hoverText {
-//         background-color: #ddd;
-//       }
-
-//       .hoverImage {
-//         opacity: 1;
-//       }
-//     }
-//   }
-
-//   .hoverText {
-//     margin: 0;
-//     padding: 5px 10px;
-//     background-color: #f0f0f0;
-//     transition: background-color 0.3s ease;
-//   }
-
-//   .hoverImage {
-//     position: absolute;
-//     top: 0;
-//     left: 0;
-//     opacity: 0;
-//     transition: opacity 0.3s ease;
-//   }
-// }
 
 // /* Keyframes */
-// @keyframes change-background {
-//   0% {
-//     background: transparent;
-//   }
-//   100% {
-//     background: #000;
-//   }
-// }
+@keyframes change-background {
+  0% {
+    background: #000;
+  }
+  100% {
+  }
+}
 
 // ############## RESPONSIVE  ###############
 @media (min-width: 1200px) {

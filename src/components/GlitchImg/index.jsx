@@ -7,6 +7,38 @@ const GlitchImg = () => {
     const glitchRef = useRef(null);
     const [isAnimating, setIsAnimating] = useState(true);
 
+    // useEffect(() => {
+    //   const glitchContainer = glitchRef.current;
+
+    //   const observerOptions = {
+    //     root: document.querySelector(".main"),
+    //     rootMargin: "10px",
+    //     threshold: 0.2,
+    //   };
+
+    //   const observer = new IntersectionObserver((entries) => {
+    //     console.log("Entries:", entries); // Afficher les valeurs de entries
+    //     entries.forEach((entry) => {
+    //       console.log("Entry:", entry); // Afficher les valeurs de chaque entry
+    //       const { isIntersecting, intersectionRatio } = entry;
+    //       if (isIntersecting && intersectionRatio >= 0.1) {
+    //         setIsAnimating(true);
+    //         console.log("Element fully visible");
+    //       } else {
+    //         setIsAnimating(false);
+    //         console.log("Element not fully visible");
+    //       }
+    //     });
+    //   }, observerOptions);
+
+    //   observer.observe(glitchContainer);
+
+    //   return () => {
+    //     observer.unobserve(glitchContainer);
+    //     setIsAnimating(false);
+    //     console.log("Animation observer cleaned up");
+    //   };
+    // }, []);
     useEffect(() => {
       const glitchContainer = glitchRef.current;
 
@@ -17,13 +49,17 @@ const GlitchImg = () => {
       };
 
       const observer = new IntersectionObserver((entries) => {
+        // console.log("Entries:", entries); // Afficher les valeurs de entries
         entries.forEach((entry) => {
+          // console.log("Entry:", entry); // Afficher les valeurs de chaque entry
           const { isIntersecting, intersectionRatio } = entry;
           if (isIntersecting && intersectionRatio >= 0.1) {
             setIsAnimating(true);
+            glitchContainer.classList.add("active");
             console.log("Element fully visible");
           } else {
             setIsAnimating(false);
+            glitchContainer.classList.remove("active"); // / Sinon retire la classe 'active' quand je nettoie
             console.log("Element not fully visible");
           }
         });
@@ -34,6 +70,7 @@ const GlitchImg = () => {
       return () => {
         observer.unobserve(glitchContainer);
         setIsAnimating(false);
+        glitchContainer.classList.remove("active"); // Retire la classe 'active' quand je nettoie
         console.log("Animation observer cleaned up");
       };
     }, []);

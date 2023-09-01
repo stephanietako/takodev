@@ -4,7 +4,7 @@ import styles from "./styles.module.scss";
 // import logo from "../../assets/logo/takodev-logo-white.png";
 import GlitchImg from "../GlitchImg";
 
-const About = ({ text, textmobile }) => {
+const About = ({ title, text, textmobile }) => {
   return (
     <div className={styles.about} id="about">
       <div className={styles.__container}>
@@ -16,9 +16,16 @@ const About = ({ text, textmobile }) => {
           </div>
           <div className={`${styles.box} ${styles.__text} `}>
             <div className={styles.__regular_text}>
+              <span>
+                <h1>{title}</h1>
+                <br></br>
+              </span>
               <p>{text}</p>
             </div>
             <div className={styles.__text_mobile}>
+              <span>
+                <h1>{title}</h1>
+              </span>
               <p>{textmobile}</p>
             </div>
           </div>
