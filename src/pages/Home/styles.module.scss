@@ -1,7 +1,7 @@
 section {
   margin-bottom: 188px;
   display: flex;
-  flex-direction: column;
+
   align-items: center;
   width: 100%;
   height: 80vh;
@@ -13,7 +13,7 @@ section {
   overflow: hidden;
 }
 
-// ############## RESPONSIVE  ###############
+////////////////// RESPONSIVE //////////////
 @media screen and (max-width: 1024px) {
   section {
     height: 85vh;
