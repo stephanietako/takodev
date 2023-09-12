@@ -37,7 +37,7 @@ const Navbar = () => {
   // menu state change management
   const [isOpen, setIsOpen] = useState(false);
   const toggleMenu = () => setIsOpen(!isOpen);
-  ///////////////////////////////////////////////////////////////
+  //////////////////////////////////////////////////////////////
   // Main navbar menu
   const links = [
     { name: "Accueil", target: "#welcome" },
