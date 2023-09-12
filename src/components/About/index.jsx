@@ -2,6 +2,9 @@
 import styles from "./styles.module.scss";
 // Imports
 import GlitchImg from "../GlitchImg";
+// Assets
+import chevronleft from "../../assets/icon/chevronleft.svg";
+import chevronright from "../../assets/icon/chevronright.svg";
 
 const About = ({ title, subtitle, text, textmobile }) => {
   return (
@@ -16,7 +19,17 @@ const About = ({ title, subtitle, text, textmobile }) => {
           <div className={`${styles.box} ${styles.__text} `}>
             <div className={styles.__regular_text}>
               <span>
+                <img
+                  className={styles.__icon_left}
+                  src={chevronleft}
+                  alt="icon left chevron "
+                />
                 <h1> {title}</h1>
+                <img
+                  className={styles.__icon_right}
+                  src={chevronright}
+                  alt="icon right chevron "
+                />
                 <br></br>
               </span>
               <span>
