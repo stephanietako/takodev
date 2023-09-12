@@ -41,6 +41,9 @@ const About = ({ title, subtitle, text, textmobile }) => {
               <span>
                 <h1>{title}</h1>
               </span>
+              <span>
+                <h2>{subtitle}</h2>
+              </span>
               <p>{textmobile}</p>
             </div>
           </div>
