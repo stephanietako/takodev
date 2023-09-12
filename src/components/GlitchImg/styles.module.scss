@@ -19,6 +19,19 @@
   // width: 100%;
   height: 100%;
 
+  .__logo {
+    display: flex;
+    position: absolute;
+    width: 19rem;
+    height: auto;
+    z-index: 1;
+    opacity: 0.2;
+    padding: 33px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
   .container_glitch,
   .container_glitch__img {
     background-image: url("../../assets/images/black.png");
@@ -33,7 +46,7 @@
     // background-image: url(http://localhost:3000/static/media/black.png);
     height: calc(100vh - 42px);
     position: relative;
-    width: 80%;
+    width: 100%;
     /* height: auto; */
     // filter: sepia(0.2);
     background: rgba(3, 8, 28, 0.75);

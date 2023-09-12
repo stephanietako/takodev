@@ -1,6 +1,8 @@
 import React, { useRef, useEffect, useState } from "react";
 // Styles
 import styles from "./styles.module.scss";
+// Assets
+import logo from "../../assets/logo/takodev-logo-white.png";
 
 const GlitchImg = () => {
   const GlitchContainer = ({ numImages }) => {
@@ -98,6 +100,7 @@ const GlitchImg = () => {
 
   return (
     <div className={styles.container}>
+      <img className={styles.__logo} src={logo} alt="logo tako dev "></img>
       <main className={`${styles.container} ${styles.activeAnimation}`}>
         <GlitchContainer numImages={5} />
       </main>
