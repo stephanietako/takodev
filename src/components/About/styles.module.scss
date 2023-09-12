@@ -49,21 +49,23 @@
           z-index: 11;
           border: 3px solid fuchsia;
           text-align: start;
+          position: relative;
 
           span {
-            padding: 0 35px;
             white-space: normal;
             word-break: break-word;
             display: flex;
             align-items: center;
-            border: 2px solid blue;
+            // border: 2px solid blue;
             height: auto;
             text-align: center;
-            width: 79%;
+            // width: 50%;
             margin: auto;
-            /* padding: 0 35px 37px; */
-            height: 12rem;
+            padding: 0 0px 37px;
+            // height: 12rem;
+            line-height: 40px;
           }
+
           .__regular_text {
             flex-direction: column;
             width: 100%;
@@ -71,15 +73,17 @@
             align-self: center;
             justify-content: center;
             display: flex;
-            padding: 0 35px 0;
-            border: 3px solid green;
+            // padding: 0 35px 0;
+            // border: 3px solid green;
             text-align: start;
+            padding: 3rem;
             p {
-              font-size: 28px;
+              font-size: 24px;
               line-height: 47px;
               white-space: pre-wrap;
             }
           }
+
           .__text_mobile {
             flex-direction: column;
             width: 100%;
