@@ -33,9 +33,7 @@ const Home = () => {
       content: (
         <div className={styles.sections} id="about">
           <About
-            title={
-              "Studio de développement web qui met l'art et la technologie au service de vos projets"
-            }
+            title={"Studio de développement web"}
             subtitle={
               "Mettre l'art et la technologie au service de vos projets"
             }
