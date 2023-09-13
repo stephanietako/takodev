@@ -15,7 +15,6 @@ const App = () => (
         ) : (
           <Route path="/" element={<Home />} />
         )}
-
         <Route path="*" element={<Page404 />} />
       </Routes>
     </Router>

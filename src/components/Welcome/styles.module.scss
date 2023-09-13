@@ -11,13 +11,13 @@
   overflow: hidden;
   width: 100%;
   margin: 0 auto;
-  height: 100%;
-  max-height: 100%;
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding-top: 33px;
+  height: 100vh;
 
   .__bloc {
     width: 100%;
@@ -34,7 +34,7 @@
         flex: 1.5;
         height: auto;
         margin: auto;
-        z-index: 999;
+        // z-index: 999;
         justify-content: flex-end;
         // border: 2px solid red;
         flex-direction: column;
@@ -64,7 +64,7 @@
         flex: 0.2;
         height: auto;
         justify-content: flex-end;
-        z-index: 11;
+        // z-index: 11;
         // border: 5px solid green;
 
         .__regular_text {
@@ -91,7 +91,7 @@
           display: flex;
           padding: 40px 0;
           display: none;
-          border: 3px solid violet;
+          // border: 3px solid violet;
           p {
             font-size: 38px;
             line-height: 47px;
@@ -190,9 +190,9 @@
         &.logo_container {
           flex: 1;
           .__logo {
-            border: 3px solid turquoise;
+            // border: 3px solid turquoise;
             img {
-              width: 16rem;
+              width: 14rem;
               height: auto;
               object-fit: cover;
             }

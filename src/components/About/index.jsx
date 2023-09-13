@@ -37,9 +37,19 @@ const About = ({ title, subtitle, text, textmobile }) => {
               </span>
               <p>{text}</p>
             </div>
-            <div className={styles.__text_mobile}>
+            <div className={styles.__text_mobile} id={styles.textAboutMobile}>
               <span>
+                <img
+                  className={styles.__icon_left}
+                  src={chevronleft}
+                  alt="icon left chevron "
+                />
                 <h1>{title}</h1>
+                <img
+                  className={styles.__icon_right}
+                  src={chevronright}
+                  alt="icon right chevron "
+                />
               </span>
               <span>
                 <h2>{subtitle}</h2>

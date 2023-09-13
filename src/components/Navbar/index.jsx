@@ -23,7 +23,7 @@ const Navbar = () => {
     );
   }, [navbarElement]);
   ////////////////////////////////////////////////////////
-  // navbar color state change managment
+  //navbar color state change managment
   const [fix, setFix] = useState(false);
   const setFixed = () => {
     if (window.scrollY >= 111) {

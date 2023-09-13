@@ -12,8 +12,11 @@
     font-weight: bolder;
     position: relative;
     z-index: 2;
+    padding: 1.5rem;
+    cursor: pointer;
     &:hover {
       opacity: 0;
+      transition: opacity 0.5s ease-out;
     }
   }
 
@@ -24,10 +27,41 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    // opacity: 1;
-    transition: opacity 1.3s ease-in-out;
-    // border: 5px solid greenyellow;
     width: 5rem;
+    animation: fadeIn 2s ease-out; /* Utilisez le nom de l'animation et la durée souhaitée */
     /* Pas besoin de :hover ici, car l'opacité est gérée par l'état isHovered dans le composant React */
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/////////////////// RESPONSIVE ///////////////////////////
+// /* Medium devices such as tablets (768px and up) */
+@media only screen and (max-width: 48em) {
+  .link {
+    a {
+      // text-decoration: none;
+      // font-size: 24px;
+      // padding: 4px 7px 11px 0px;
+      // width: 100%;
+      // font-weight: bolder;
+      // position: relative;
+      // z-index: 2;
+      // padding: 1.5rem;
+      // cursor: pointer;
+      // border: 3px solid black;
+      &:hover {
+        color: gray;
+      }
+    }
+    .__hoverImage {
+      display: none;
+    }
   }
 }
