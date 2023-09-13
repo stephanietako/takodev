@@ -82,6 +82,7 @@
             justify-content: center;
             display: flex;
             text-align: start;
+            border: 3px solid red;
             p {
               font-size: 22px;
               line-height: 33px;
@@ -99,9 +100,10 @@
             justify-content: center;
             padding: 40px 0;
             display: none;
-            // border: 3px solid violet;
+            border: 3px solid violet;
             padding: 30px 12px;
             background-color: #000;
+            min-height: 1px; /* Ajoutez une hauteur minimale */
             p {
               font-size: 17px;
               line-height: 27px;
