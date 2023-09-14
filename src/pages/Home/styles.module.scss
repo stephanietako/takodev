@@ -8,21 +8,19 @@ section {
 .sections {
   width: 100%;
   display: block;
-  height: 90vh;
+  // height: 90vh;
+  height: auto;
   overflow: hidden;
 }
 
 ////////////////// RESPONSIVE //////////////
-// /* Medium devices such as tablets (768px and up) */
-@media only screen and (max-width: 48em) {
-  .sections {
-    //height: 85vh;
-    height: auto;
-  }
-  #welcome {
-    height: 85vh;
-  }
-}
+// /* Medium devices en-dessous de 820 */
+// @media only screen and (max-width: 821px) {
+//   .sections {
+//     //height: 85vh;
+//     height: auto;
+//   }
+// }
 
 // @media screen and (max-width: 768px) {
 //   .sections {

@@ -35,7 +35,7 @@ const Home = () => {
           <About
             title={"Studio de développement web"}
             subtitle={
-              "Mettre l'art et la technologie au service de vos projets"
+              "Mettre l'art et la technologie\nau service de vos projets"
             }
             text={
               "Je suis Stéphanie, la fondatrice de Tako Dev.\n Ma formation en histoire de l'art me permet de comprendre les enjeux culturels et esthétiques de chaque projet. Tandis que mes compétences techniques en programmation javascript me permettent de réaliser des solutions numériques performantes, évolutives, esthétiques et fonctionnelles.\n La technologie peut être un outil puissant pour la créativité.\n J'utilise mes compétences techniques et ma formation artistique pour créer des interfaces intuitives et attrayantes afin de répondre à vos besoins.\n L’atout de Tako Dev réside dans la fusion entre expertise artistique et compétences techniques. \n Cette synergie unique permet d'apporter une perspective innovante à chacun de vos projets, tout en tenant compte de vos préférences et envies en matière de design. "

@@ -2,13 +2,13 @@
   display: flex;
   width: 100%;
   align-items: center;
-  height: 100%;
+  height: 100vh;
   justify-content: center;
 
   .__container {
     overflow: hidden;
-    width: 100%;
-    height: 100%;
+    // width: 100%;
+    // height: 100%;
     max-height: 100%;
     position: relative;
     display: flex;
@@ -18,7 +18,7 @@
 
     .__about_content {
       width: 100%;
-      height: 100%;
+      height: auto;
       display: flex;
       // border: 4px solid turquoise;
 
@@ -82,7 +82,7 @@
             justify-content: center;
             display: flex;
             text-align: start;
-            border: 3px solid red;
+            // border: 3px solid red;
             p {
               font-size: 22px;
               line-height: 33px;
@@ -94,16 +94,16 @@
           .__text_mobile {
             flex-direction: column;
             width: auto;
-            height: auto;
+            // height: auto;
             text-align: start;
             align-self: center;
             justify-content: center;
             padding: 40px 0;
             display: none;
-            border: 3px solid violet;
-            padding: 30px 12px;
+            padding: 30px 22px;
             background-color: #000;
-            min-height: 1px; /* Ajoutez une hauteur minimale */
+            min-height: 100vh;
+            border: 3px solid green;
             p {
               font-size: 17px;
               line-height: 27px;
@@ -125,8 +125,8 @@
   }
 }
 ////////////////// RESPONSIVE /////////////////////////////////
-// /* Medium devices such as tablets (768px and up) */
-@media only screen and (max-width: 48em) {
+/// // en dessous de 600
+@media only screen and (max-width: 600px) {
   .about {
     display: flex;
     width: 100%;
@@ -148,16 +148,14 @@
       .__about_content {
         flex-direction: column;
 
-        // border: 4px solid turquoise;
-
         .box {
           text-align: center;
           display: flex;
-          border: 4px solid pink;
+          // border: 4px solid pink;
           &.__anime_container {
             flex: 1;
             height: auto;
-            border: 2px solid red;
+            // border: 2px solid red;
 
             .__anime {
               display: block;
@@ -178,6 +176,82 @@
 
             .__text_mobile {
               display: block;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/// en dessous de 821 et au dessus de 600
+@media only screen and (max-width: 1025px) and (min-width: 600px) {
+  .about {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    height: 100%;
+    justify-content: center;
+
+    .__container {
+      overflow: hidden;
+      width: 100%;
+      height: 100%;
+      max-height: 100%;
+      position: relative;
+      display: flex;
+      // border: 5px solid pink;
+      justify-content: center;
+      align-items: center;
+
+      .__about_content {
+        flex-direction: column;
+
+        .box {
+          text-align: center;
+          display: flex;
+          // border: 4px solid pink;
+          &.__anime_container {
+            flex: 1;
+            height: auto;
+            // border: 2px solid red;
+
+            .__anime {
+              display: block;
+              width: 100%;
+              // height: 100%;
+              height: auto;
+              position: relative;
+            }
+          }
+
+          &.__text {
+            flex-direction: column; // Change the flex direction to column
+            align-items: center; // Center align the text vertically
+            text-align: center; // Center align the text horizontally
+
+            .__regular_text {
+              display: none;
+            }
+
+            .__text_mobile {
+              display: block;
+              padding: 30px;
+              border: 4px solid blue;
+              p {
+                font-size: 22px;
+                line-height: 27px;
+                white-space: pre-wrap;
+              }
+              h1 {
+                font-size: 24px;
+              }
+              h2 {
+                padding: 0 17px 0;
+                font-size: 22px;
+                line-height: 33px;
+                white-space: pre-wrap;
+              }
             }
           }
         }

@@ -11,7 +11,7 @@
     width: 100%;
     font-weight: bolder;
     position: relative;
-    z-index: 2;
+    z-index: 11;
     padding: 1.5rem;
     cursor: pointer;
     &:hover {
@@ -28,7 +28,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     width: 5rem;
-    animation: fadeIn 2s ease-out; /* Utilisez le nom de l'animation et la durée souhaitée */
+    animation: fadeIn 1s ease-out;
     /* Pas besoin de :hover ici, car l'opacité est gérée par l'état isHovered dans le composant React */
   }
 }

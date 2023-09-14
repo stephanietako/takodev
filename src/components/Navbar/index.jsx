@@ -59,6 +59,12 @@ const Navbar = () => {
       <a href="#welcome">
         <img className={styles.__logo} src={logo} alt="Tako dev logo" />
       </a>
+      {/* DESKTOP MENU */}
+      <div className={styles.__nav_menu}>
+        {links.map((link) => {
+          return <Links key={uuidv4()} link={link} onClick={toggleMenu} />;
+        })}
+      </div>
       {/* MOBILE MENU */}
       <div className={styles.__nav_burger_menu}>
         <button
@@ -69,19 +75,12 @@ const Navbar = () => {
           <img src={isOpen ? cross : menu} alt={isOpen ? "Menu" : "Cross"} />
         </button>
         {isOpen && (
-          <div>
+          <div className={styles.__menu_mobile}>
             {linksMobile.map((link) => {
               return <Links key={uuidv4()} link={link} onClick={toggleMenu} />;
             })}
           </div>
         )}
-      </div>
-
-      {/* DESKTOP MENU */}
-      <div className={styles.__nav_menu}>
-        {links.map((link) => {
-          return <Links key={uuidv4()} link={link} onClick={toggleMenu} />;
-        })}
       </div>
     </nav>
   );

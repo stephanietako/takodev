@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useState, useEffect } from "react";
 // Styles
 import styles from "./styles.module.scss";
 // Imports
@@ -6,37 +6,34 @@ import GlitchImg from "../GlitchImg";
 // Assets
 import chevronleft from "../../assets/icon/chevronleft.svg";
 import chevronright from "../../assets/icon/chevronright.svg";
-///////////////
-// const scrollToRef = (ref) => {
-//   if (ref && ref.current) {
-//     ref.current.scrollIntoView({
-//       behavior: "smooth", // Pour un défilement fluide
-//       block: "start", // Défilement pour afficher le haut de l'élément
-//     });
-//   }
-// };
 
-/////////////////
 const About = ({ title, subtitle, text, textmobile }) => {
   ////////////////////
+  const [imgVisible, setImgVisible] = useState(false);
   const ref = useRef(null);
-  const scrollToRef = () => ref.current?.scrollIntoView({ behavior: "smooth" });
-  useEffect(() => {
-    const timer = setTimeout(() => {
+  let timer;
+  const triggerAbout = () => {
+    timer = setTimeout(() => {
       scrollToRef(ref);
     }, 2000); // Déclenche le défilement après 2 secondes
+  };
 
-    return () => clearTimeout(timer); // Nettoie le timer si le composant est démonté avant l'échéance
-  }, []);
+  const scrollToRef = () => ref.current?.scrollIntoView({ behavior: "smooth" });
+  useEffect(() => {
+    if (imgVisible) {
+      triggerAbout();
+    }
+    return () => clearTimeout(timer);
+    // eslint-disable-next-line
+  }, [imgVisible]);
 
-  /////////////////////////
   return (
     <div className={styles.about} id="about">
       <div className={styles.__container}>
         <div className={styles.__about_content}>
           <div className={`${styles.box} ${styles.__anime_container} `}>
             <div className={styles.__anime}>
-              <GlitchImg />
+              <GlitchImg setImgVisible={setImgVisible} />
             </div>
           </div>
           <div className={`${styles.box} ${styles.__text} `}>
