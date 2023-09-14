@@ -7,27 +7,28 @@ import GlitchImg from "../GlitchImg";
 import chevronleft from "../../assets/icon/chevronleft.svg";
 import chevronright from "../../assets/icon/chevronright.svg";
 ///////////////
-const scrollToRef = (ref) => {
-  if (ref && ref.current) {
-    ref.current.scrollIntoView({
-      behavior: "smooth", // Pour un défilement fluide
-      block: "start", // Défilement pour afficher le haut de l'élément
-    });
-  }
-};
+// const scrollToRef = (ref) => {
+//   if (ref && ref.current) {
+//     ref.current.scrollIntoView({
+//       behavior: "smooth", // Pour un défilement fluide
+//       block: "start", // Défilement pour afficher le haut de l'élément
+//     });
+//   }
+// };
 
 /////////////////
 const About = ({ title, subtitle, text, textmobile }) => {
   ////////////////////
-  const scrollToTxt = useRef(null);
+  const ref = useRef(null);
+  const scrollToRef = () => ref.current?.scrollIntoView({ behavior: "smooth" });
   useEffect(() => {
     const timer = setTimeout(() => {
-      scrollToRef(scrollToTxt);
+      scrollToRef(ref);
     }, 2000); // Déclenche le défilement après 2 secondes
 
     return () => clearTimeout(timer); // Nettoie le timer si le composant est démonté avant l'échéance
   }, []);
-  console.log("MYREF !!!!", scrollToTxt.current);
+
   /////////////////////////
   return (
     <div className={styles.about} id="about">
@@ -59,11 +60,7 @@ const About = ({ title, subtitle, text, textmobile }) => {
               </span>
               <p>{text}</p>
             </div>
-            <div
-              ref={scrollToTxt}
-              className={styles.__text_mobile}
-              // id={styles.textAboutMobile}
-            >
+            <div ref={ref} className={styles.__text_mobile}>
               <span>
                 <img
                   className={styles.__icon_left}
