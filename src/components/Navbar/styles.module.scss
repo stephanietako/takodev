@@ -1,5 +1,5 @@
 .navbar {
-  background: transparent;
+  // background: transparent;
   display: flex;
   position: sticky;
   top: 0;
@@ -12,8 +12,8 @@
   padding: 33px;
   &.fixed {
     background: rgb(23, 22, 22);
-    animation: styles_change-background 4s ease-out;
-    opacity: 0.7;
+    animation: styles_change-background 2s ease-in-out;
+    opacity: 0.9;
     z-index: 999;
   }
 
