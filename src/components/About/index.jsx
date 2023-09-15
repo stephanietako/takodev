@@ -65,6 +65,7 @@ const About = ({ title, subtitle, text, textmobile }) => {
                   alt="icon left chevron "
                 />
                 <h1>{title}</h1>
+                <span className={styles.__slash}></span>
                 <img
                   className={styles.__icon_right}
                   src={chevronright}

@@ -4,7 +4,16 @@ const LinesSection = ({ sections }) => {
       {sections.map((section, index) => (
         <div key={section.id}>
           {section.content}
-          {index !== sections.length - 1 && <hr />} {/* Ligne de séparation */}
+          {index !== sections.length - 1 && (
+            <hr
+              style={{
+                width: "30%",
+                margin: "0 auto",
+                opacity: "0.4",
+              }}
+            />
+          )}{" "}
+          {/* Ligne de séparation */}
         </div>
       ))}
     </div>

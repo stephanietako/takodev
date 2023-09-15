@@ -8,60 +8,6 @@ section {
 .sections {
   width: 100%;
   display: block;
-  // height: 90vh;
   height: auto;
   overflow: hidden;
 }
-
-////////////////// RESPONSIVE //////////////
-// /* Medium devices en-dessous de 820 */
-// @media only screen and (max-width: 821px) {
-//   .sections {
-//     //height: 85vh;
-//     height: auto;
-//   }
-// }
-
-// @media screen and (max-width: 768px) {
-//   .sections {
-//     //height: 81vh;
-//     height: auto;
-//   }
-// }
-
-// @media screen and (max-width: 600px) {
-//   section {
-//     height: auto;
-//     //height: 75vh;
-//   }
-// }
-
-// @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
-//   section {
-//     height: 70vh;
-//   }
-// }
-
-// @media (min-width: 430px) and (max-width: 500px) {
-//   section {
-//     height: 72vh;
-//   }
-// }
-
-// @media (min-width: 501px) and (max-width: 600px) {
-//   section {
-//     height: 72vh;
-//   }
-// }
-
-// @media (max-width: 375px) and (min-width: 360px) {
-//   section {
-//     height: 72vh;
-//   }
-// }
-
-// @media (min-width: 320px) and (max-width: 321px) {
-//   section {
-//     height: 70vh;
-//   }
-// }

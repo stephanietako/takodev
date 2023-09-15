@@ -42,26 +42,24 @@
 }
 
 /////////////////// RESPONSIVE ///////////////////////////
-// /* Medium devices such as tablets (768px and up) */
+// /* Medium devices such as tablets (768px and down) */
 @media only screen and (max-width: 48em) {
   .link {
-    a {
-      // text-decoration: none;
-      // font-size: 24px;
-      // padding: 4px 7px 11px 0px;
-      // width: 100%;
-      // font-weight: bolder;
-      // position: relative;
-      // z-index: 2;
-      // padding: 1.5rem;
-      // cursor: pointer;
-      // border: 3px solid black;
-      &:hover {
-        color: gray;
-      }
-    }
     .__hoverImage {
       display: none;
+    }
+    a {
+      &::after {
+        content: "";
+        display: block;
+        margin: 12px auto;
+        width: 22px;
+        height: 2px;
+        background: gray;
+      }
+    }
+    &:hover {
+      color: gray;
     }
   }
 }

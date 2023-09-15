@@ -26,7 +26,7 @@ const Navbar = () => {
   //navbar color state change managment
   const [fix, setFix] = useState(false);
   const setFixed = () => {
-    if (window.scrollY >= 111) {
+    if (window.scrollY >= 114) {
       setFix(true);
     } else {
       setFix(false);
