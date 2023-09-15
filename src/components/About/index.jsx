@@ -8,7 +8,6 @@ import chevronleft from "../../assets/icon/chevronleft.svg";
 import chevronright from "../../assets/icon/chevronright.svg";
 
 const About = ({ title, subtitle, text, textmobile }) => {
-  ////////////////////
   const [imgVisible, setImgVisible] = useState(false);
   const ref = useRef(null);
   let timer;

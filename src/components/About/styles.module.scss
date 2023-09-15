@@ -10,7 +10,6 @@
     max-height: 100%;
     position: relative;
     display: flex;
-    // border: 5px solid pink;
     justify-content: center;
     align-items: center;
 
@@ -18,12 +17,10 @@
       width: 100%;
       height: auto;
       display: flex;
-      // border: 4px solid turquoise;
 
       .box {
         text-align: center;
         display: flex;
-        // border: 4px solid pink;
         &.__anime_container {
           flex: 1;
           height: auto;
@@ -96,7 +93,6 @@
           .__text_mobile {
             flex-direction: column;
             width: auto;
-            // height: auto;
             text-align: start;
             align-self: center;
             justify-content: center;
@@ -105,7 +101,6 @@
             padding: 30px 22px;
             background-color: #000;
             min-height: 100vh;
-            border: 3px solid green;
             p {
               font-size: 17px;
               line-height: 27px;
@@ -143,7 +138,6 @@
       max-height: 100%;
       position: relative;
       display: flex;
-      // border: 5px solid pink;
       justify-content: center;
       align-items: center;
 
@@ -153,11 +147,9 @@
         .box {
           text-align: center;
           display: flex;
-          // border: 4px solid pink;
           &.__anime_container {
             flex: 1;
             height: auto;
-            // border: 2px solid red;
 
             .__anime {
               display: block;
