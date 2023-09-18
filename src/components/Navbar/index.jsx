@@ -22,7 +22,7 @@ const Navbar = () => {
       navigationHeight
     );
   }, [navbarElement]);
-  ////////////////////////////////////////////////////////
+
   //navbar color state change managment
   const [fix, setFix] = useState(false);
   const setFixed = () => {
@@ -33,11 +33,11 @@ const Navbar = () => {
     }
   };
   window.addEventListener("scroll", setFixed);
-  ///////////////////////////////////////////////////////////
+
   // menu state change management
   const [isOpen, setIsOpen] = useState(false);
   const toggleMenu = () => setIsOpen(!isOpen);
-  //////////////////////////////////////////////////////////////
+
   // Main navbar menu
   const links = [
     { name: "Accueil", target: "#welcome" },
