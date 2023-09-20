@@ -17,7 +17,7 @@ const Tentacles = () => {
     return null; // Retourne null lorsque n atteint 0
   };
 
-  const tentacles = 10;
+  const tentacles = 1;
   let n = tentacles; // Déclaration de n avec let pour pouvoir le modifier
 
   const tentacleElements = []; // Je stocke les éléments de tentacules
@@ -26,7 +26,7 @@ const Tentacles = () => {
   while (n > 0) {
     tentacleElements.push(
       <div className={`_${tentacles - n + 1} ${styles.tentacle}`} key={n}>
-        {renderDivs(55)}
+        {renderDivs(75)}
         {/* Appel de la fonction pour générer des div imbriqués */}
       </div>
     );

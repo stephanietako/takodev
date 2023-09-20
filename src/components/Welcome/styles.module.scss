@@ -6,13 +6,13 @@
   align-items: center;
   position: relative;
 }
-.__container {
+.__welcome_container {
   overflow: hidden;
   width: 100%;
   margin: 0 auto;
   position: relative;
   display: flex;
-  flex-direction: column;
+  // flex-direction: column;
   align-items: center;
   height: 90vh;
 
@@ -20,17 +20,19 @@
     width: 100%;
     height: auto;
     display: flex;
+    justify-content: center;
     flex-direction: column;
     // border: 2px solid yellow;
     .box {
       display: flex;
       text-align: center;
-      // border: 2px solid yellow;
+      //border: 2px solid yellow;
       &.logo_container {
+        width: auto;
         height: auto;
-        margin: auto;
+        // margin: auto;
         justify-content: center;
-        flex-direction: column;
+        //flex-direction: column;
         padding: 22px;
 
         .__logo {
@@ -38,7 +40,8 @@
           height: auto;
           width: 100%;
           align-self: center;
-          justify-content: flex-end;
+          justify-content: center;
+          // justify-content: flex-end;
 
           img {
             max-width: 24rem;
@@ -48,6 +51,14 @@
         }
       }
 
+      &.__tentacles_container {
+        height: auto;
+        width: 5%;
+        border: 3px solid red;
+        // justify-content: center;
+        // flex-direction: column;
+        // padding: 22px;
+      }
       // &.button_box {
       //   flex: 1;
       // }
@@ -88,7 +99,9 @@
 //////////////////////// RESPONSIVE ///////////////////////////////
 @media only screen and (max-width: 48em) {
   .__container {
+    flex-direction: column;
     .__bloc {
+      flex-direction: column;
       .box {
         text-align: center;
         &.logo_container {
@@ -114,7 +127,9 @@
 
 @media only screen and (max-width: 600px) {
   .__container {
+    flex-direction: column;
     .__bloc {
+      flex-direction: column;
       .box {
         text-align: center;
         &.logo_container {
@@ -147,7 +162,9 @@
 
 @media only screen and (max-width: 500px) {
   .__container {
+    flex-direction: column;
     .__bloc {
+      flex-direction: column;
       .box {
         text-align: center;
         &.logo_container {

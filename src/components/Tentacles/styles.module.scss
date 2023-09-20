@@ -1,11 +1,12 @@
 .container {
   position: absolute;
-  top: 40%;
-  left: 44%;
-  height: 5em;
-  width: 5em;
+  top: 37%;
+  left: 34%;
+
+  height: 2em;
+  width: 1em;
   border: 2px solid red;
-  transform: translateY(-3.5em) translate(-50%, -50%) rotate(81deg);
+  transform: translateY(-3.5em) translate(-50%, -50%) rotate(80deg);
 
   // position: absolute;
   // top: 40%;
@@ -51,17 +52,17 @@
     font-size: 0.9em;
     // height: 4em;
     // width: 2em;
-    height: 11em;
+    height: 8em;
     width: 3em;
     border-radius: 100% 100%;
     background: gray;
     // box-shadow: 0.1em -0.8em 0 white inset, 0 0 0 0.3em inset;
     box-shadow: -0.1em 0.1em 0 mix(white, black, 80%) inset;
     position: absolute;
-    top: 25%;
-    left: 50%;
+    // top: 25%;
+    // left: 50%;
     animation: rotation 3s ease-in-out alternate infinite;
-    border: 3px solid yellow;
+    // border: 3px solid yellow;
 
     // top: auto;
     // bottom: -3em;
@@ -85,13 +86,13 @@
     // }
 
     .__tentacles {
-      border: 3px solid red;
+      border: 0.5px solid whitesmoke;
       top: auto;
-      bottom: -3em;
+      bottom: -2.5em;
       left: auto;
       right: 0;
-      transform: rotate(5deg);
-      transform-origin: 100% 100%;
+      // transform: rotate(5deg);
+      // transform-origin: 100% 100%;
       &::before {
         content: "";
         position: absolute;
@@ -99,12 +100,13 @@
         top: 50%;
         right: 100%;
         background: #000;
-        height: 0.7em;
-        width: 0.3em;
-        margin: -0.35em -0.15em;
+        margin: -2.1em -0.3em;
+
+        height: 1.9em;
+        width: 0.8em;
         border-radius: 100%;
         border-color: aliceblue;
-        box-shadow: -0.1em 0.1em 0 inset, 0 0 0 0.1em inset;
+        box-shadow: -0.3em 0.1em 0 inset, 0 0 0 0.1em inset;
       }
     }
   }

@@ -9,7 +9,13 @@ body {
   // width: 100%;
   min-height: 100vh;
   line-height: 1;
-  background-color: #000;
+  background: linear-gradient(
+    90deg,
+    rgba(33, 33, 32, 1) 0%,
+    rgba(33, 33, 32, 1) 0%,
+    rgba(1, 13, 33, 0.96) 50%,
+    rgba(1, 4, 46, 1) 100%
+  );
   font-family: "Georama", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -21,4 +27,5 @@ a {
   text-decoration: none;
   list-style-type: none;
   color: #fff;
+  cursor: pointer;
 }

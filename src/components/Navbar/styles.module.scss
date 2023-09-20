@@ -1,5 +1,11 @@
 .navbar {
-  // background: transparent;
+  background: linear-gradient(
+    90deg,
+    rgba(33, 33, 32, 1) 0%,
+    rgba(33, 33, 32, 1) 0%,
+    rgba(1, 13, 33, 0.96) 50%,
+    rgba(1, 4, 46, 1) 100%
+  );
   display: flex;
   position: sticky;
   top: 0;
@@ -8,8 +14,16 @@
   height: 114px;
   justify-content: space-between;
   padding: 33px;
+
   &.fixed {
-    background: rgb(23, 22, 22);
+    background: linear-gradient(
+      90deg,
+      rgba(33, 33, 32, 1) 0%,
+      rgba(33, 33, 32, 1) 0%,
+      rgba(1, 13, 33, 0.96) 50%,
+      rgba(1, 4, 46, 1) 100%
+    );
+    // background: rgb(23, 22, 22);
     animation: styles_change-background 2s ease-in-out;
     opacity: 0.9;
     z-index: 999;
@@ -110,7 +124,7 @@
 
 @media (min-width: 768px) {
   .navbar {
-    background: #000;
+    // background: #000;
     z-index: 999;
     .__nav_menu {
       display: none;
@@ -123,7 +137,7 @@
 
 @media (min-width: 501px) {
   .navbar {
-    background: #000;
+    // background: #000;
     z-index: 999;
     .__nav_menu {
       display: none;
@@ -136,7 +150,7 @@
 
 @media (max-width: 500px) and (min-width: 300px) {
   .navbar {
-    background: #000;
+    // background: #000;
     z-index: 999;
     .__nav_menu {
       display: none;
@@ -149,7 +163,7 @@
 
 @media (max-width: 501px) and (min-width: 320px) {
   .navbar {
-    background: #000;
+    // background: #000;
     z-index: 999;
     .__nav_burger_menu {
       display: block;
@@ -159,7 +173,7 @@
 
 @media (min-width: 320px) {
   .navbar {
-    background: #000;
+    // background: #000;
     z-index: 999;
     .__nav_burger_menu {
       display: block;
