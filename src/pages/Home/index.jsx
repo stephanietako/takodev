@@ -2,13 +2,14 @@ import Navbar from "../../components/Navbar";
 import Welcome from "../../components/Welcome";
 import LinesSection from "../../components/LinesSection";
 import About from "../../components/About";
+import Projects from "../../components/Projects";
+import Footer from "../../components/Footer";
 // Logos
 import logotako from "../../assets/logo/takodev-logo-white.png";
 // Images
 import picthome from "../../assets/images/picthome.jpg";
 // Styles
 import styles from "./styles.module.scss";
-import Projects from "../../components/Projects";
 
 const Home = () => {
   const sections = [
@@ -68,6 +69,7 @@ const Home = () => {
       <div>
         <LinesSection sections={sections} />
       </div>
+      <Footer />
     </>
   );
 };
