@@ -1,15 +1,13 @@
 .wrapper {
   display: flex;
-  width: 90%;
-  justify-content: space-around;
-  margin: auto;
+  padding: 2rem;
 
   .card {
-    width: 380px;
-    height: 460px;
+    width: 280px;
+    height: 360px;
     border-radius: 15px;
     padding: 1.5rem;
-    background: white;
+    background: #fff;
     position: relative;
     display: flex;
     align-items: flex-end;
@@ -48,8 +46,7 @@
     }
 
     .__btn_link {
-      padding: 0.6rem;
-      color: red;
+      color: gray;
       font-weight: bold;
       cursor: pointer;
     }
@@ -70,13 +67,14 @@
     }
 
     img {
-      width: 100%;
+      max-width: 100%;
       height: 100%;
       object-fit: cover;
       position: absolute;
       top: 0;
       left: 0;
       border-radius: 15px;
+      flex-direction: column;
     }
   }
 }
