@@ -1,0 +1,53 @@
+.footer {
+  display: flex;
+  bottom: 0;
+  width: 100%;
+  max-height: 50%;
+  height: 50%;
+
+  .__container {
+    display: flex;
+    align-items: center;
+    bottom: 0;
+    width: 100%;
+    color: gray;
+    background: #000;
+    height: 5rem;
+    max-height: 5rem;
+
+    .__logo {
+      width: auto;
+      max-height: 2rem;
+    }
+
+    .__copyright {
+      display: flex;
+      flex-wrap: wrap;
+      color: gray;
+      font-size: 14px;
+      width: 100%;
+    }
+
+    ul {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      list-style-type: none;
+      width: auto;
+      height: auto;
+
+      li {
+        padding: 10px;
+        font-size: small;
+
+        a {
+          color: #fff;
+          font-size: 11px;
+          &:hover {
+            color: gray;
+          }
+        }
+      }
+    }
+  }
+}
