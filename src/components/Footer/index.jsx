@@ -24,7 +24,7 @@ const Footer = () => {
           </li>
           <li>
             <div className={styles.__copyright}>
-              &#169; Copyright {currentYear} | Tako Dev |
+              &#169; Copyright {currentYear} | Tako Dev
             </div>
           </li>
         </ul>
