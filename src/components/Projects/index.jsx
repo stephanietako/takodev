@@ -33,16 +33,10 @@ const Projects = () => {
         title={data.title}
         content={data.content}
         image={data.image}
-        // link={data.link}
+        link={data.link}
       />
     ));
   };
-  return (
-    <>
-      <div className={styles.container}>
-        <div className={styles.__container_cards}> {generateCards()}</div>
-      </div>
-    </>
-  );
+  return <div className={styles.__container_cards}> {generateCards()}</div>;
 };
 export default Projects;
