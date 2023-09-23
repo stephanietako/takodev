@@ -46,9 +46,12 @@
 @media only screen and (max-width: 1024px) {
   .link {
     .__hoverImage {
-      display: none;
+      display: block;
     }
     a {
+      &:hover {
+        opacity: 2;
+      }
       &::after {
         content: "";
         display: block;
@@ -57,9 +60,6 @@
         height: 2px;
         background: gray;
       }
-    }
-    &:hover {
-      color: gray;
     }
   }
 }
