@@ -66,7 +66,12 @@ const Navbar = () => {
         {isOpen && (
           <div className={styles.__menu_mobile}>
             {links.map((link) => (
-              <Links key={uuidv4()} link={link} onClick={toggleMenu} />
+              <Links
+                key={uuidv4()}
+                link={link}
+                onClick={toggleMenu}
+                isMobileMenuActive={isOpen}
+              />
             ))}
           </div>
         )}
