@@ -10,6 +10,7 @@ import logotako from "../../assets/logo/takodev-logo-white.png";
 import picthome from "../../assets/images/picthome.jpg";
 // Styles
 import styles from "./styles.module.scss";
+import Contact from "../../components/Contact";
 
 const Home = () => {
   const sections = [
@@ -58,6 +59,18 @@ const Home = () => {
       content: (
         <div className={styles.sections} id="projects">
           <Projects />
+        </div>
+      ),
+    },
+
+    {
+      id: "contact",
+      content: (
+        <div className={styles.sections} id="contact">
+          <Contact
+            title={"BOX GAUCHE CONTACT FORM"}
+            content={"paragraphe  !!!!!"}
+          />
         </div>
       ),
     },
