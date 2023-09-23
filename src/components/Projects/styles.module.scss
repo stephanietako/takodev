@@ -1,9 +1,10 @@
 .__container_cards {
   display: flex;
   width: 100%;
-  height: auto;
+  // height: auto;
   align-items: center;
   flex-wrap: wrap;
   justify-content: space-around;
   border: 2px solid gray;
+  height: 100%;
 }
