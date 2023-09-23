@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
+// Styles
 import styles from "./styles.module.scss";
+// Assets
 import logo from "../../assets/logo/takodev-logo-white.png";
 
 const Footer = () => {
