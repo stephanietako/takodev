@@ -2,22 +2,17 @@
 import styles from "./styles.module.scss";
 // Imports
 import Form from "../Form";
-// import imgCard1 from "../../assets/images/nasa.jpg";
-const Contact = ({ title, content, image, alt }) => {
+// Assets
+import imgcontact from "../../assets/images/nasa.jpg";
+
+const Contact = () => {
   return (
-    <div className={styles.contact} id="contact">
-      <div className={styles.container}>
-        <div className={`${styles.box} ${styles.__left_container} `}>
-          <img src={image} alt={alt}></img>
-          <div className={styles.__infoBox}>
-            <h2>{title}</h2>
-            <p>{content}</p>
-          </div>
-        </div>
-        <div className={`${styles.box} ${styles.__form_container} `}>
-          <Form />
-        </div>
-      </div>
+    <div className={styles.__container_contact}>
+      <Form
+        content={"LEFT CONTENT Paragraphe"}
+        title={"TITRE"}
+        image={imgcontact}
+      />
     </div>
   );
 };
