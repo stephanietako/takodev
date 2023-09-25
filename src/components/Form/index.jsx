@@ -1,9 +1,10 @@
 import React, { useState } from "react";
+// Styles
 import styles from "./styles.module.scss";
 
 const InputField = ({ name, label, value, onChange, error }) => {
   return (
-    <div className={styles.__form_element}>
+    <>
       <label htmlFor={name}>{label}:</label>
       <input
         type="text"
@@ -14,11 +15,11 @@ const InputField = ({ name, label, value, onChange, error }) => {
         placeholder={`Ton ${label.toLowerCase()} ici`}
       />
       {error && <div className={styles.error}>{error}</div>}
-    </div>
+    </>
   );
 };
 
-const Form = () => {
+const Form = ({ title, content, image, alt }) => {
   const [formData, setFormData] = useState({
     name: "",
     lastName: "",
@@ -76,42 +77,63 @@ const Form = () => {
   };
 
   return (
-    <div className={styles.form}>
-      <form onSubmit={handleSubmit} className={styles.__container_form}>
-        <InputField
-          name="name"
-          label="Name"
-          value={formData.name}
-          onChange={handleChange}
-          error={errors.name}
-        />
-        <InputField
-          name="lastName"
-          label="LastName"
-          value={formData.lastName}
-          onChange={handleChange}
-          error={errors.lastName}
-        />
-        <InputField
-          name="email"
-          label="Email"
-          value={formData.email}
-          onChange={handleChange}
-          error={errors.email}
-        />
-        <div className={styles.__form_element}>
-          <label htmlFor="message">Message:</label>
-          <textarea
-            id="message"
-            name="message"
-            value={formData.message}
-            onChange={handleChange}
-            placeholder="Ton message ici"
-          />
+    <>
+      <div className={styles.__left_content}>
+        <div className={styles.__image}>
+          <img src={image} alt={alt}></img>
         </div>
-        <button type="submit">Submit</button>
-      </form>
-    </div>
+        <div className={styles.__infoBox}>
+          <span>
+            <h2>{title}</h2>
+            <p>{content}</p>
+          </span>
+        </div>
+      </div>
+      {/* Form */}
+      <div className={styles.__right_content}>
+        <form onSubmit={handleSubmit} className={styles.__container_form}>
+          <div className={styles.__form_element}>
+            <InputField
+              name="name"
+              label="Name"
+              value={formData.name}
+              onChange={handleChange}
+              error={errors.name}
+            />
+          </div>
+          <div className={styles.__form_element}>
+            <InputField
+              name="lastName"
+              label="LastName"
+              value={formData.lastName}
+              onChange={handleChange}
+              error={errors.lastName}
+            />
+          </div>
+
+          <div className={styles.__form_element}>
+            <InputField
+              name="email"
+              label="Email"
+              value={formData.email}
+              onChange={handleChange}
+              error={errors.email}
+            />
+          </div>
+          <div className={styles.__form_element}>
+            <label htmlFor="message">Message:</label>
+            <textarea
+              id="message"
+              name="message"
+              value={formData.message}
+              onChange={handleChange}
+              placeholder="Ton message ici"
+            />
+          </div>
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+    </>
   );
 };
 
