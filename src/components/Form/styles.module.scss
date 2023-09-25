@@ -75,6 +75,7 @@
         padding: 0.7rem 0;
         outline: none;
         background: transparent;
+        color: whitesmoke;
       }
 
       textarea {
@@ -87,9 +88,11 @@
         resize: none;
         outline: none;
         background: transparent;
+        color: whitesmoke;
       }
     }
     button {
+      padding: 0.7rem 0;
       height: 3.2rem;
       width: 14rem;
       font-size: 2rem;
