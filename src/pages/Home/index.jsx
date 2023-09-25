@@ -4,13 +4,13 @@ import LinesSection from "../../components/LinesSection";
 import About from "../../components/About";
 import Projects from "../../components/Projects";
 import Footer from "../../components/Footer";
+import Contact from "../../components/Contact";
 // Logos
 import logotako from "../../assets/logo/takodev-logo-white.png";
 // Images
 import picthome from "../../assets/images/picthome.jpg";
 // Styles
 import styles from "./styles.module.scss";
-import Contact from "../../components/Contact";
 
 const Home = () => {
   const sections = [
@@ -67,10 +67,7 @@ const Home = () => {
       id: "contact",
       content: (
         <div className={styles.sections} id="contact">
-          <Contact
-            title={"BOX GAUCHE CONTACT FORM"}
-            content={"paragraphe  !!!!!"}
-          />
+          <Contact />
         </div>
       ),
     },
