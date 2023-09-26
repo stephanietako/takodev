@@ -1,10 +1,13 @@
 import { useState, useRef, useEffect } from "react";
 import { v4 as uuidv4 } from "uuid";
+import Links from "../Links";
+// Assets
 import logo from "../../assets/logo/takodev-logo-white.png";
 import menu from "../../assets/icon/menu.svg";
 import cross from "../../assets/icon/cross.svg";
-import Links from "../Links";
+// Styles
 import styles from "./styles.module.scss";
+import IconContact from "../IconContact";
 
 const Navbar = () => {
   const navbarElement = useRef(null);
@@ -39,7 +42,7 @@ const Navbar = () => {
     { name: "Accueil", target: "#welcome" },
     { name: "Projets", target: "#projects" },
     { name: "A Propos", target: "#about" },
-    { name: "Contact", target: "#contact" },
+    // { name: "Contact", target: "#contact" },
   ];
 
   return (
@@ -75,6 +78,9 @@ const Navbar = () => {
             ))}
           </div>
         )}
+      </div>
+      <div className={styles.__icons}>
+        <IconContact />
       </div>
     </nav>
   );

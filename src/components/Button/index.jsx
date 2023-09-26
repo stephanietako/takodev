@@ -14,7 +14,7 @@ const ButtonStyle = ({ text, link }) => {
     <div className={styles.container}>
       <a
         href={target}
-        className={styles.__btn}
+        className={styles.__space_btn}
         type="button"
         onClick={handleClick}
       >

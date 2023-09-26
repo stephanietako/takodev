@@ -1,10 +1,11 @@
 import { useState } from "react";
+// Styles
 import styles from "./styles.module.scss";
+// Assets
 import crossImage from "../../assets/icon/crossgray.svg";
 
 const Links = ({ link, onClick, isMobileMenuActive }) => {
   const { name, target } = link;
-
   const [isHovered, setIsHovered] = useState(false); // État pour gérer le survol
 
   return (

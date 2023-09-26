@@ -6,29 +6,30 @@
 
   .__image {
     display: flex;
-    width: 49rem;
+    max-width: 49rem;
+    width: auto;
+    height: auto;
 
     img {
-      height: 100%;
-      object-fit: cover;
       width: auto;
+      height: auto;
+      object-fit: cover;
+      width: 100%;
       object-fit: contain;
       display: block;
-      width: 100%;
+      border-radius: 22px;
     }
   }
 
   .__infoBox {
     display: flex;
     position: absolute;
-    flex-direction: column;
     background: rgba(0, 0, 0, 0.6);
-    display: flex;
-    position: absolute;
     flex-direction: column;
-    background: rgba(0, 0, 0, 0.6);
     width: 100%;
     height: 100%;
+    border-radius: 22px;
+    border: 2px solid gray;
 
     span {
       width: auto;
@@ -96,12 +97,171 @@
       width: 14rem;
       font-size: 2rem;
       background: transparent;
-      // background: linear-gradient(to right, #4d4c50, #08033b);
       color: #fff;
       border-radius: 22px;
       margin: auto;
       cursor: pointer;
       margin-top: 1rem;
+      border: 2px solid gray;
+    }
+  }
+}
+//////////////////////// RESPONSIVE ///////////////////////////////
+@media only screen and (max-width: 48em) {
+  .__left_content {
+    .__image {
+      width: 19rem;
+    }
+  }
+  .__right_content {
+    .__container_form {
+      width: 19rem;
+      .__form_element {
+        label {
+          color: grey;
+          font-size: 2.5rem;
+          justify-content: left;
+          justify-content: end;
+          text-align: left;
+        }
+
+        input {
+          border: none;
+          border-bottom: 0.1rem solid #cccccc;
+          width: 100%;
+          margin-bottom: 1rem;
+          font-size: 1.5rem;
+          padding: 0.7rem 0;
+          outline: none;
+          background: transparent;
+          color: whitesmoke;
+        }
+
+        textarea {
+          border: none;
+          border-bottom: 0.1rem solid #e6e6e6;
+          width: 100%;
+          padding: 0.7rem 0;
+          margin-bottom: 1rem;
+          font-size: 1.5rem;
+          resize: none;
+          outline: none;
+          background: transparent;
+          color: whitesmoke;
+        }
+      }
+      button {
+        height: 2.2rem;
+        width: 10rem;
+        font-size: 1.5rem;
+        margin-top: 1rem;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .__left_content {
+    .__image {
+      width: 19rem;
+    }
+  }
+  .__right_content {
+    .__container_form {
+      width: 19rem;
+      .__form_element {
+        label {
+          color: grey;
+          font-size: 1.5rem;
+          justify-content: left;
+          justify-content: end;
+          text-align: left;
+        }
+
+        input {
+          border: none;
+          border-bottom: 0.1rem solid #cccccc;
+          width: 100%;
+          margin-bottom: 1rem;
+          font-size: 1.5rem;
+          padding: 0.7rem 0;
+          outline: none;
+          background: transparent;
+          color: whitesmoke;
+        }
+
+        textarea {
+          border: none;
+          border-bottom: 0.1rem solid #e6e6e6;
+          width: 100%;
+          padding: 0.7rem 0;
+          margin-bottom: 1rem;
+          font-size: 1.5rem;
+          resize: none;
+          outline: none;
+          background: transparent;
+          color: whitesmoke;
+        }
+      }
+      button {
+        height: 2.2rem;
+        width: 10rem;
+        font-size: 1.5rem;
+        margin-top: 1rem;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .__left_content {
+    .__image {
+      width: 19rem;
+    }
+  }
+  .__right_content {
+    .__container_form {
+      width: 19rem;
+      .__form_element {
+        label {
+          color: grey;
+          font-size: 1.5rem;
+          justify-content: left;
+          justify-content: end;
+          text-align: left;
+        }
+
+        input {
+          border: none;
+          border-bottom: 0.1rem solid #cccccc;
+          width: 100%;
+          margin-bottom: 1rem;
+          font-size: 1rem;
+          padding: 0.7rem 0;
+          outline: none;
+          background: transparent;
+          color: whitesmoke;
+        }
+
+        textarea {
+          border: none;
+          border-bottom: 0.1rem solid #e6e6e6;
+          width: 100%;
+          padding: 0.7rem 0;
+          margin-bottom: 1rem;
+          font-size: 1rem;
+          resize: none;
+          outline: none;
+          background: transparent;
+          color: whitesmoke;
+        }
+      }
+      button {
+        height: 2.2rem;
+        width: 10rem;
+        font-size: 1.5rem;
+        margin-top: 1rem;
+      }
     }
   }
 }

@@ -5,23 +5,20 @@ import ButtonStyle from "../Button";
 
 const Welcome = ({ text, textmobile, logo, altLogo }) => {
   const linkToAbout = {
-    name: "À propos",
-    target: "#about",
+    name: "Contact",
+    target: "#contact",
   };
 
   return (
-    <div className={styles.blocs}>
-      <div className={styles.__welcome_container}>
-        <div className={styles.__bloc}>
-          <div className={`${styles.box} ${styles.logo_container} `}>
-            <div className={styles.__logo}>
-              <img src={logo} alt={altLogo} />
-            </div>
+    <div className={styles.welcome}>
+      <div className={styles.main_container}>
+        <div className={styles.logo_container}>
+          <div className={styles.__logo}>
+            <img src={logo} alt={altLogo} />
           </div>
-          {/* <div className={`${styles.box} ${styles.__tentacles_container} `}>
-            <Tentacles />
-          </div> */}
-          <div className={`${styles.box} ${styles.home_text} `}>
+        </div>
+        <div className={styles.__container}>
+          <div className={styles.text}>
             <span className={styles.__regular_text}>
               <p>{text}</p>
             </span>
@@ -29,7 +26,7 @@ const Welcome = ({ text, textmobile, logo, altLogo }) => {
               <p>{textmobile}</p>
             </span>
           </div>
-          <div className={`${styles.box} ${styles.button_box} `}>
+          <div className={styles.__button_box}>
             <ButtonStyle link={linkToAbout} />
           </div>
         </div>
