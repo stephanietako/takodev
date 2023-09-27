@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import IconContact from "../IconContact";
 // Styles
 import styles from "./styles.module.scss";
-
+// Assets
+import arrow from "../../assets/icon/arrowgray.png";
 const InputField = ({ name, label, value, onChange, error }) => {
   return (
     <>
@@ -21,6 +22,16 @@ const InputField = ({ name, label, value, onChange, error }) => {
 };
 
 const Form = ({ title, content, image, alt }) => {
+  const [textVisible, setTextVisible] = useState(false);
+  const rightContentRef = useRef(null);
+
+  const toggleText = () => {
+    setTextVisible(!textVisible);
+    if (rightContentRef.current) {
+      rightContentRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   const [formData, setFormData] = useState({
     name: "",
     lastName: "",
@@ -82,6 +93,10 @@ const Form = ({ title, content, image, alt }) => {
       <div className={styles.__left_content}>
         <div className={styles.__image}>
           <img src={image} alt={alt}></img>
+          <span className={styles.__arrow}>
+            {" "}
+            <img src={arrow} alt={"arrow icon"} onClick={toggleText} />
+          </span>
         </div>
         <div className={styles.__infoBox}>
           <span>
@@ -90,8 +105,9 @@ const Form = ({ title, content, image, alt }) => {
           </span>
         </div>
       </div>
+
       {/* Form */}
-      <div className={styles.__right_content}>
+      <div className={styles.__right_content} ref={rightContentRef}>
         <form onSubmit={handleSubmit} className={styles.__container_form}>
           <div className={styles.__form_element}>
             <InputField

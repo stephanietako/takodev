@@ -19,6 +19,18 @@
       display: block;
       border-radius: 22px;
     }
+
+    .__arrow {
+      width: auto;
+      height: auto;
+      display: none;
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%);
+      bottom: 0;
+      cursor: pointer;
+      z-index: 1;
+    }
   }
 
   .__infoBox {
@@ -121,6 +133,9 @@
   .__left_content {
     .__image {
       width: 19rem;
+      .__arrow {
+        display: block;
+      }
     }
   }
   .__right_content {
@@ -177,6 +192,9 @@
   .__left_content {
     .__image {
       width: 19rem;
+      .__arrow {
+        display: block;
+      }
     }
   }
   .__right_content {
@@ -233,6 +251,9 @@
   .__left_content {
     .__image {
       width: 19rem;
+      .__arrow {
+        display: block;
+      }
     }
   }
   .__right_content {
@@ -240,7 +261,7 @@
       width: 19rem;
       .__form_element {
         label {
-          color: grey;
+          color: gray;
           font-size: 1.5rem;
           justify-content: left;
           justify-content: end;
