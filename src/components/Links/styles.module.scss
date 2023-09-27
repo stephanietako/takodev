@@ -2,7 +2,8 @@
   display: flex;
   align-items: center;
   position: relative;
-  width: 100%;
+  width: auto;
+  height: auto;
 
   a {
     text-decoration: none;
@@ -32,6 +33,7 @@
     /* Pas besoin de :hover ici, car l'opacité est gérée par l'état isHovered dans le composant React */
   }
 }
+
 @keyframes fadeIn {
   from {
     opacity: 0;

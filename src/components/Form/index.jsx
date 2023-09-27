@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import IconContact from "../IconContact";
 // Styles
 import styles from "./styles.module.scss";
 
@@ -131,6 +132,9 @@ const Form = ({ title, content, image, alt }) => {
             />
           </div>
           <button type="submit">Submit</button>
+          <div className={styles.__icons}>
+            <IconContact />
+          </div>
         </form>
       </div>
     </>

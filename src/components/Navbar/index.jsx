@@ -1,13 +1,13 @@
 import { useState, useRef, useEffect } from "react";
 import { v4 as uuidv4 } from "uuid";
 import Links from "../Links";
+import IconContact from "../IconContact";
 // Assets
 import logo from "../../assets/logo/takodev-logo-white.png";
 import menu from "../../assets/icon/menu.svg";
 import cross from "../../assets/icon/cross.svg";
 // Styles
 import styles from "./styles.module.scss";
-import IconContact from "../IconContact";
 
 const Navbar = () => {
   const navbarElement = useRef(null);
@@ -42,7 +42,6 @@ const Navbar = () => {
     { name: "Accueil", target: "#welcome" },
     { name: "Projets", target: "#projects" },
     { name: "A Propos", target: "#about" },
-    // { name: "Contact", target: "#contact" },
   ];
 
   return (
@@ -50,14 +49,20 @@ const Navbar = () => {
       ref={navbarElement}
       className={fix ? `${styles.navbar} ${styles.fixed}` : `${styles.navbar}`}
     >
-      <a href="#welcome">
-        <img className={styles.__logo} src={logo} alt="Tako dev logo" />
-      </a>
       <div className={styles.__nav_menu}>
-        {links.map((link) => (
-          <Links key={uuidv4()} link={link} onClick={toggleMenu} />
-        ))}
+        <a href="#welcome">
+          <img className={styles.__logo} src={logo} alt="Tako dev logo" />
+        </a>
+        <div className={styles.__menu_content}>
+          {links.map((link) => (
+            <Links key={uuidv4()} link={link} onClick={toggleMenu} />
+          ))}
+          <div className={styles.__icons}>
+            <IconContact />
+          </div>
+        </div>
       </div>
+
       <div className={styles.__nav_burger_menu}>
         <button
           className={styles.__summ}
@@ -78,9 +83,6 @@ const Navbar = () => {
             ))}
           </div>
         )}
-      </div>
-      <div className={styles.__icons}>
-        <IconContact />
       </div>
     </nav>
   );
