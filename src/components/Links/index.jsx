@@ -18,7 +18,7 @@ const Links = ({ link, onClick, isMobileMenuActive }) => {
         <a
           href={target}
           onClick={onClick}
-          style={{ color: isHovered ? "blue" : "white" }}
+          style={{ color: isHovered ? "gray" : "white" }}
         >
           {name}
         </a>

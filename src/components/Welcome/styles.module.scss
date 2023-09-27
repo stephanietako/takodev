@@ -17,7 +17,7 @@
     justify-content: center;
 
     .logo_container {
-      width: auto;
+      max-width: 33rem;
       height: auto;
       justify-content: center;
       padding: 3rem;
@@ -97,12 +97,14 @@
   }
 }
 //////////////////////// RESPONSIVE ///////////////////////////////
-@media only screen and (max-width: 48em) {
+@media only screen and (max-width: 1025px) and (min-width: 600px) {
   .welcome {
     flex-direction: column;
     .main_container {
       flex-direction: column;
       .logo_container {
+        width: 29rem;
+        margin-top: 7rem;
         .__logo {
           img {
             width: 17rem;
@@ -123,7 +125,6 @@
         }
 
         .__button_box {
-          display: block;
           margin-top: 1rem;
         }
       }
@@ -131,15 +132,18 @@
   }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 500px) {
   .welcome {
     flex-direction: column;
     .main_container {
       flex-direction: column;
       .logo_container {
+        justify-content: center;
+        align-items: center;
+        margin: 22px auto;
         .__logo {
           img {
-            width: 14rem;
+            width: 12rem;
           }
         }
       }
@@ -157,43 +161,8 @@
           }
         }
         .__button_box {
-          display: block;
           margin-top: 1rem;
         }
-      }
-    }
-  }
-}
-
-@media only screen and (max-width: 500px) {
-  .welcome {
-    flex-direction: column;
-    .main_container {
-      flex-direction: column;
-      .logo_container {
-        .__logo {
-          img {
-            width: 14rem;
-          }
-        }
-      }
-      .__container {
-        .text {
-          padding: 1rem;
-          .__regular_text {
-            display: none;
-          }
-          .__text_mobile {
-            display: block;
-            p {
-              font-size: 22px;
-            }
-          }
-        }
-      }
-      .__button_box {
-        display: block;
-        margin-top: 1rem;
       }
     }
   }
