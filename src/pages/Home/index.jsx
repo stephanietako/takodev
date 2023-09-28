@@ -4,7 +4,7 @@ import LinesSection from "../../components/LinesSection";
 import About from "../../components/About";
 import Projects from "../../components/Projects";
 import Footer from "../../components/Footer";
-import Contact from "../../components/Contact";
+// import Contact from "../../components/Contact";
 // Logos
 import logotako from "../../assets/logo/takodev-logo-white.png";
 // Images
@@ -63,14 +63,14 @@ const Home = () => {
       ),
     },
 
-    {
-      id: "contact",
-      content: (
-        <div className={styles.sections} id="contact">
-          <Contact />
-        </div>
-      ),
-    },
+    // {
+    //   id: "contact",
+    //   content: (
+    //     <div className={styles.sections} id="contact">
+    //       <Contact />
+    //     </div>
+    //   ),
+    // },
   ];
 
   return (
