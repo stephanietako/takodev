@@ -97,9 +97,10 @@
   }
 }
 //////////////////////// RESPONSIVE ///////////////////////////////
-@media only screen and (max-width: 1025px) and (min-width: 600px) {
+@media only screen and (max-width: 1440px) and (min-width: 600px) {
   .welcome {
     flex-direction: column;
+    height: 85vh;
     .main_container {
       flex-direction: column;
       .logo_container {
@@ -135,6 +136,7 @@
 @media only screen and (max-width: 500px) {
   .welcome {
     flex-direction: column;
+    // height: 75vh;
     .main_container {
       flex-direction: column;
       .logo_container {

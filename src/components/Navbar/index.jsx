@@ -40,8 +40,9 @@ const Navbar = () => {
 
   const links = [
     { name: "Accueil", target: "#welcome" },
-    { name: "Projets", target: "#projects" },
     { name: "A Propos", target: "#about" },
+    { name: "Projets", target: "#projects" },
+    { name: "Contact", target: "#contact" },
   ];
 
   return (

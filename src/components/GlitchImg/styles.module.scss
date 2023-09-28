@@ -16,7 +16,7 @@
 .activeAnimation {
   display: block;
   width: auto;
-  height: 100vh;
+  height: 85vh;
   position: relative;
 
   .__logo {
@@ -63,7 +63,6 @@
     // filter: blur(3px);
     filter: blur(1px);
     // filter: rgba(255, 255, 255, 0.75);
-    // ici
 
     &:nth-child(n + 2) {
       opacity: 0;

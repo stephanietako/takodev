@@ -1,15 +1,13 @@
 .sections {
   width: 100%;
   display: block;
-  // height: auto;
   overflow: hidden;
   padding: 2rem;
   height: 90vh;
-  //border: 3px solid red;
 }
 
 //////////////////RESPONSIVE//////////////////////
-@media only screen and (max-width: 1440px) {
+@media only screen and (max-width: 950px) {
   .sections {
     padding: 1rem;
     height: auto;
