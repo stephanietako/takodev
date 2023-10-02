@@ -5,15 +5,17 @@
   justify-content: center;
   align-items: center;
   position: relative;
+  flex-wrap: wrap;
 
-  .main_container {
+  .__container {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    position: relative;
     display: flex;
-    width: auto;
-    height: auto;
-    flex-wrap: wrap;
     justify-content: center;
-    border: 2px solid #babecc;
-    border-radius: 22px;
+    align-items: center;
+
     &::before {
       content: "";
       position: absolute;
@@ -25,38 +27,37 @@
       background: linear-gradient(to bottom, #0a0c2c80 3rem, transparent 10rem);
       opacity: 1;
       border-radius: 22px;
+      z-index: -1;
     }
 
-    .logo_container {
-      max-width: 33rem;
+    .__welcome_container {
+      display: flex;
       height: auto;
-      justify-content: center;
+      border: 3px solid #babecc;
+      border-radius: 22px;
       padding: 1rem;
 
-      .__logo {
-        display: flex;
+      .logo_container {
+        width: auto;
         height: auto;
-        width: 100%;
-        align-self: center;
         justify-content: center;
+        display: flex;
+        padding: 1rem;
 
-        img {
-          max-width: 24rem;
+        .__logo {
+          display: flex;
           height: auto;
-          object-fit: cover;
+          width: 100%;
+          align-self: center;
+          justify-content: center;
+
+          img {
+            max-width: 24rem;
+            height: auto;
+            object-fit: cover;
+          }
         }
       }
-    }
-    .__container {
-      overflow: hidden;
-      width: auto;
-      position: relative;
-      display: flex;
-      align-items: center;
-      height: auto;
-      // border: 2px solid red;
-      flex-direction: column;
-      justify-content: center;
 
       // &.__tentacles_container {
       //   height: auto;
@@ -65,20 +66,25 @@
 
       .text {
         display: flex;
-        flex-direction: column;
-        width: auto;
         height: auto;
-        padding: 3rem;
+        white-space: pre-wrap;
+        width: auto;
+        flex-direction: column;
+        text-align: center;
+
+        h1 {
+          font-size: 3rem;
+        }
 
         .__regular_text {
           width: 100%;
           height: auto;
-          align-self: center;
-          justify-content: center;
           display: flex;
-
+          flex-direction: column;
+          padding: 2rem;
+          line-height: 33px;
           p {
-            font-size: 40px;
+            font-size: 28px;
           }
         }
 
@@ -95,48 +101,49 @@
             font-size: 37px;
           }
         }
-      }
-
-      .__button_box {
-        display: block;
-        margin-top: 3rem;
+        .__button_box {
+          height: auto;
+          align-items: center;
+          align-content: center;
+          display: flex;
+        }
       }
     }
   }
 }
+
 //////////////////////// RESPONSIVE ///////////////////////////////
-/// (max-width: 1440px): C'est une condition qui spécifie que les styles s'appliqueront lorsque la largeur de l'écran sera inférieure ou égale à 1440 pixels. Cela signifie que ces styles ne s'appliqueront que si l'écran est plus petit ou égal à 1440 pixels de large.
-//and: C'est un opérateur logique qui permet de combiner plusieurs conditions médias. Dans ce cas, il est utilisé pour combiner la condition (max-width: 1440px) avec la condition suivante.
-
-//(min-width: 600px): C'est une autre condition qui spécifie que les styles s'appliqueront lorsque la largeur de l'écran sera supérieure ou égale à 600 pixels. Cela signifie que ces styles ne s'appliqueront que si l'écran est plus grand ou égal à 600 pixels de large.
-
-@media only screen and (max-width: 1440px) and (min-width: 600px) {
+@media only screen and (max-width: 1440px) and (min-width: 950px) {
   .welcome {
-    justify-content: start;
-    .main_container {
-      flex-direction: column;
-      .logo_container {
-        width: 29rem;
-        margin-top: 7rem;
-        .__logo {
-          img {
-            width: 17rem;
+    .__container {
+      width: 100%;
+      .__welcome_container {
+        padding: 2rem;
+        .logo_container {
+          .__logo {
+            img {
+              width: 22rem;
+            }
           }
         }
-      }
-      .__container {
         .text {
+          width: 100%;
+          h1 {
+            font-size: 2rem;
+          }
           .__regular_text {
             display: none;
           }
           .__text_mobile {
             display: block;
+            line-height: 23px;
+            padding: 2rem;
+
             p {
-              font-size: 28px;
+              font-size: 18px;
             }
           }
         }
-
         .__button_box {
           margin-top: 1rem;
         }
@@ -145,32 +152,77 @@
   }
 }
 
+@media only screen and (max-width: 950px) and (min-width: 600px) {
+  .welcome {
+    flex-direction: column;
+    .__container {
+      flex-direction: column;
+      width: 100%;
+      .__welcome_container {
+        flex-direction: column;
+        padding: 1rem;
+        .logo_container {
+          .__logo {
+            img {
+              width: 17rem;
+            }
+          }
+        }
+        .text {
+          width: 100%;
+          h1 {
+            font-size: 2rem;
+          }
+          .__regular_text {
+            display: none;
+            padding: 1rem;
+          }
+          .__text_mobile {
+            display: block;
+            line-height: 23px;
+
+            p {
+              font-size: 18px;
+            }
+          }
+        }
+        .__button_box {
+          margin-top: 3rem;
+        }
+      }
+    }
+  }
+}
 @media only screen and (max-width: 600px) {
   .welcome {
     flex-direction: column;
-    // height: 75vh;
-    .main_container {
+    .__container {
       flex-direction: column;
-      .logo_container {
-        justify-content: center;
-        align-items: center;
-        margin: 22px auto;
-        .__logo {
-          img {
-            width: 12rem;
+      .__welcome_container {
+        flex-direction: column;
+        padding: 1rem;
+        .logo_container {
+          .__logo {
+            img {
+              width: 9rem;
+            }
           }
         }
-      }
-      .__container {
         .text {
-          padding: 1rem;
+          width: 100%;
+          h1 {
+            font-size: 19px;
+          }
           .__regular_text {
             display: none;
           }
           .__text_mobile {
             display: block;
+
+            padding: 1rem;
+            text-align: left;
             p {
-              font-size: 22px;
+              font-size: 18px;
             }
           }
         }

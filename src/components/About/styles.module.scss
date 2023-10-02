@@ -3,7 +3,6 @@
   width: 100%;
   align-items: center;
   height: 100%;
-  justify-content: center;
 
   .__container {
     overflow: hidden;
@@ -18,18 +17,19 @@
       width: 100%;
       height: 100%;
       display: flex;
+      justify-content: space-evenly;
 
       .box {
         text-align: center;
         display: flex;
-        width: auto;
-        height: auto;
+        width: 100%;
+        height: 100%;
         border-radius: 22px;
         border: 3px solid #babecc;
         border-radius: 22px;
 
         &.__anime_container {
-          flex: 1;
+          width: 40%;
           height: 100%;
           overflow: hidden;
 
@@ -42,12 +42,14 @@
         }
 
         &.__text {
-          flex: 1;
+          width: 40%;
           position: relative;
           height: auto;
+          line-height: 25px;
+          white-space: pre-wrap;
 
           span {
-            white-space: normal;
+            // white-space: normal;
             display: flex;
             align-items: center;
             height: auto;
@@ -87,8 +89,7 @@
             justify-content: center;
             display: flex;
             text-align: start;
-            padding: 49px;
-            // border: 4px solid yellow;
+            padding: 2rem;
 
             p {
               font-size: 24px;
@@ -111,8 +112,6 @@
 
             p {
               font-size: 16px;
-              line-height: 25px;
-              white-space: pre-wrap;
             }
 
             h1 {
@@ -138,15 +137,24 @@
   .about {
     .__container {
       .__about_content {
+        justify-content: space-evenly;
         .box {
+          &.__anime_container {
+            width: 40%;
+          }
           &.__text {
+            width: 40%;
+            margin-top: 22px;
             .__regular_text {
               display: none;
             }
             .__text_mobile {
               display: block;
-              padding-top: 5rem;
+              flex-direction: column;
+              width: 100%;
               height: 100%;
+              justify-content: center;
+              padding: 2rem;
             }
           }
         }
@@ -163,7 +171,14 @@
         .box {
           text-align: center;
           display: flex;
+
+          &.__anime_container {
+            width: 100%;
+            height: 100vh;
+          }
           &.__text {
+            width: 100%;
+            margin-top: 22px;
             .__regular_text {
               display: none;
             }
@@ -184,20 +199,13 @@
     .__container {
       .__about_content {
         flex-direction: column;
-
         .box {
-          text-align: center;
-          display: flex;
-
           &.__anime_container {
-            flex: 1;
-            height: auto;
+            width: 100%;
           }
-
           &.__text {
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
+            width: 100%;
+            margin-top: 22px;
 
             .__regular_text {
               display: none;

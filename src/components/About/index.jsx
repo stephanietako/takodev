@@ -23,13 +23,13 @@ const About = ({ title, subtitle, text, textmobile }) => {
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (entry.intersectionRatio >= 0.7) {
+        if (entry.intersectionRatio >= 0.8) {
           setImgVisible(true);
         } else {
           setImgVisible(false);
         }
       },
-      { root: null, rootMargin: "0px", threshold: 0.7 }
+      { root: null, rootMargin: "0px", threshold: 0.8 }
     );
 
     observer.observe(ref.current);
@@ -42,6 +42,7 @@ const About = ({ title, subtitle, text, textmobile }) => {
       triggerAbout();
     }
     return () => clearTimeout(timer);
+    // eslint-disable-next-line
   }, [imgVisible]);
 
   return (
@@ -68,8 +69,8 @@ const About = ({ title, subtitle, text, textmobile }) => {
                   src={chevronright}
                   alt="icon right chevron "
                 />
-                <br></br>
               </span>
+              <br />
               <span>
                 <h2>{subtitle}</h2>
               </span>
