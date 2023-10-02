@@ -4,6 +4,7 @@ import IconContact from "../IconContact";
 import styles from "./styles.module.scss";
 // Assets
 import arrow from "../../assets/icon/arrowgray.png";
+
 const InputField = ({ name, label, value, onChange, error }) => {
   return (
     <>

@@ -11,7 +11,7 @@ import styles from "./styles.module.scss";
 
 const Navbar = () => {
   const navbarElement = useRef(null);
-  const navigationHeight = useRef(0); // Utilisez useRef ici
+  const navigationHeight = useRef(0);
 
   useEffect(() => {
     navigationHeight.current = navbarElement.current.offsetHeight;
@@ -50,10 +50,10 @@ const Navbar = () => {
       ref={navbarElement}
       className={fix ? `${styles.navbar} ${styles.fixed}` : `${styles.navbar}`}
     >
+      <a href="#welcome">
+        <img className={styles.__logo} src={logo} alt="Tako dev logo" />
+      </a>
       <div className={styles.__nav_menu}>
-        <a href="#welcome">
-          <img className={styles.__logo} src={logo} alt="Tako dev logo" />
-        </a>
         <div className={styles.__menu_content}>
           {links.map((link) => (
             <Links key={uuidv4()} link={link} onClick={toggleMenu} />
@@ -63,7 +63,6 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-
       <div className={styles.__nav_burger_menu}>
         <button
           className={styles.__summ}

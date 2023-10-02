@@ -15,7 +15,7 @@ const GlitchImg = ({ setImgVisible }) => {
       const observerOptions = {
         root: document.querySelector(".main"),
         rootMargin: "10px",
-        threshold: 0.2,
+        threshold: 0.4,
       };
 
       const observer = new IntersectionObserver((entries) => {

@@ -1,4 +1,4 @@
-$btn-color: gray;
+$btn-color: #babecc;
 
 .container {
   display: flex;
@@ -86,7 +86,7 @@ $btn-color: gray;
     width: 100%;
     height: 2px;
 
-    top: calc(100% - 1px);
+    top: calc(100% - 2px);
     left: 0;
   }
 }

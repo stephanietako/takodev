@@ -15,11 +15,26 @@
     z-index: 11;
     padding: 1.5rem;
     cursor: pointer;
+    color: #babecc;
     &:hover {
       opacity: 0;
-      transition: opacity 0.5s ease-out;
+      transition: opacity 0.2s ease-out;
+      -webkit-transition: opacity 0.2s ease-out;
+      -moz-transition: opacity 0.2s ease-out;
+      -o-transition: opacity 0.2s ease-out;
     }
   }
+
+  // a {
+  //   &[href] {
+  //     color: blue;
+  //     text-decoration: none;
+
+  //     &:hover {
+  //       color: red;
+  //     }
+  //   }
+  // }
 
   .__hoverImage {
     display: flex;
@@ -30,6 +45,8 @@
     transform: translate(-50%, -50%);
     width: 5rem;
     animation: fadeIn 1s ease-out;
+    color: #babecc;
+
     /* Pas besoin de :hover ici, car l'opacité est gérée par l'état isHovered dans le composant React */
   }
 }
@@ -60,7 +77,7 @@
         margin: 12px auto;
         width: 22px;
         height: 2px;
-        background: gray;
+        background: #babecc;
       }
     }
   }

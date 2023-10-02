@@ -1,16 +1,16 @@
 // Styles
 import styles from "./styles.module.scss";
 // Imports
-import Form from "../Form";
+import Formulaire from "../Formulaire";
 // Assets
-import imgcontact from "../../assets/images/nasa.jpg";
+import imgcontact from "../../assets/logo/takodev-logo-white.png";
 
 const Contact = () => {
   return (
     <div className={styles.__container_contact}>
-      <Form
-        content={"LEFT CONTENT Paragraphe"}
-        title={"TITRE"}
+      <Formulaire
+        content={"Vous avez un projet ?\nDes questions ?"}
+        title={"Ecrivez-moi"}
         image={imgcontact}
       />
     </div>

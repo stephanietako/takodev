@@ -11,6 +11,7 @@ const About = ({ title, subtitle, text, textmobile }) => {
   const [imgVisible, setImgVisible] = useState(false);
   const ref = useRef(null);
   let timer;
+
   const triggerAbout = () => {
     timer = setTimeout(() => {
       scrollToRef(ref);
@@ -18,12 +19,29 @@ const About = ({ title, subtitle, text, textmobile }) => {
   };
 
   const scrollToRef = () => ref.current?.scrollIntoView({ behavior: "smooth" });
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.intersectionRatio >= 0.7) {
+          setImgVisible(true);
+        } else {
+          setImgVisible(false);
+        }
+      },
+      { root: null, rootMargin: "0px", threshold: 0.7 }
+    );
+
+    observer.observe(ref.current);
+
+    return () => observer.disconnect();
+  }, []);
+
   useEffect(() => {
     if (imgVisible) {
       triggerAbout();
     }
     return () => clearTimeout(timer);
-    // eslint-disable-next-line
   }, [imgVisible]);
 
   return (

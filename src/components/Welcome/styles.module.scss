@@ -5,24 +5,33 @@
   justify-content: center;
   align-items: center;
   position: relative;
-  border: 2px solid gray;
-  border-radius: 22px;
 
   .main_container {
     display: flex;
     width: auto;
     height: auto;
-    // border: 3px solid turquoise;
     flex-wrap: wrap;
     justify-content: center;
+    border: 2px solid #babecc;
+    border-radius: 22px;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to bottom, #0a0c2c80 3rem, transparent 10rem);
+      opacity: 1;
+      border-radius: 22px;
+    }
 
     .logo_container {
       max-width: 33rem;
       height: auto;
       justify-content: center;
       padding: 1rem;
-      border: 2px solid gray;
-      border-radius: 22px;
 
       .__logo {
         display: flex;
@@ -60,7 +69,6 @@
         width: auto;
         height: auto;
         padding: 3rem;
-        // border: 2px solid yellow;
 
         .__regular_text {
           width: 100%;
@@ -97,10 +105,14 @@
   }
 }
 //////////////////////// RESPONSIVE ///////////////////////////////
+/// (max-width: 1440px): C'est une condition qui spécifie que les styles s'appliqueront lorsque la largeur de l'écran sera inférieure ou égale à 1440 pixels. Cela signifie que ces styles ne s'appliqueront que si l'écran est plus petit ou égal à 1440 pixels de large.
+//and: C'est un opérateur logique qui permet de combiner plusieurs conditions médias. Dans ce cas, il est utilisé pour combiner la condition (max-width: 1440px) avec la condition suivante.
+
+//(min-width: 600px): C'est une autre condition qui spécifie que les styles s'appliqueront lorsque la largeur de l'écran sera supérieure ou égale à 600 pixels. Cela signifie que ces styles ne s'appliqueront que si l'écran est plus grand ou égal à 600 pixels de large.
+
 @media only screen and (max-width: 1440px) and (min-width: 600px) {
   .welcome {
-    flex-direction: column;
-    height: 85vh;
+    justify-content: start;
     .main_container {
       flex-direction: column;
       .logo_container {
@@ -133,7 +145,7 @@
   }
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 600px) {
   .welcome {
     flex-direction: column;
     // height: 75vh;

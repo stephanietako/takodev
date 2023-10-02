@@ -18,11 +18,14 @@ const Links = ({ link, onClick, isMobileMenuActive }) => {
         <a
           href={target}
           onClick={onClick}
-          style={{ color: isHovered ? "gray" : "white" }}
+          style={{ color: isHovered ? "silver" : "white" }}
         >
           {name}
         </a>
       ) : (
+        // <a href={target} onClick={onClick} className="hover_links">
+        //   {name}
+        // </a>
         <>
           <a href={target} onClick={onClick}>
             {name}

@@ -10,7 +10,7 @@
     align-items: center;
     bottom: 0;
     width: 100%;
-    color: gray;
+    color: #babecc;
     background: #000;
     height: 5rem;
     max-height: 5rem;
@@ -23,7 +23,7 @@
     .__copyright {
       display: flex;
       flex-wrap: wrap;
-      color: gray;
+      color: #babecc;
       font-size: 14px;
       width: 100%;
     }
@@ -44,7 +44,7 @@
           color: #fff;
           font-size: 12px;
           &:hover {
-            color: gray;
+            color: #babecc;
           }
         }
       }
