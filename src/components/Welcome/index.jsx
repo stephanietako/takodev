@@ -26,7 +26,6 @@ const Welcome = ({ title, text, textmobile, logo, altLogo }) => {
             </span>
             <span className={styles.__text_mobile}>
               <h1>{title}</h1>
-              <br />
               <p>{textmobile}</p>
             </span>
             <div className={styles.__button_box}>

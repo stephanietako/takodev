@@ -70,10 +70,11 @@
         white-space: pre-wrap;
         width: auto;
         flex-direction: column;
-        text-align: center;
+        line-height: 33px;
 
         h1 {
           font-size: 3rem;
+          margin-bottom: 1rem;
         }
 
         .__regular_text {
@@ -82,7 +83,7 @@
           display: flex;
           flex-direction: column;
           padding: 2rem;
-          line-height: 33px;
+
           p {
             font-size: 28px;
           }
@@ -94,8 +95,9 @@
           justify-content: flex-end;
           align-self: center;
           justify-content: center;
-          display: flex;
           display: none;
+          padding: 3rem;
+          line-height: 26px;
 
           p {
             font-size: 37px;
@@ -103,9 +105,9 @@
         }
         .__button_box {
           height: auto;
-          align-items: center;
           align-content: center;
           display: flex;
+          padding: 2rem;
         }
       }
     }
@@ -129,23 +131,19 @@
         .text {
           width: 100%;
           h1 {
-            font-size: 2rem;
+            font-size: 1.9rem;
           }
           .__regular_text {
             display: none;
           }
           .__text_mobile {
             display: block;
-            line-height: 23px;
             padding: 2rem;
 
             p {
               font-size: 18px;
             }
           }
-        }
-        .__button_box {
-          margin-top: 1rem;
         }
       }
     }
@@ -179,20 +177,16 @@
           }
           .__text_mobile {
             display: block;
-            line-height: 23px;
-
             p {
-              font-size: 18px;
+              font-size: 22px;
             }
           }
-        }
-        .__button_box {
-          margin-top: 3rem;
         }
       }
     }
   }
 }
+
 @media only screen and (max-width: 600px) {
   .welcome {
     flex-direction: column;
@@ -202,6 +196,7 @@
         flex-direction: column;
         padding: 1rem;
         .logo_container {
+          padding: 0;
           .__logo {
             img {
               width: 9rem;
@@ -225,9 +220,9 @@
               font-size: 18px;
             }
           }
-        }
-        .__button_box {
-          margin-top: 1rem;
+          .__button_box {
+            padding: 0.5rem;
+          }
         }
       }
     }

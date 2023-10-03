@@ -23,10 +23,10 @@ const Home = () => {
           <Welcome
             title={"Votre créateur de solutions web "}
             text={
-              "La technologie comme un puissant levier de créativité.\nQue vous souhaitiez concevoir un site web réactif\nDévelopper une application web sur mesure\nTako Dev possède l'expertise nécessaire."
+              "La technologie comme un puissant levier de créativité\nQue vous souhaitiez concevoir un site web réactif\nDévelopper une application web sur mesure\nTako Dev possède l'expertise nécessaire"
             }
             textmobile={
-              "La technologie comme un puissant levier de créativité.\nQue vous souhaitiez concevoir un site web réactif\nDévelopper une application web sur mesure\nTako Dev possède l'expertise nécessaire."
+              "La technologie comme un puissant levier de créativité\nQue vous souhaitiez concevoir un site web réactif\nDévelopper une application web sur mesure\nTako Dev possède l'expertise nécessaire"
             }
             logo={logotako}
             altLogo="logo Tako Dev"

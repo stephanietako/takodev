@@ -4,8 +4,6 @@ $btn-color: #babecc;
   display: flex;
   height: auto;
   width: 100%;
-  margin-bottom: 2rem;
-  justify-content: center;
 
   .__space_btn {
     position: relative;
@@ -15,7 +13,7 @@ $btn-color: #babecc;
     line-height: 1;
     color: $btn-color;
     margin: 0;
-    padding: 2rem;
+    padding: 1rem;
     background: none;
     border: none;
     cursor: pointer;
@@ -121,32 +119,16 @@ $btn-color: #babecc;
 }
 
 ///////////////////////// RESPONSIVE ///////////////////////////
-@media only screen and (max-width: 48em) {
+@media only screen and (max-width: 950px) and (min-width: 600px) {
   .container {
-    .__space_btn {
-      width: 9rem;
-      height: 27px;
-      font-size: 18px;
-      line-height: 5px;
-    }
+    justify-content: center;
   }
 }
 
 @media only screen and (max-width: 500px) {
   .container {
+    justify-content: center;
     .__space_btn {
-      width: 9rem;
-      height: 27px;
-      font-size: 18px;
-      line-height: 5px;
-    }
-  }
-}
-
-@media only screen and (max-width: 400px) {
-  .container {
-    .__space_btn {
-      width: 9rem;
       height: 27px;
       font-size: 18px;
       line-height: 5px;
