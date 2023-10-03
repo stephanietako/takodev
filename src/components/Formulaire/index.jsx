@@ -20,6 +20,23 @@ const InputField = ({ name, label, value, onChange, error }) => {
   );
 };
 
+const TextareaField = ({ name, label, value, onChange, error }) => {
+  return (
+    <>
+      <label htmlFor={name}>{label}:</label>
+      <textarea
+        type="text"
+        id={name}
+        name={name}
+        value={value}
+        onChange={onChange}
+        placeholder={`Ton ${label.toLowerCase()} ici`}
+      />
+      {error && <div className={styles.error}>{error}</div>}
+    </>
+  );
+};
+
 const Formulaire = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -39,6 +56,10 @@ const Formulaire = () => {
     const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
     return emailRegex.test(email);
   };
+  const validateMessage = (message) => {
+    const messageRegex = /^[a-zA-Z0-9\s]+$/;
+    return messageRegex.test(message);
+  };
 
   const validateForm = () => {
     const newErrors = {};
@@ -56,6 +77,11 @@ const Formulaire = () => {
     // Validez l'e-mail
     if (!validateEmail(formData.email)) {
       newErrors.email = "L'e-mail n'est pas valide";
+    }
+
+    // Validez le message
+    if (!validateMessage(formData.message)) {
+      newErrors.message = "Le message n'est pas valide";
     }
 
     setErrors(newErrors);
@@ -115,13 +141,12 @@ const Formulaire = () => {
           />
         </div>
         <div className={styles.__form_element}>
-          <label htmlFor="message">Message:</label>
-          <textarea
-            id="message"
+          <TextareaField
             name="message"
+            label="message"
             value={formData.message}
             onChange={handleChange}
-            placeholder="Ton message ici"
+            error={errors.message}
           />
         </div>
         <button type="submit">Submit</button>

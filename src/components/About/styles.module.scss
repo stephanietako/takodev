@@ -17,7 +17,7 @@
       width: 100%;
       height: 100%;
       display: flex;
-      justify-content: space-evenly;
+      justify-content: space-between;
 
       .box {
         text-align: center;
@@ -29,7 +29,7 @@
         border-radius: 22px;
 
         &.__anime_container {
-          width: 40%;
+          width: 49%;
           height: 100%;
           overflow: hidden;
 
@@ -42,10 +42,9 @@
         }
 
         &.__text {
-          width: 40%;
+          width: 49%;
           position: relative;
           height: auto;
-          line-height: 33px;
           white-space: pre-wrap;
 
           span {
@@ -53,7 +52,7 @@
             align-items: center;
             height: auto;
             text-align: center;
-            padding: 0 0px 9px;
+            padding: 3px 0px 11px;
             width: 100%;
             justify-content: center;
 
@@ -67,7 +66,7 @@
 
             .__slash {
               width: 2px;
-              background: blue;
+              background: #babecc;
               transform: rotate(16deg);
               height: 33px;
               margin-left: 9px;
@@ -85,13 +84,12 @@
             width: 100%;
             height: 100%;
             align-self: center;
-            justify-content: center;
             display: flex;
             text-align: start;
             padding: 2rem;
-
+            line-height: 33px;
             p {
-              font-size: 24px;
+              font-size: 22px;
               white-space: pre-wrap;
             }
           }
@@ -105,6 +103,7 @@
             display: none;
             padding: 30px 12px;
             width: 100%;
+            line-height: 29px;
 
             p {
               font-size: 16px;
@@ -133,24 +132,14 @@
   .about {
     .__container {
       .__about_content {
-        justify-content: space-evenly;
         .box {
-          &.__anime_container {
-            width: 40%;
-          }
           &.__text {
-            width: 40%;
             .__regular_text {
-              display: none;
+              display: block;
+              padding: 1rem;
             }
             .__text_mobile {
-              display: block;
-              flex-direction: column;
-              width: 100%;
-              height: 100%;
-              justify-content: center;
-              padding: 2rem;
-              line-height: 29px;
+              display: none;
             }
           }
         }
@@ -209,6 +198,43 @@
 
             .__text_mobile {
               display: block;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  .about {
+    .__container {
+      .__about_content {
+        .box {
+          &.__text {
+            overflow-x: hidden;
+            overflow-y: scroll;
+            &::-webkit-scrollbar {
+              width: 12px;
+            }
+            &::-webkit-scrollbar-track {
+              border: 1px solid #babecc;
+              border-radius: 3px;
+              border-radius: 2px 22px 22px 2px;
+            }
+            &::-webkit-scrollbar-thumb {
+              background: #babecc;
+              border-radius: 2px 22px 22px 2px;
+            }
+            &::-webkit-scrollbar-thumb:hover {
+              background: #babecc;
+            }
+            .__regular_text {
+              display: block;
+              padding: 1rem;
+            }
+            .__text_mobile {
+              display: none;
             }
           }
         }

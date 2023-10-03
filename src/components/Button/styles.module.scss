@@ -125,7 +125,17 @@ $btn-color: #babecc;
   }
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 550px) {
+  .container {
+    justify-content: center;
+    .__space_btn {
+      font-size: 18px;
+      line-height: 5px;
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
   .container {
     justify-content: center;
     .__space_btn {

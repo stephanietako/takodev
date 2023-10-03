@@ -70,7 +70,6 @@ const About = ({ title, subtitle, text, textmobile }) => {
                   alt="icon right chevron "
                 />
               </span>
-              <br />
               <span>
                 <h2>{subtitle}</h2>
               </span>

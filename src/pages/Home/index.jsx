@@ -6,7 +6,7 @@ import Projects from "../../components/Projects";
 import Footer from "../../components/Footer";
 import Contact from "../../components/Contact";
 // Logos
-import logotako from "../../assets/logo/takodev-logo-black.png";
+import logotako from "../../assets/logo/takodev-logo-white.png";
 // Images
 // import picthome from "../../assets/images/picthome.jpg";
 // Styles

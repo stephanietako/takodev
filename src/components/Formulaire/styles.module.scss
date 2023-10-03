@@ -16,9 +16,8 @@ $color-white: #fff;
   position: relative;
   display: flex;
   flex-direction: column;
-  padding: 1rem;
   padding: $ruler;
-  width: calc(#{$ruler} * 20); // Utilisation de calc()
+  width: calc(#{$ruler} * 20);
   margin: 0 auto;
 
   .__form_element {
@@ -29,51 +28,23 @@ $color-white: #fff;
     label {
       color: grey;
       font-size: 1.5rem;
-      justify-content: left;
-      justify-content: end;
       text-align: left;
-    }
-
-    input {
-      border: 0;
-      outline: 0;
-      font-size: $ruler;
-      border-radius: calc(#{$ruler} * 20); // Utilisation de calc()
-      padding: $ruler;
-      background-color: $color-bg;
-      text-shadow: 1px 1px 0 $color-white;
-      letter-spacing: -0.2px;
-    }
-
-    label {
-      display: block;
-      margin-bottom: calc(#{$ruler} * 1.5); // Utilisation de calc()
-      width: 100%;
-    }
-
-    input {
-      margin-right: calc(#{$ruler} / 2); // Utilisation de calc()
-      box-shadow: inset 2px 2px 5px $color-shadow,
-        inset -5px -5px 10px $color-white;
-      width: 100%;
-      transition: all 0.2s ease-in-out;
-      -webkit-transition: all 0.2s ease-in-out;
-      -moz-transition: all 0.2s ease-in-out;
-      -o-transition: all 0.2s ease-in-out;
-
-      appearance: none;
-      -webkit-appearance: none;
-
-      &:focus {
-        box-shadow: inset 1px 1px 2px $color-shadow,
-          inset -1px -1px 2px $color-white;
-      }
+      margin-bottom: calc(#{$ruler} * 1.5);
     }
 
     input,
     textarea {
-      margin-right: calc(16px / 2);
-      box-shadow: inset 2px 2px 5px #babecc, inset -5px -5px 10px #fff;
+      border: 0;
+      outline: 0;
+      font-size: $ruler;
+      border-radius: calc(#{$ruler} * 20);
+      padding: $ruler;
+      background-color: $color-bg;
+      text-shadow: 1px 1px 0 $color-white;
+      letter-spacing: -0.2px;
+      margin-right: calc(#{$ruler} / 2);
+      box-shadow: inset 2px 2px 5px $color-shadow,
+        inset -5px -5px 10px $color-white;
       width: 100%;
       transition: all 0.2s ease-in-out;
       -webkit-transition: all 0.2s ease-in-out;
@@ -84,20 +55,21 @@ $color-white: #fff;
       resize: none;
       outline: none;
       border: none;
-      //   background-color: #f8f8f8;
       margin-bottom: 2rem;
       height: 5rem;
-      border-radius: 34px;
       background-color: $color-bg;
       cursor: pointer;
       overflow: auto;
-      padding: 16px;
 
       &:focus {
         box-shadow: inset 1px 1px 2px $color-shadow,
           inset -1px -1px 2px $color-white;
       }
     }
+  }
+
+  label {
+    display: block;
   }
 
   button {
@@ -111,14 +83,16 @@ $color-white: #fff;
     border: 0;
     outline: 0;
     font-size: $ruler;
-    border-radius: calc(#{$ruler} * 20); // Utilisation de calc()
+    border-radius: calc(#{$ruler} * 20);
     padding: $ruler;
     background-color: $color-bg;
     text-shadow: 1px 1px 0 $color-white;
     letter-spacing: -0.2px;
+
     &:hover {
       box-shadow: -2px -2px 5px $color-white, 2px 2px 5px $color-shadow;
     }
+
     &:active {
       box-shadow: inset 1px 1px 2px $color-shadow,
         inset -1px -1px 2px $color-white;
