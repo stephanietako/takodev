@@ -32,9 +32,6 @@ const Welcome = ({ title, text, textmobile, logo, altLogo }) => {
               <ButtonStyle link={linkToAbout} />
             </div>
           </div>
-          {/* <div className={styles.__button_box}>
-            <ButtonStyle link={linkToAbout} />
-          </div> */}
         </div>
       </div>
     </div>
