@@ -46,6 +46,24 @@
           position: relative;
           height: auto;
           white-space: pre-wrap;
+          overflow-x: hidden;
+          overflow-y: scroll;
+
+          &::-webkit-scrollbar {
+            width: 12px;
+          }
+          &::-webkit-scrollbar-track {
+            border: 1px solid #babecc;
+            border-radius: 3px;
+            border-radius: 2px 22px 22px 2px;
+          }
+          &::-webkit-scrollbar-thumb {
+            background: #babecc;
+            border-radius: 2px 22px 22px 2px;
+          }
+          &::-webkit-scrollbar-thumb:hover {
+            background: #babecc;
+          }
 
           span {
             display: flex;
@@ -88,6 +106,7 @@
             text-align: start;
             padding: 2rem;
             line-height: 33px;
+
             p {
               font-size: 22px;
               white-space: pre-wrap;
@@ -212,23 +231,23 @@
       .__about_content {
         .box {
           &.__text {
-            overflow-x: hidden;
-            overflow-y: scroll;
-            &::-webkit-scrollbar {
-              width: 12px;
-            }
-            &::-webkit-scrollbar-track {
-              border: 1px solid #babecc;
-              border-radius: 3px;
-              border-radius: 2px 22px 22px 2px;
-            }
-            &::-webkit-scrollbar-thumb {
-              background: #babecc;
-              border-radius: 2px 22px 22px 2px;
-            }
-            &::-webkit-scrollbar-thumb:hover {
-              background: #babecc;
-            }
+            // overflow-x: hidden;
+            // overflow-y: scroll;
+            // &::-webkit-scrollbar {
+            //   width: 12px;
+            // }
+            // &::-webkit-scrollbar-track {
+            //   border: 1px solid #babecc;
+            //   border-radius: 3px;
+            //   border-radius: 2px 22px 22px 2px;
+            // }
+            // &::-webkit-scrollbar-thumb {
+            //   background: #babecc;
+            //   border-radius: 2px 22px 22px 2px;
+            // }
+            // &::-webkit-scrollbar-thumb:hover {
+            //   background: #babecc;
+            // }
             .__regular_text {
               display: block;
               padding: 1rem;

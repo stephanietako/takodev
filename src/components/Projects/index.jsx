@@ -1,6 +1,6 @@
 import styles from "./styles.module.scss";
 import Cards from "../Cards";
-import imgCard1 from "../../assets/images/nasa.jpg";
+import imgCard1 from "../../assets/logo/takodev-logo-black.png";
 import imgCard2 from "../../assets/images/nasa.jpg";
 import imgCard3 from "../../assets/images/nasa.jpg";
 

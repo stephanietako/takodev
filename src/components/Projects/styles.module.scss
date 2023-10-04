@@ -1,12 +1,13 @@
 .__container_cards {
   display: flex;
-  width: 100%;
+  width: auto;
   height: 100%;
   align-items: center;
   border: 2px solid #babecc;
   flex-wrap: wrap;
   border-radius: 22px;
-  overflow: hidden;
-  justify-content: space-evenly;
+  // justify-content: space-evenly;
   border: 2px solid red;
+  overflow: hidden;
+  justify-content: space-around;
 }
