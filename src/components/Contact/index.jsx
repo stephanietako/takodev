@@ -1,18 +1,22 @@
+import Formulaire from "../Formulaire";
 // Styles
 import styles from "./styles.module.scss";
-// Imports
-import Formulaire from "../Formulaire";
-// Assets
-import imgcontact from "../../assets/logo/takodev-logo-white.png";
 
-const Contact = () => {
+const Contact = ({ title, text, logo, altLogo }) => {
   return (
-    <div className={styles.__container_contact}>
-      <Formulaire
-        content={"Vous avez un projet ?\nDes questions ?"}
-        title={"Ecrivez-moi"}
-        image={imgcontact}
-      />
+    <div className={styles.container_contact}>
+      <div className={styles.__box}>
+        <div className={styles.__infoBox}>
+          <h3>{title}</h3>
+          <p>{text}</p>
+
+          <div className={styles.__logo}>
+            <img src={logo} alt={altLogo} />
+          </div>
+        </div>
+      </div>
+
+      <Formulaire />
     </div>
   );
 };

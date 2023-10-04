@@ -105,12 +105,6 @@ const Formulaire = () => {
 
   return (
     <>
-      <div className={styles.__title}>
-        <h1>Contact</h1>
-      </div>
-
-      {/* Form */}
-
       <form onSubmit={handleSubmit} className={styles.__container_form}>
         <div className={styles.__form_element}>
           <InputField

@@ -5,16 +5,12 @@ import About from "../../components/About";
 import Projects from "../../components/Projects";
 import Footer from "../../components/Footer";
 import Contact from "../../components/Contact";
-// Logos
+// Assets
 import logotako from "../../assets/logo/takodev-logo-white.png";
-// Images
-// import picthome from "../../assets/images/picthome.jpg";
 // Styles
 import styles from "./styles.module.scss";
 
 const Home = () => {
-  // Utilisez la fonction pour convertir une valeur en pixels en vh
-
   const sections = [
     {
       id: "welcome",
@@ -30,8 +26,6 @@ const Home = () => {
             }
             logo={logotako}
             altLogo="logo Tako Dev"
-            // img={picthome}
-            // alt="présentation créatrice su studio Tako Dev"
           />
         </div>
       ),
@@ -54,8 +48,6 @@ const Home = () => {
             }
             logo={logotako}
             altLogo="logo Tako Dev"
-            // img={picthome}
-            // alt="présentation créatrice su studio Tako Dev"
           />
         </div>
       ),
@@ -74,7 +66,12 @@ const Home = () => {
       id: "contact",
       content: (
         <div className={styles.sections} id="contact">
-          <Contact />
+          <Contact
+            title={"Ecrivez-moi"}
+            text={"Vous avez un projet ?\nDes questions ?"}
+            logo={logotako}
+            altLogo="logo Tako Dev"
+          />
         </div>
       ),
     },

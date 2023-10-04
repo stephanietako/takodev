@@ -8,6 +8,7 @@
   .card {
     min-width: 16rem;
     display: flex;
+    position: relative;
     height: 493px;
     border-radius: 15px;
     padding: 1.5rem;
@@ -50,7 +51,7 @@
       );
       width: 100%;
       height: auto;
-      border-radius: 10px;
+      border-radius: 15px;
       top: 0;
       left: 0;
       position: absolute;

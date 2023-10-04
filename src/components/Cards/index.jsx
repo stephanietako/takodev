@@ -1,6 +1,6 @@
 // Styles
 import styles from "./styles.module.scss";
-// import imgCard1 from "../../assets/images/nasa.jpg";
+
 const Cards = ({ title, content, image, alt, link }) => {
   return (
     <div className={styles.wrapper}>
