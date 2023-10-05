@@ -1,20 +1,49 @@
+$ruler: 16px;
+$color-bg: rgb(24, 24, 26);
+$color-shadow-dark: #0b0b0b;
+$color-clear-dark: #2a2a2e;
+// $color-shadow-dark: #0b0b0b;
+// $color-clear-dark: #36363a;
+//  #2c2c31;
+// #0b0b0b;
 .__iconBox {
   display: flex;
-  width: 100%;
-  height: auto;
   align-items: center;
-  position: relative;
-  justify-content: center;
+  width: 100%;
+  height: 100%;
 
-  .__icon_mail,
-  .__icon_linkedin {
-    // border: 2px solid green;
-    display: flex;
-    width: 2.5rem;
-    height: 2.5rem;
-    padding: 5px;
+  button,
+  input {
+    border: 0;
+    outline: 0;
+    font-size: $ruler;
+    border-radius: calc(#{$ruler} * 20);
+    padding: $ruler;
+    background-color: $color-bg;
+    text-shadow: 1px 1px 0 $color-clear-dark;
+  }
+
+  .unit {
+    box-shadow: -5px -5px 20px $color-clear-dark,
+      5px 5px 20px $color-shadow-dark;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    width: calc(#{$ruler} * 4);
+    height: calc(#{$ruler} * 4);
+
     &:hover {
-      transform: scale(1.5);
+      box-shadow: -2px -2px 5px $color-clear-dark,
+        2px 2px 5px $color-shadow-dark;
+    }
+
+    &:active {
+      box-shadow: inset 1px 1px 2px $color-shadow-dark,
+        inset -1px -1px 2px $color-clear-dark;
+    }
+
+    .icon {
+      margin-right: 0;
+      width: 2rem;
     }
   }
 }

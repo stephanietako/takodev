@@ -1,5 +1,6 @@
 import React, { useState, useRef } from "react";
 import Formulaire from "../Formulaire";
+import IconContact from "../IconContact";
 // Assets
 import arrow from "../../assets/icon/arrowgray.png";
 // Styles
@@ -26,6 +27,9 @@ const Contact = ({ title, text, logo, altLogo }) => {
           <div className={styles.__arrow}>
             <img src={arrow} alt={"arrow icon"} onClick={toggleText} />
           </div>
+        </div>
+        <div className={styles.__icons}>
+          <IconContact />
         </div>
       </div>
       <div className={styles.__form} ref={formRef}>
