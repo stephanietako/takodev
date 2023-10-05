@@ -12,7 +12,6 @@ $color-white: #fff;
   display: flex;
   flex-direction: column;
   padding: $ruler;
-  width: 44rem;
 
   .__form_element {
     margin-top: 0.5rem;
@@ -28,12 +27,9 @@ $color-white: #fff;
 
     input,
     textarea {
-      border: 0;
-      outline: 0;
       font-size: $ruler;
       border-radius: calc(#{$ruler} * 20);
       padding: $ruler;
-      background-color: $color-bg;
       text-shadow: 1px 1px 0 $color-white;
       letter-spacing: -0.2px;
       margin-right: calc(#{$ruler} / 2);
@@ -49,7 +45,7 @@ $color-white: #fff;
       resize: none;
       outline: none;
       border: none;
-      margin-bottom: 2rem;
+      // margin-bottom: 2rem;
       height: 5rem;
       background-color: $color-bg;
       cursor: pointer;
@@ -68,7 +64,6 @@ $color-white: #fff;
 
   button {
     color: #61677c;
-    font-weight: bold;
     box-shadow: -5px -5px 20px $color-white, 5px 5px 20px $color-shadow;
     transition: all 0.2s ease-in-out;
     cursor: pointer;
@@ -82,7 +77,7 @@ $color-white: #fff;
     background-color: $color-bg;
     text-shadow: 1px 1px 0 $color-white;
     letter-spacing: -0.2px;
-    margin: auto;
+    margin: 18px auto;
 
     &:hover {
       box-shadow: -2px -2px 5px $color-white, 2px 2px 5px $color-shadow;
@@ -92,5 +87,8 @@ $color-white: #fff;
       box-shadow: inset 1px 1px 2px $color-shadow,
         inset -1px -1px 2px $color-white;
     }
+  }
+  div {
+    color: #61677c;
   }
 }
