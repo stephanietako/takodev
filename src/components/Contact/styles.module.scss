@@ -90,6 +90,14 @@
     flex: 1;
     height: auto;
   }
+  .__icons {
+    display: flex;
+    width: 50%;
+    height: 100%;
+    padding: 2rem;
+    justify-content: space-evenly;
+    margin: auto;
+  }
 }
 
 //////////////////////// RESPONSIVE ///////////////////////////////

@@ -57,8 +57,10 @@
 
       .__icons {
         display: flex;
-        width: auto;
-        height: auto;
+        width: 23%;
+        height: 100%;
+        padding: 2rem;
+        justify-content: space-evenly;
       }
     }
   }
