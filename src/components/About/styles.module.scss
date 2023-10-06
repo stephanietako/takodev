@@ -2,7 +2,7 @@
   display: flex;
   width: 100%;
   align-items: center;
-  height: 100vh;
+  height: 80vh;
 
   .__container {
     overflow: hidden;
@@ -220,6 +220,28 @@
 
             .__text_mobile {
               display: block;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .about {
+    height: 100vh;
+    .__container {
+      .__about_content {
+        .box {
+          &.__text {
+            height: 100%;
+            .__regular_text {
+              display: block;
+              padding: 1rem;
+            }
+            .__text_mobile {
+              display: none;
             }
           }
         }

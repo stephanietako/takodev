@@ -2,7 +2,7 @@
   display: flex;
   width: 100%;
   align-items: center;
-  height: 100%;
+  height: 80vh;
   justify-content: center;
   position: relative;
   flex-wrap: wrap;
@@ -116,7 +116,6 @@
 //////////////////////// RESPONSIVE ///////////////////////////////
 @media only screen and (max-width: 1440px) and (min-width: 950px) {
   .welcome {
-    height: 80vh;
     .__container {
       width: 100%;
       .__welcome_container {
@@ -154,7 +153,6 @@
     justify-content: flex-start;
     flex-direction: column;
     margin-top: 5rem;
-    height: 80vh;
     .__container {
       flex-direction: column;
       width: 100%;
@@ -193,7 +191,6 @@
   .welcome {
     justify-content: flex-start;
     flex-direction: column;
-    height: 80vh;
     .__container {
       flex-direction: column;
       .__welcome_container {
