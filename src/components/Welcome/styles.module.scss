@@ -1,21 +1,20 @@
 .welcome {
   display: flex;
   width: 100%;
+  align-items: center;
   height: 100%;
   justify-content: center;
-  align-items: center;
   position: relative;
   flex-wrap: wrap;
 
   .__container {
     overflow: hidden;
     width: 100%;
-    height: 100%;
+    height: auto;
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-
     &::before {
       content: "";
       position: absolute;
@@ -23,7 +22,8 @@
       left: 0;
       display: block;
       width: 100%;
-      height: 100%;
+      // height: 100%;
+      height: auto;
       background: linear-gradient(to bottom, #0a0c2c80 3rem, transparent 10rem);
       opacity: 1;
       border-radius: 22px;
@@ -35,7 +35,6 @@
       height: auto;
       border: 3px solid #babecc;
       border-radius: 22px;
-      padding: 1rem;
 
       .logo_container {
         width: auto;
@@ -117,6 +116,7 @@
 //////////////////////// RESPONSIVE ///////////////////////////////
 @media only screen and (max-width: 1440px) and (min-width: 950px) {
   .welcome {
+    height: 80vh;
     .__container {
       width: 100%;
       .__welcome_container {
@@ -138,8 +138,6 @@
             padding: 2rem;
           }
           .__text_mobile {
-            // display: block;
-            // padding: 2rem;
             display: none;
             p {
               font-size: 18px;
@@ -153,7 +151,10 @@
 
 @media only screen and (max-width: 950px) and (min-width: 600px) {
   .welcome {
+    justify-content: flex-start;
     flex-direction: column;
+    margin-top: 5rem;
+    height: 80vh;
     .__container {
       flex-direction: column;
       width: 100%;
@@ -190,7 +191,9 @@
 
 @media only screen and (max-width: 600px) {
   .welcome {
+    justify-content: flex-start;
     flex-direction: column;
+    height: 80vh;
     .__container {
       flex-direction: column;
       .__welcome_container {

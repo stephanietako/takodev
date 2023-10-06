@@ -46,7 +46,7 @@ const About = ({ title, subtitle, text, textmobile }) => {
   }, [imgVisible]);
 
   return (
-    <div className={styles.about} id="about">
+    <div className={styles.about}>
       <div className={styles.__container}>
         <div className={styles.__about_content}>
           <div className={`${styles.box} ${styles.__anime_container} `}>

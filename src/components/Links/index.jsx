@@ -1,24 +1,24 @@
-import { useState } from "react";
+// import { useState } from "react";
 // Styles
 import styles from "./styles.module.scss";
 // Assets
-import crossImage from "../../assets/icon/crossgray.svg";
+// import crossImage from "../../assets/icon/crossgray.svg";
 
 const Links = ({ link, onClick, isMobileMenuActive }) => {
   const { name, target } = link;
-  const [isHovered, setIsHovered] = useState(false); // État pour gérer le survol
+  // const [isHovered, setIsHovered] = useState(false); // État pour gérer le survol
 
   return (
     <li
       className={styles.link}
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
+      // onMouseEnter={() => setIsHovered(true)}
+      // onMouseLeave={() => setIsHovered(false)}
     >
       {isMobileMenuActive ? (
         <a
           href={target}
           onClick={onClick}
-          style={{ color: isHovered ? "silver" : "white" }}
+          // style={{ color: isHovered ? "silver" : "white" }}
         >
           {name}
         </a>
@@ -30,9 +30,9 @@ const Links = ({ link, onClick, isMobileMenuActive }) => {
           <a href={target} onClick={onClick}>
             {name}
           </a>
-          {!isMobileMenuActive && isHovered && (
+          {/* {!isMobileMenuActive && isHovered && (
             <img className={styles.__hoverImage} src={crossImage} alt="Cross" />
-          )}
+          )} */}
         </>
       )}
     </li>

@@ -3,7 +3,9 @@
   display: block;
   overflow: hidden;
   padding: 2rem;
-  height: 86vh;
+
+  height: 100vh;
+  border: 3px solid blue;
 }
 
 //////////////////RESPONSIVE//////////////////////
@@ -11,5 +13,6 @@
   .sections {
     padding: 1rem;
     height: auto;
+    border: 3px solid fuchsia;
   }
 }

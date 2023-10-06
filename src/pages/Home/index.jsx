@@ -80,7 +80,9 @@ const Home = () => {
   return (
     <>
       <Navbar />
+
       <LinesSection sections={sections} />
+
       <Footer />
     </>
   );

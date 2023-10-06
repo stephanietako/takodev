@@ -2,12 +2,12 @@
   display: flex;
   width: 100%;
   align-items: center;
-  height: 100%;
+  height: 100vh;
 
   .__container {
     overflow: hidden;
     width: 100%;
-    height: 100%;
+    height: auto;
     position: relative;
     display: flex;
     justify-content: center;
@@ -44,26 +44,26 @@
         &.__text {
           width: 49%;
           position: relative;
-          height: auto;
+          height: 100%;
           white-space: pre-wrap;
-          overflow-x: hidden;
-          overflow-y: scroll;
+          // overflow-x: hidden;
+          // overflow-y: scroll;
 
-          &::-webkit-scrollbar {
-            width: 12px;
-          }
-          &::-webkit-scrollbar-track {
-            border: 1px solid #babecc;
-            border-radius: 3px;
-            border-radius: 2px 22px 22px 2px;
-          }
-          &::-webkit-scrollbar-thumb {
-            background: #babecc;
-            border-radius: 2px 22px 22px 2px;
-          }
-          &::-webkit-scrollbar-thumb:hover {
-            background: #babecc;
-          }
+          // &::-webkit-scrollbar {
+          //   width: 12px;
+          // }
+          // &::-webkit-scrollbar-track {
+          //   border: 1px solid #babecc;
+          //   border-radius: 3px;
+          //   border-radius: 2px 22px 22px 2px;
+          // }
+          // &::-webkit-scrollbar-thumb {
+          //   background: #babecc;
+          //   border-radius: 2px 22px 22px 2px;
+          // }
+          // &::-webkit-scrollbar-thumb:hover {
+          //   background: #babecc;
+          // }
 
           span {
             display: flex;
@@ -172,6 +172,7 @@
     .__container {
       .__about_content {
         flex-direction: column;
+        height: 100vh;
         .box {
           text-align: center;
           display: flex;
@@ -200,7 +201,9 @@
 
 @media only screen and (max-width: 600px) {
   .about {
+    height: auto;
     .__container {
+      height: 100%;
       .__about_content {
         flex-direction: column;
         .box {
@@ -210,7 +213,7 @@
           &.__text {
             width: 100%;
             margin-top: 22px;
-
+            height: 100%;
             .__regular_text {
               display: none;
             }
@@ -248,6 +251,7 @@
             // &::-webkit-scrollbar-thumb:hover {
             //   background: #babecc;
             // }
+            height: 100%;
             .__regular_text {
               display: block;
               padding: 1rem;

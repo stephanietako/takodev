@@ -37,6 +37,12 @@ const Projects = () => {
       />
     ));
   };
-  return <div className={styles.__container_cards}> {generateCards()}</div>;
+  return (
+    <div className={styles.projects}>
+      <div className={styles.__container}>
+        <div className={styles.__container_cards}> {generateCards()}</div>
+      </div>
+    </div>
+  );
 };
 export default Projects;
