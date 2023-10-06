@@ -150,7 +150,6 @@
 
 @media only screen and (max-width: 950px) and (min-width: 600px) {
   .welcome {
-    justify-content: flex-start;
     flex-direction: column;
     margin-top: 5rem;
     .__container {
@@ -189,7 +188,6 @@
 
 @media only screen and (max-width: 600px) {
   .welcome {
-    justify-content: flex-start;
     flex-direction: column;
     .__container {
       flex-direction: column;
