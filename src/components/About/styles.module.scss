@@ -2,12 +2,12 @@
   display: flex;
   width: 100%;
   align-items: center;
-  height: 80vh;
+  height: 70vh;
 
   .__container {
     overflow: hidden;
     width: 100%;
-    height: auto;
+    height: 100%;
     position: relative;
     display: flex;
     justify-content: center;
@@ -105,7 +105,8 @@
             display: flex;
             text-align: start;
             padding: 2rem;
-            line-height: 33px;
+            line-height: 1.5;
+            justify-content: center;
 
             p {
               font-size: 18px;
@@ -199,8 +200,31 @@
   }
 }
 
+@media screen and (max-width: 1024px) {
+  .about {
+    height: 100vh;
+    .__container {
+      .__about_content {
+        .box {
+          &.__text {
+            height: 100%;
+            .__regular_text {
+              display: block;
+              padding: 1rem;
+            }
+            .__text_mobile {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
 @media only screen and (max-width: 600px) {
   .about {
+    height: 100vh;
     height: auto;
     .__container {
       height: 100%;
@@ -220,28 +244,6 @@
 
             .__text_mobile {
               display: block;
-            }
-          }
-        }
-      }
-    }
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  .about {
-    height: 100vh;
-    .__container {
-      .__about_content {
-        .box {
-          &.__text {
-            height: 100%;
-            .__regular_text {
-              display: block;
-              padding: 1rem;
-            }
-            .__text_mobile {
-              display: none;
             }
           }
         }

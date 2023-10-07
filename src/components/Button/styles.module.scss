@@ -14,7 +14,7 @@ $btn-color: #babecc;
     line-height: 1;
     color: $btn-color;
     margin: 0;
-    padding: 1rem;
+    padding: 1.5rem;
     background: none;
     border: none;
     cursor: pointer;
@@ -125,7 +125,7 @@ $btn-color: #babecc;
   }
 }
 
-@media only screen and (max-width: 550px) {
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
   .container {
     justify-content: center;
     .__space_btn {
@@ -135,12 +135,22 @@ $btn-color: #babecc;
   }
 }
 
-@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+@media only screen and (max-width: 550px) {
+  .container {
+    justify-content: center;
+    .__space_btn {
+      font-size: 32px;
+      line-height: 10px;
+    }
+  }
+}
+
+@media (max-width: 375px) {
   .container {
     justify-content: center;
     .__space_btn {
       font-size: 18px;
-      line-height: 5px;
+      line-height: 2px;
     }
   }
 }
