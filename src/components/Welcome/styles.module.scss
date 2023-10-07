@@ -181,7 +181,7 @@
   }
 }
 
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 600px) {
   .welcome {
     flex-direction: column;
     border: 3px solid green;
@@ -256,7 +256,7 @@
   }
 }
 
-@media only screen and (max-width: 375px) {
+@media only screen and (max-width: 320px) {
   .welcome {
     flex-direction: column;
     border: 3px solid orangered;
