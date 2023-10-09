@@ -2,7 +2,7 @@
   display: flex;
   width: 100%;
   align-items: center;
-  height: 70vh;
+  height: 80vh;
 
   .__container {
     overflow: hidden;
@@ -46,24 +46,6 @@
           position: relative;
           height: 100%;
           white-space: pre-wrap;
-          // overflow-x: hidden;
-          // overflow-y: scroll;
-
-          // &::-webkit-scrollbar {
-          //   width: 12px;
-          // }
-          // &::-webkit-scrollbar-track {
-          //   border: 1px solid #babecc;
-          //   border-radius: 3px;
-          //   border-radius: 2px 22px 22px 2px;
-          // }
-          // &::-webkit-scrollbar-thumb {
-          //   background: #babecc;
-          //   border-radius: 2px 22px 22px 2px;
-          // }
-          // &::-webkit-scrollbar-thumb:hover {
-          //   background: #babecc;
-          // }
 
           span {
             display: flex;
@@ -155,8 +137,9 @@
         .box {
           &.__text {
             .__regular_text {
-              display: block;
               padding: 1rem;
+              // justify-content: center;
+              display: flex;
             }
             .__text_mobile {
               display: none;
@@ -227,7 +210,7 @@
     height: 100vh;
     height: auto;
     .__container {
-      height: 100%;
+      // height: 100%;
       .__about_content {
         flex-direction: column;
         .box {
@@ -237,7 +220,7 @@
           &.__text {
             width: 100%;
             margin-top: 22px;
-            height: 100%;
+            // height: 100%;
             .__regular_text {
               display: none;
             }

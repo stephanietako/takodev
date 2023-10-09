@@ -13,7 +13,6 @@ $color-white: #fff;
   display: flex;
   flex-direction: column;
   padding: $ruler;
-  border: 7px solid turquoise;
 
   .__form_element {
     margin-top: 0.5rem;
@@ -34,21 +33,16 @@ $color-white: #fff;
       padding: 19px;
       text-shadow: 1px 1px 0 $color-white;
       letter-spacing: -0.2px;
-      margin-right: calc(#{$ruler} / 2);
+      margin-right: calc(16 / 2);
       box-shadow: inset 2px 2px 5px $color-shadow,
         inset -5px -5px 10px $color-white;
       width: 100%;
-      transition: all 0.2s ease-in-out;
-      -webkit-transition: all 0.2s ease-in-out;
-      -moz-transition: all 0.2s ease-in-out;
-      -o-transition: all 0.2s ease-in-out;
       appearance: none;
       -webkit-appearance: none;
       resize: none;
       outline: none;
       border: none;
-      // margin-bottom: 2rem;
-      height: 5rem;
+      height: 4rem;
       background-color: $color-bg;
       cursor: pointer;
       overflow: auto;
@@ -94,14 +88,3 @@ $color-white: #fff;
     color: #61677c;
   }
 }
-//////////////////////// RESPONSIVE ///////////////////////////////
-// @media only screen and (max-width: 1024px) {
-//   .__container_form {
-//     width: auto;
-//   }
-// }
-// @media only screen and (max-width: 820px) {
-//   .__container_form {
-//     width: auto;
-//   }
-// }

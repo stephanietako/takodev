@@ -59,7 +59,7 @@ const Home = () => {
         <div className={styles.sections} id="projects">
           <Projects
             text={
-              "De la conception du design personnalisé à la création de sites web réactifs pour tous les écrans, en passant par l'optimisation du référencement SEO, Tako Dev vous offre une approche globale pour votre projet et d'une expérience utilisateur réactive pour une visibilité en ligne réussie."
+              "Conception du design personnalisé à la création de sites web réactifs pour tous les écrans\nOptimisation du référencement SEO\nTako Dev vous offre une approche globale à votre projet pour \nune expérience utilisateur réactive pour une visibilité en ligne réussie."
             }
             logo={logotako}
             altLogo="logo Tako Dev"

@@ -20,7 +20,7 @@ const Projects = ({ title, text, logo, altLogo }) => {
   const generateCards = () => {
     const cardData = [
       {
-        title: "Carte 1",
+        title: "b&b Italia Saint-tropez",
         content: "Contenu de la carte 1",
         image: imgCard1,
         link: "/",
