@@ -9,15 +9,6 @@ $color-clear-dark: #2a2a2e;
   height: 100%;
   justify-content: space-around;
 
-  button,
-  input {
-    border: 0;
-    outline: 0;
-    border-radius: 30%;
-    padding: 14px;
-    background-color: $color-bg;
-  }
-
   .unit {
     box-shadow: -5px -5px 20px $color-clear-dark,
       5px 5px 20px $color-shadow-dark;
@@ -25,6 +16,14 @@ $color-clear-dark: #2a2a2e;
     cursor: pointer;
     width: 64px;
     height: 64px;
+    border: none;
+    border: 0;
+    outline: 0;
+    border-radius: 30%;
+    padding: 14px;
+    background-color: $color-bg;
+    appearance: none;
+    -webkit-appearance: none;
 
     &:hover {
       box-shadow: -2px -2px 5px $color-clear-dark,
@@ -43,6 +42,7 @@ $color-clear-dark: #2a2a2e;
   }
 }
 
+//////////////////////// RESPONSIVE ///////////////////////////////
 @media only screen and (max-width: 768px) {
   .__iconBox {
     display: flex;

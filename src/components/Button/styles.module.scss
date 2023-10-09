@@ -18,7 +18,9 @@ $btn-color: #babecc;
     background: none;
     border: none;
     cursor: pointer;
-
+    appearance: none;
+    -webkit-appearance: none;
+    border: none;
     &:hover {
       color: lighten($btn-color, 20%);
     }

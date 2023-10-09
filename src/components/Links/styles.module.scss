@@ -1,25 +1,25 @@
 $color-bg: rgb(24, 24, 26);
 $color-shadow-dark: #0b0b0b;
+$color-shadow-dark: #000;
 $color-clear-dark: #2a2a2e;
 
 .link {
   display: flex;
   align-items: center;
   width: 14%;
-  height: 73%;
-  // border: 1px solid yellow;
+  border-radius: 320px;
+  height: 4rem;
   margin-left: 3rem;
-  box-shadow: -5px -5px 20px #2a2a2e, 5px 5px 20px #0b0b0b;
+  box-shadow: -5px -5px 20px $color-clear-dark, 5px 5px 20px $color-shadow-dark;
   transition: all 0.2s ease-in-out;
   cursor: pointer;
   border: 0;
   outline: 0;
-  border-radius: 30%;
-  padding: 14px;
-  background-color: $color-bg;
-
-  box-shadow: -5px -5px 20px $color-clear-dark, 5px 5px 20px $color-shadow-dark;
-  transition: all 0.2s ease-in-out;
+  padding: 16px;
+  // background-color: $color-bg;
+  opacity: 2;
+  appearance: none;
+  -webkit-appearance: none;
 
   &:hover {
     box-shadow: -2px -2px 5px $color-clear-dark, 2px 2px 5px $color-shadow-dark;
@@ -33,21 +33,20 @@ $color-clear-dark: #2a2a2e;
   a {
     text-decoration: none;
     font-size: 24px;
-    padding: 4px 7px 11px 0px;
     width: 100%;
     font-weight: bolder;
     position: relative;
     z-index: 11;
     padding: 1.5rem;
     cursor: pointer;
-    color: red;
+    color: #fff;
     &:hover {
       opacity: 1;
       transition: opacity 0.2s ease-out;
       -webkit-transition: opacity 0.2s ease-out;
       -moz-transition: opacity 0.2s ease-out;
       -o-transition: opacity 0.2s ease-out;
-      color: blue;
+      color: silver;
     }
   }
 }
@@ -60,86 +59,3 @@ $color-clear-dark: #2a2a2e;
     opacity: 1;
   }
 }
-
-// $color-bg: rgb(24, 24, 26);
-// $color-shadow-dark: #0b0b0b;
-// $color-clear-dark: #2a2a2e;
-
-// .link {
-//   display: flex;
-//   align-items: center;
-//   position: relative;
-//   width: auto;
-//   height: auto;
-//   box-shadow: -5px -5px 20px $color-clear-dark, 5px 5px 20px $color-shadow-dark;
-//   transition: all 0.2s ease-in-out;
-//   cursor: pointer;
-//   // width: 14rem;
-//   padding: 16px;
-//   border: 0;
-//   outline: 0;
-//   border-radius: 30%;
-//   padding: 14px;
-//   background-color: rgb(24, 24, 26);
-//   // border: 2px solid red;
-
-//   &:hover {
-//     box-shadow: -2px -2px 5px $color-clear-dark, 2px 2px 5px $color-shadow-dark;
-//   }
-
-//   &:active {
-//     box-shadow: inset 1px 1px 2px $color-shadow-dark,
-//       inset -1px -1px 2px $color-clear-dark;
-//   }
-
-//   a {
-//     text-decoration: none;
-//     font-size: 24px;
-//     // width: 100%;
-//     font-weight: bolder;
-//     position: relative;
-//     z-index: 11;
-//     padding: 1.5rem;
-//     cursor: pointer;
-
-//     &:hover {
-//       opacity: 1;
-//       transition: opacity 0.2s ease-out;
-//       -webkit-transition: opacity 0.2s ease-out;
-//       -moz-transition: opacity 0.2s ease-out;
-//       -o-transition: opacity 0.2s ease-out;
-//       color: blue;
-//     }
-//   }
-// }
-
-// @keyframes fadeIn {
-//   from {
-//     opacity: 0;
-//   }
-//   to {
-//     opacity: 1;
-//   }
-// }
-/////////////////// RESPONSIVE ///////////////////////////
-// /* Medium devices such as tablets (768px and down) */
-// @media only screen and (max-width: 1024px) {
-//   .link {
-//     .__hoverImage {
-//       display: block;
-//     }
-//     a {
-//       &:hover {
-//         opacity: 2;
-//       }
-//       &::after {
-//         content: "";
-//         display: block;
-//         margin: 12px auto;
-//         width: 22px;
-//         height: 2px;
-//         background: #babecc;
-//       }
-//     }
-//   }
-// }

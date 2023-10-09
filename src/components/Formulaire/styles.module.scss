@@ -29,11 +29,10 @@ $color-white: #fff;
     input,
     textarea {
       font-size: $ruler;
-      border-radius: calc(#{$ruler} * 20);
+      border-radius: 320px;
       padding: 19px;
       text-shadow: 1px 1px 0 $color-white;
       letter-spacing: -0.2px;
-      margin-right: calc(16 / 2);
       box-shadow: inset 2px 2px 5px $color-shadow,
         inset -5px -5px 10px $color-white;
       width: 100%;
@@ -65,6 +64,7 @@ $color-white: #fff;
     cursor: pointer;
     font-weight: 600;
     width: 14rem;
+    height: auto;
     border: 0;
     outline: 0;
     font-size: $ruler;
