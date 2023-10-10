@@ -1,4 +1,4 @@
-$color-bg: rgb(24, 24, 26);
+// $color-bg: rgb(24, 24, 26);
 $color-shadow-dark: #0b0b0b;
 $color-shadow-dark: #000;
 $color-clear-dark: #2a2a2e;
@@ -16,7 +16,7 @@ $color-clear-dark: #2a2a2e;
   border: 0;
   outline: 0;
   padding: 16px;
-  // background-color: $color-bg;
+  background-color: transparent;
   opacity: 2;
   appearance: none;
   -webkit-appearance: none;

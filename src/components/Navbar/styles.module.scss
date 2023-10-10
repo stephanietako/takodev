@@ -6,13 +6,7 @@
     rgba(30, 29, 43, 0.96) 50%,
     rgb(16, 17, 27) 100%
   );
-  // background: linear-gradient(
-  //   319deg,
-  //   rgb(48 49 63) 0%,
-  //   rgb(40, 40, 50) 0%,
-  //   rgba(29, 34, 43, 0.96) 50%,
-  //   rgb(16, 17, 27) 100%
-  // );
+
   display: flex;
   position: sticky;
   top: 0;
@@ -34,7 +28,7 @@
     -webkit-transition: 2s ease-in-out;
     -moz-transition: 2s ease-in-out;
     -o-transition: 2s ease-in-out;
-    opacity: 0.9;
+    // opacity: 0.9;
     z-index: 999;
     width: 100%;
   }
