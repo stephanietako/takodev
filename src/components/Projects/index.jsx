@@ -2,7 +2,7 @@ import React, { useState, useRef } from "react";
 import styles from "./styles.module.scss";
 import Cards from "../Cards";
 // Assets
-import imgCard1 from "../../assets/logo/takodev-logo-black.png";
+import imgCard1 from "../../assets/logo/bb-logo-noir-crop.png";
 import imgCard2 from "../../assets/images/nasa.jpg";
 import imgCard3 from "../../assets/images/nasa.jpg";
 import arrow from "../../assets/icon/arrowgray.png";
@@ -20,20 +20,21 @@ const Projects = ({ title, text, logo, altLogo }) => {
   const generateCards = () => {
     const cardData = [
       {
-        title: "b&b Italia Saint-tropez",
-        content: "Contenu de la carte 1",
+        title: "B&B Italia Saint-Tropez",
+        content:
+          " Site web Showroom de mobilier design contemporain indoor et outdoor",
         image: imgCard1,
-        link: "/",
+        link: "https://www.bebitaliasainttropez.com/",
       },
       {
-        title: "Carte 2",
-        content: "Contenu de la carte 2",
+        title: "Projet",
+        content: "Projet en cours",
         image: imgCard2,
         link: "/",
       },
       {
-        title: "Carte 3",
-        content: "Contenu de la carte 3",
+        title: "Projet",
+        content: "Projet en cours",
         image: imgCard3,
         link: "/",
       },

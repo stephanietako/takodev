@@ -5,7 +5,9 @@ const Cards = ({ title, content, image, alt, link }) => {
   return (
     <div className={styles.wrapper}>
       <div className={styles.card}>
-        <img src={image} alt={alt}></img>
+        <div className={styles.__image}>
+          <img src={image} alt={alt} />
+        </div>
         <div className={styles.__infoBox}>
           <h2>{title}</h2>
           <p>{content}</p>
