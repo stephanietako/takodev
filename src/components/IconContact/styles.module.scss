@@ -1,4 +1,4 @@
-$color-bg: rgb(30, 30, 34);
+// $color-bg: rgb(30, 30, 34);
 $color-shadow-dark: #000;
 $color-clear-dark: #2a2a2e;
 
@@ -43,12 +43,14 @@ $color-clear-dark: #2a2a2e;
 }
 
 //////////////////////// RESPONSIVE ///////////////////////////////
+@media only screen and (max-width: 1440px) {
+  .__iconBox {
+    justify-content: space-between;
+  }
+}
+
 @media only screen and (max-width: 768px) {
   .__iconBox {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    justify-content: space-around;
+    justify-content: space-evenly;
   }
 }

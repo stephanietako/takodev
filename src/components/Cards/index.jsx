@@ -2,6 +2,15 @@
 import styles from "./styles.module.scss";
 
 const Cards = ({ title, content, image, alt, link }) => {
+  let domain = "";
+  // Gérer les erreurs potentielles liées à la construction de l'objet URL
+  try {
+    const url = new URL(link);
+    domain = url.hostname;
+  } catch (error) {
+    domain = "URL en attente";
+  }
+
   return (
     <div className={styles.wrapper}>
       <div className={styles.card}>
@@ -12,7 +21,7 @@ const Cards = ({ title, content, image, alt, link }) => {
           <h2>{title}</h2>
           <p>{content}</p>
           <a href={link} className={styles.__btn_link}>
-            Link
+            {domain}
           </a>
         </div>
       </div>

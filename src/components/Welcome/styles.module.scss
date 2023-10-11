@@ -3,7 +3,6 @@
   width: 100%;
   align-items: center;
   height: 80vh;
-  // justify-content: center;
   position: relative;
   flex-wrap: wrap;
 
@@ -143,34 +142,32 @@
   }
 }
 
-@media only screen and (max-width: 950px) and (min-width: 600px) {
+@media only screen and (max-width: 950px) and (min-width: 768px) {
   .welcome {
-    flex-direction: column;
-    // height: 100vh;
     .__container {
-      flex-direction: column;
       width: 100%;
       .__welcome_container {
-        flex-direction: column;
         padding: 1rem;
         .logo_container {
           .__logo {
             img {
-              width: 17rem;
+              width: 14rem;
             }
           }
         }
         .text {
           width: 100%;
           h1 {
-            font-size: 2rem;
+            font-size: 1.8rem;
           }
           .__regular_text {
-            display: none;
-            padding: 1rem;
+            display: block;
+            p {
+              font-size: 25px;
+            }
           }
           .__text_mobile {
-            display: block;
+            display: none;
           }
         }
       }
@@ -180,8 +177,6 @@
 
 @media only screen and (max-width: 600px) {
   .welcome {
-    // flex-direction: column;
-    // height: auto;
     .__container {
       flex-direction: column;
       .__welcome_container {
@@ -204,7 +199,7 @@
           }
           .__text_mobile {
             display: block;
-            padding: 1rem;
+            padding: 2rem;
             text-align: left;
           }
         }
@@ -215,7 +210,6 @@
 
 @media only screen and (max-width: 375px) {
   .welcome {
-    // flex-direction: column;
     .__container {
       flex-direction: column;
       .__welcome_container {
@@ -254,13 +248,9 @@
 
 @media only screen and (max-width: 320px) {
   .welcome {
-    // flex-direction: column;
     width: auto;
     .__container {
-      flex-direction: column;
       .__welcome_container {
-        flex-direction: column;
-
         .logo_container {
           padding: 0;
           .__logo {

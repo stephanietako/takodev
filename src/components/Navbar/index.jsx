@@ -20,7 +20,7 @@ const Navbar = () => {
       "--scroll-padding",
       navigationHeight.current
     );
-  }, [navbarElement]);
+  }, []);
 
   const [fix, setFix] = useState(false);
 
@@ -32,7 +32,12 @@ const Navbar = () => {
     }
   };
 
-  window.addEventListener("scroll", setFixed);
+  useEffect(() => {
+    window.addEventListener("scroll", setFixed);
+    return () => {
+      window.removeEventListener("scroll", setFixed);
+    };
+  }, []);
 
   const [isOpen, setIsOpen] = useState(false);
 
@@ -79,6 +84,8 @@ const Navbar = () => {
                 link={link}
                 onClick={toggleMenu}
                 isMobileMenuActive={isOpen}
+                className={isOpen ? styles.link_menu : styles.link}
+                // Ajoutez la classe link_menu ici si isOpen est true
               />
             ))}
           </div>

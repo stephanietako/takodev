@@ -1,13 +1,15 @@
 import React, { useState, useRef } from "react";
 import Formulaire from "../Formulaire";
 // Assets
-import arrow from "../../assets/icon/arrowgray.png";
+import arrow from "../../assets/icon/arrow.png";
+import arrowInHover from "../../assets/icon/arrow-colored.png";
 import IconContact from "../IconContact";
 // Styles
 import styles from "./styles.module.scss";
 
 const Contact = ({ title, text, logo, altLogo }) => {
   const [visible, setVisible] = useState(false);
+  const [isArrowHovered, setIsArrowHovered] = useState(false);
   const formRef = useRef(null);
 
   const toggleElmt = () => {
@@ -26,8 +28,16 @@ const Contact = ({ title, text, logo, altLogo }) => {
             <div className={styles.__logo}>
               <img src={logo} alt={altLogo} />
             </div>
-            <div className={styles.__arrow}>
-              <img src={arrow} alt={"arrow icon"} onClick={toggleElmt} />
+            <div
+              className={styles.__arrow}
+              onMouseEnter={() => setIsArrowHovered(true)}
+              onMouseLeave={() => setIsArrowHovered(false)}
+            >
+              <img
+                src={isArrowHovered ? arrowInHover : arrow}
+                alt={"icon flêche"}
+                onClick={toggleElmt}
+              />
             </div>
           </div>
           <div className={styles.__icons}>

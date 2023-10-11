@@ -13,8 +13,8 @@
     border-radius: 22px;
     width: 100%;
     border: 3px solid #babecc;
-    padding: 1rem;
-    justify-content: center;
+    padding: 2rem;
+    justify-content: space-evenly;
 
     .__box {
       padding: 1rem;
@@ -115,11 +115,12 @@
   .contact {
     height: auto;
     .__container_contact {
+      padding: 1rem;
       .__box {
         width: 100%;
         .__infoBox {
-          height: 18rem;
-          font-size: 1rem;
+          height: 26rem;
+          font-size: 2rem;
           .__arrow {
             display: block;
           }
@@ -142,8 +143,11 @@
   .contact {
     height: auto;
     .__container_contact {
+      padding: 1rem;
       .__box {
         .__infoBox {
+          height: 24rem;
+          font-size: 1.5rem;
           .__arrow {
             display: block;
           }

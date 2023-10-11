@@ -2,7 +2,7 @@ import React, { useState } from "react";
 // Styles
 import styles from "./styles.module.scss";
 
-const InputField = ({ name, label, value, onChange, error }) => {
+const InputField = ({ name, label, value, onChange, error, placeholder }) => {
   return (
     <>
       <label htmlFor={name}>{label}:</label>
@@ -12,14 +12,21 @@ const InputField = ({ name, label, value, onChange, error }) => {
         name={name}
         value={value}
         onChange={onChange}
-        placeholder={`Ton ${label.toLowerCase()} ici`}
+        placeholder={placeholder}
       />
       {error && <div className={styles.error}>{error}</div>}
     </>
   );
 };
 
-const TextareaField = ({ name, label, value, onChange, error }) => {
+const TextareaField = ({
+  name,
+  label,
+  value,
+  onChange,
+  error,
+  placeholder,
+}) => {
   return (
     <>
       <label htmlFor={name}>{label}:</label>
@@ -29,7 +36,7 @@ const TextareaField = ({ name, label, value, onChange, error }) => {
         name={name}
         value={value}
         onChange={onChange}
-        placeholder={`Ton ${label.toLowerCase()} ici`}
+        placeholder={placeholder}
       />
       {error && <div className={styles.error}>{error}</div>}
     </>
@@ -52,26 +59,28 @@ const Formulaire = () => {
   };
 
   const validateEmail = (email) => {
-    const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+    // eslint-disable-next-line
+    const emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
     return emailRegex.test(email);
   };
+
   const validateMessage = (message) => {
-    const messageRegex = /^[a-zA-Z0-9\s]+$/;
+    const messageRegex = /^[\s\S]{10,1000}$/;
     return messageRegex.test(message);
+  };
+
+  const validateName = (name) => {
+    const nameRegex = /^[a-zA-Z]+[a-zA-Z]+$/;
+    return nameRegex.test(name);
+  };
+
+  const validateLastName = (lastname) => {
+    const nameRegex = /^[a-zA-Z]+[a-zA-Z]+$/;
+    return nameRegex.test(lastname);
   };
 
   const validateForm = () => {
     const newErrors = {};
-
-    // Validez le nom
-    if (formData.name.trim() === "") {
-      newErrors.name = "Le nom est requis";
-    }
-
-    // Validez le nom de famille
-    if (formData.lastName.trim() === "") {
-      newErrors.lastName = "Le nom de famille est requis";
-    }
 
     // Validez l'e-mail
     if (!validateEmail(formData.email)) {
@@ -81,6 +90,16 @@ const Formulaire = () => {
     // Validez le message
     if (!validateMessage(formData.message)) {
       newErrors.message = "Le message n'est pas valide";
+    }
+
+    // Validez le name
+    if (!validateName(formData.name)) {
+      newErrors.name = "Le nom n'est pas valide, caractères autorisés dépassés";
+    }
+
+    // Validez le lastname
+    if (!validateLastName(formData.lastName)) {
+      newErrors.lastName = "Le nom n'est pas valide";
     }
 
     setErrors(newErrors);
@@ -112,6 +131,7 @@ const Formulaire = () => {
             value={formData.name}
             onChange={handleChange}
             error={errors.name}
+            placeholder="Ton Prénom ici"
           />
         </div>
         <div className={styles.__form_element}>
@@ -121,6 +141,7 @@ const Formulaire = () => {
             value={formData.lastName}
             onChange={handleChange}
             error={errors.lastName}
+            placeholder="Ton Nom de Famille ici"
           />
         </div>
 
@@ -131,15 +152,17 @@ const Formulaire = () => {
             value={formData.email}
             onChange={handleChange}
             error={errors.email}
+            placeholder="Ton e-mail ici"
           />
         </div>
         <div className={styles.__form_element}>
           <TextareaField
             name="message"
-            label="message"
+            label="Message"
             value={formData.message}
             onChange={handleChange}
             error={errors.message}
+            placeholder="Ton message ici"
           />
         </div>
         <button type="submit">Submit</button>

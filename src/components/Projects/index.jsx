@@ -5,10 +5,12 @@ import Cards from "../Cards";
 import imgCard1 from "../../assets/logo/bb-logo-noir-crop.png";
 import imgCard2 from "../../assets/images/nasa.jpg";
 import imgCard3 from "../../assets/images/nasa.jpg";
-import arrow from "../../assets/icon/arrowgray.png";
+import arrow from "../../assets/icon/arrow.png";
+import arrowInHover from "../../assets/icon/arrow-colored.png";
 
 const Projects = ({ title, text, logo, altLogo }) => {
   const [visible, setVisible] = useState(false);
+  const [isArrowHovered, setIsArrowHovered] = useState(false);
   const formRef = useRef(null);
   const toggleElmt = () => {
     setVisible(!visible);
@@ -39,7 +41,6 @@ const Projects = ({ title, text, logo, altLogo }) => {
         link: "/",
       },
     ];
-
     return cardData.map((data, index) => (
       <Cards
         key={index}
@@ -55,16 +56,25 @@ const Projects = ({ title, text, logo, altLogo }) => {
       <div className={styles.__container}>
         <div className={styles.__box}>
           <div className={styles.__infoBox}>
+            <h3>{title}</h3>
             <p>{text}</p>
             <div className={styles.__logo}>
               <img src={logo} alt={altLogo} />
             </div>
-            <h3>{title}</h3>
-            <div className={styles.__arrow}>
-              <img src={arrow} alt={"arrow icon"} onClick={toggleElmt} />
-            </div>
           </div>
         </div>
+        <div
+          className={styles.__arrow}
+          onMouseEnter={() => setIsArrowHovered(true)}
+          onMouseLeave={() => setIsArrowHovered(false)}
+        >
+          <img
+            src={isArrowHovered ? arrowInHover : arrow}
+            alt={"icon flêche icon"}
+            onClick={toggleElmt}
+          />
+        </div>
+
         <div className={styles.__container_cards} ref={formRef}>
           {generateCards()}
         </div>
