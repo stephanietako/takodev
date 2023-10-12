@@ -1,3 +1,5 @@
+@import "../../style/scss-variables";
+
 .footer {
   display: flex;
   bottom: 0;
@@ -10,7 +12,7 @@
     align-items: center;
     bottom: 0;
     width: 100%;
-    color: #babecc;
+    color: $clear-gray;
     background: #000;
     height: 5rem;
     max-height: 5rem;
@@ -23,7 +25,7 @@
     .__copyright {
       display: flex;
       flex-wrap: wrap;
-      color: #babecc;
+      color: $clear-gray;
       font-size: 14px;
       width: 100%;
     }
@@ -44,7 +46,7 @@
           color: #fff;
           font-size: 12px;
           &:hover {
-            color: #babecc;
+            color: $clear-gray;
           }
         }
       }

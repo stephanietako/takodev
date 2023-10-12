@@ -1,3 +1,5 @@
+@import "../../style/scss-variables";
+
 .wrapper {
   flex: 1;
   flex-wrap: wrap;
@@ -43,13 +45,7 @@
       -webkit-transition: 0.5s;
       -moz-transition: 0.5s;
       -o-transition: 0.5s;
-      background: linear-gradient(
-        90deg,
-        rgb(24, 25, 40) 0%,
-        rgb(25, 25, 37) 0%,
-        rgba(30, 29, 43, 0.96) 50%,
-        rgb(16, 17, 27) 100%
-      );
+      background: $bg-linear-gradt;
       width: 100%;
       height: 100%;
       border-radius: 17px;
@@ -69,7 +65,7 @@
     }
 
     .__btn_link {
-      color: #babecc;
+      color: $clear-gray;
       font-weight: bold;
       cursor: pointer;
     }
@@ -80,7 +76,7 @@
       position: relative;
       border: 2px solid #fff;
       border-radius: 22px;
-      background: #babecc;
+      background: $clear-gray;
 
       img {
         width: 100%;
@@ -103,5 +99,12 @@
     a[href]:hover {
       color: #707070;
     }
+  }
+}
+
+//////////////////////// RESPONSIVE ///////////////////////////////
+@media only screen and (max-width: 820px) {
+  .wrapper {
+    padding: 1rem;
   }
 }

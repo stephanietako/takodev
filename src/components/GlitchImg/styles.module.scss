@@ -2,7 +2,6 @@
 .activeAnimation {
   display: block;
   width: auto;
-  // height: 85vh;
   height: 100%;
   position: relative;
 
@@ -26,7 +25,6 @@
     background-repeat: no-repeat;
     background-position: 50% 50%;
     background-size: cover;
-    // box-shadow: #dae6ea 0px 5px 15px 0px;
     transition: 0.5s cubic-bezier(0.77, 0, 0.175, 1);
   }
 
@@ -34,13 +32,11 @@
     position: relative;
     width: 100%;
     height: 100%;
-    // background: rgba(3, 8, 28, 0.75);
     z-index: -1;
   }
 
   .container_glitch__img {
     height: calc(78% + 367px);
-    //height: calc(100% + 340px);
     left: 0;
     pointer-events: none;
     position: absolute;
@@ -48,12 +44,8 @@
     transform: translate3d(0, 0, 0);
     width: calc(100% + 10px * 2);
     background-blend-mode: overlay;
-    //   background-color: #1a5da1;
     background-color: #0a0e41;
-    // filter: blur(3px);
     filter: blur(1px);
-    //filter: rgba(255, 255, 255, 0.75);
-    // box-shadow: #dae6ea 0px 5px 15px 0px;
 
     &:nth-child(n + 2) {
       opacity: 0;
@@ -63,7 +55,6 @@
       &:not(.activeAnimation) {
         animation: none;
       }
-      // animation: glitch-anim-1 2s infinite linear;
       background-blend-mode: overlay;
       background-color: #1a1922;
     }
@@ -97,7 +88,6 @@
   }
 
   .container_glitch__img:nth-child(n + 2) {
-    //ici
     opacity: 0;
   }
 
@@ -318,7 +308,7 @@
     }
   }
 }
-///////////////
+//////////////////////// RESPONSIVE ///////////////////////////////
 @media only screen and (max-width: 600px) {
   .container,
   .activeAnimation {
@@ -353,7 +343,6 @@
       position: relative;
       width: 100%;
       height: 100%;
-      // background: rgba(3, 8, 28, 0.75);
     }
   }
 }

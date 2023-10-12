@@ -1,4 +1,4 @@
-$btn-color: #707070;
+@import "../../style/scss-variables";
 
 .container {
   display: flex;
@@ -22,14 +22,14 @@ $btn-color: #707070;
     -webkit-appearance: none;
     border: none;
     &:hover {
-      color: lighten($btn-color, 20%);
+      color: lighten($gray-color, 20%);
     }
     &:focus {
-      color: lighten($btn-color, 10%);
+      color: lighten($gray-color, 10%);
       outline: none;
     }
     &:active {
-      color: $btn-color;
+      color: $gray-color;
     }
 
     &::before,
@@ -44,12 +44,12 @@ $btn-color: #707070;
     &::before {
       top: 0;
       left: 0;
-      box-shadow: inset 2px 2px 0 0 $btn-color;
+      box-shadow: inset 2px 2px 0 0 $gray-color;
     }
     &::after {
       right: 0;
       bottom: 0;
-      box-shadow: inset -2px -2px 0 0 $btn-color;
+      box-shadow: inset -2px -2px 0 0 $gray-color;
     }
     &:hover {
       &::before {

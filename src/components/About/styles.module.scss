@@ -1,8 +1,10 @@
+@import "../../style/scss-variables";
+
 .about {
   display: flex;
   width: 100%;
   align-items: center;
-  height: 100%;
+  height: auto;
 
   .__container {
     overflow: hidden;
@@ -23,9 +25,8 @@
         text-align: center;
         display: flex;
         width: 100%;
-        height: 100%;
-        border-radius: 22px;
-        border: 3px solid #babecc;
+        height: auto;
+        border: 3px solid $clear-gray;
         border-radius: 22px;
 
         &.__anime_container {
@@ -66,7 +67,7 @@
 
             .__slash {
               width: 2px;
-              background: #babecc;
+              background: $clear-gray;
               transform: rotate(16deg);
               height: 33px;
               margin-left: 9px;
@@ -209,7 +210,6 @@
     height: 100vh;
     height: auto;
     .__container {
-      // height: 100%;
       .__about_content {
         flex-direction: column;
         .box {
@@ -219,7 +219,6 @@
           &.__text {
             width: 100%;
             margin-top: 22px;
-            // height: 100%;
             .__regular_text {
               display: none;
             }

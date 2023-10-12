@@ -63,6 +63,7 @@ const Projects = ({ title, text, logo, altLogo }) => {
             </div>
           </div>
         </div>
+
         <div
           className={styles.__arrow}
           onMouseEnter={() => setIsArrowHovered(true)}

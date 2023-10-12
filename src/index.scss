@@ -1,4 +1,5 @@
 @import "./style/fonts.scss";
+@import "./style/scss-variables";
 
 body {
   display: flex;
@@ -8,13 +9,7 @@ body {
   padding: 0;
   min-height: 100vh;
   line-height: 1;
-  background: linear-gradient(
-    90deg,
-    rgb(24, 25, 40) 0%,
-    rgb(25, 25, 37) 0%,
-    rgba(30, 29, 43, 0.96) 50%,
-    rgb(16, 17, 27) 100%
-  );
+  background: $bg-linear-gradt;
   font-family: "Georama", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

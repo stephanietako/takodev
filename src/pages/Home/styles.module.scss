@@ -1,15 +1,22 @@
 .sections {
   width: 100%;
-  display: block;
+  display: flex;
   overflow: hidden;
-  padding: 2.5rem;
-  height: 100vh;
+  padding: 3.5rem;
+  min-height: 85vh;
 }
 
 //////////////////RESPONSIVE//////////////////////
 @media only screen and (max-width: 1600px) {
   .sections {
-    padding: 1rem;
+    padding: 3rem;
+    height: auto;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .sections {
+    padding: 2rem;
     height: auto;
   }
 }
