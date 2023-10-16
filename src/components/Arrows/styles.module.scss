@@ -1,0 +1,14 @@
+.arrow {
+  width: 100%;
+  height: auto;
+  display: flex;
+  position: relative;
+  align-items: center;
+  bottom: 0;
+  cursor: pointer;
+  justify-content: center;
+  img {
+    width: 4rem;
+    height: 100%;
+  }
+}

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 // Styles
 import styles from "./styles.module.scss";
-
+import DOMPurify from "dompurify";
 const InputField = ({ name, label, value, onChange, error, placeholder }) => {
   return (
     <>
@@ -84,22 +84,25 @@ const Formulaire = () => {
 
     // Validez l'e-mail
     if (!validateEmail(formData.email)) {
-      newErrors.email = "L'e-mail n'est pas valide";
+      newErrors.email = "Veuillez entrer une adresse e-mail valide";
     }
 
     // Validez le message
     if (!validateMessage(formData.message)) {
-      newErrors.message = "Le message n'est pas valide";
+      newErrors.message =
+        "Votre message doit comporter au moins 10 mots et pas plus de 1000";
     }
 
     // Validez le name
     if (!validateName(formData.name)) {
-      newErrors.name = "Le nom n'est pas valide, caractères autorisés dépassés";
+      newErrors.name =
+        "Le prénom n'est pas valide, il comporte moins de lettres et/ou des chiffres";
     }
 
     // Validez le lastname
     if (!validateLastName(formData.lastName)) {
-      newErrors.lastName = "Le nom n'est pas valide";
+      newErrors.lastName =
+        "Le prénom n'est pas valide, il comporte moins de lettres et/ou des chiffres";
     }
 
     setErrors(newErrors);
@@ -111,8 +114,12 @@ const Formulaire = () => {
     event.preventDefault();
 
     if (validateForm()) {
+      const cleanedName = DOMPurify.sanitize(formData.name);
+      const cleanedLastName = DOMPurify.sanitize(formData.lastName);
+      const cleanedEmail = DOMPurify.sanitize(formData.email);
+      const cleanedMessage = DOMPurify.sanitize(formData.message);
       alert(
-        `Name: ${formData.name}, LastName: ${formData.lastName}, Email: ${formData.email}, Message: ${formData.message}`
+        `Name: ${cleanedName}, LastName: ${cleanedLastName}, Email: ${cleanedEmail}, Message: ${cleanedMessage}`
       );
     } else {
       alert(

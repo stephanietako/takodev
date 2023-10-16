@@ -1,17 +1,16 @@
 import React, { useState, useRef } from "react";
 import styles from "./styles.module.scss";
 import Cards from "../Cards";
+import Arrows from "../Arrows";
 // Assets
 import imgCard1 from "../../assets/logo/bb-logo-noir-crop.png";
 import imgCard2 from "../../assets/images/nasa.jpg";
 import imgCard3 from "../../assets/images/nasa.jpg";
-import arrow from "../../assets/icon/arrow.png";
-import arrowInHover from "../../assets/icon/arrow-colored.png";
 
 const Projects = ({ title, text, logo, altLogo }) => {
   const [visible, setVisible] = useState(false);
-  const [isArrowHovered, setIsArrowHovered] = useState(false);
   const formRef = useRef(null);
+
   const toggleElmt = () => {
     setVisible(!visible);
     if (formRef.current) {
@@ -63,19 +62,7 @@ const Projects = ({ title, text, logo, altLogo }) => {
             </div>
           </div>
         </div>
-
-        <div
-          className={styles.__arrow}
-          onMouseEnter={() => setIsArrowHovered(true)}
-          onMouseLeave={() => setIsArrowHovered(false)}
-        >
-          <img
-            src={isArrowHovered ? arrowInHover : arrow}
-            alt={"icon flêche icon"}
-            onClick={toggleElmt}
-          />
-        </div>
-
+        <Arrows onClick={toggleElmt} />
         <div className={styles.__container_cards} ref={formRef}>
           {generateCards()}
         </div>
