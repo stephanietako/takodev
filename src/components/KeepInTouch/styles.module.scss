@@ -1,0 +1,98 @@
+@import "../../style/scss-variables";
+
+.kpintch_container {
+  width: 50%;
+  height: 100%;
+  align-items: center;
+  position: relative;
+  border: 3px solid red;
+
+  h4 {
+    font-size: 20px;
+    font-weight: lighter;
+    text-transform: uppercase;
+    margin: 10px 0;
+  }
+  .__form_element {
+    display: flex;
+
+    label {
+      color: silver;
+      font-size: 1.5rem;
+      text-align: left;
+      padding: 22px;
+    }
+
+    input {
+      font-size: $ruler;
+      border-radius: 320px;
+      padding: 19px;
+      letter-spacing: -0.2px;
+      box-shadow: -5px -5px 20px $color-clear-dark,
+        5px 5px 20px $color-shadow-dark;
+      transition: all 0.2s ease-in-out;
+      width: 100%;
+      appearance: none;
+      -webkit-appearance: none;
+      resize: none;
+      outline: none;
+      border: none;
+      height: 4rem;
+      background-color: transparent;
+      cursor: pointer;
+      overflow: auto;
+      color: #fff;
+
+      &:focus {
+        box-shadow: inset 1px 1px 2px $color-shadow-dark,
+          inset -1px -1px 2px $color-clear-dark;
+      }
+      .__result {
+        position: absolute;
+        color: $clear-gray;
+      }
+    }
+
+    button {
+      cursor: pointer;
+      border: 0;
+      outline: 0;
+      padding: 16px;
+      background-color: transparent;
+      margin: 18px 14px;
+      position: relative;
+      box-shadow: -5px -5px 20px #212124, 5px 5px 20px $color-shadow-dark;
+      transition: all 0.2s ease-in-out;
+      appearance: none;
+      -webkit-appearance: none;
+      border-radius: 30%;
+      &:hover {
+        box-shadow: -2px -2px 5px $color-clear-dark,
+          2px 2px 5px $color-shadow-dark;
+      }
+
+      &:active {
+        box-shadow: inset 1px 1px 2px $color-shadow-dark,
+          inset -1px -1px 2px $color-clear-dark;
+      }
+
+      .__arrow {
+        display: flex;
+        position: absolute;
+        height: 2.563rem;
+        filter: brightness(0) invert(1);
+        -webkit-filter: brightness(0) invert(1);
+        top: 50%;
+        transform: translateY(-50%);
+        background: none;
+        border: none;
+        width: 2rem;
+        right: 0;
+      }
+    }
+  }
+}
+
+div {
+  color: $regular-gray;
+}

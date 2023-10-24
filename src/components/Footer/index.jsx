@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import styles from "./styles.module.scss";
 // Assets
 import logo from "../../assets/logo/takodev-logo-white.png";
+import KeepInTouch from "../KeepInTouch";
 
 const Footer = () => {
   const date = new Date();
@@ -30,6 +31,9 @@ const Footer = () => {
             </div>
           </li>
         </ul>
+        <span>
+          <KeepInTouch />
+        </span>
       </footer>
     </div>
   );

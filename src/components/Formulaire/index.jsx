@@ -1,7 +1,8 @@
 import React, { useState } from "react";
+import DOMPurify from "dompurify";
 // Styles
 import styles from "./styles.module.scss";
-import DOMPurify from "dompurify";
+
 const InputField = ({ name, label, value, onChange, error, placeholder }) => {
   return (
     <>
