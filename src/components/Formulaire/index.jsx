@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import DOMPurify from "dompurify";
+import fetchForm from "../../helpers/fetchForm";
 // Styles
 import styles from "./styles.module.scss";
 
@@ -119,9 +120,10 @@ const Formulaire = () => {
       const cleanedLastName = DOMPurify.sanitize(formData.lastName);
       const cleanedEmail = DOMPurify.sanitize(formData.email);
       const cleanedMessage = DOMPurify.sanitize(formData.message);
-      alert(
-        `Name: ${cleanedName}, LastName: ${cleanedLastName}, Email: ${cleanedEmail}, Message: ${cleanedMessage}`
-      );
+      // alert(
+      //   `Name: ${cleanedName}, LastName: ${cleanedLastName}, Email: ${cleanedEmail}, Message: ${cleanedMessage}`
+      // );
+      fetchForm(cleanedName, cleanedLastName, cleanedEmail, cleanedMessage);
     } else {
       alert(
         "Le formulaire contient des erreurs. Veuillez corriger les champs."
