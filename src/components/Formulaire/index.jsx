@@ -46,6 +46,8 @@ const TextareaField = ({
 };
 
 const Formulaire = () => {
+  const [loading, setLoading] = useState(false);
+
   const [formData, setFormData] = useState({
     name: "",
     lastName: "",
@@ -120,10 +122,29 @@ const Formulaire = () => {
       const cleanedLastName = DOMPurify.sanitize(formData.lastName);
       const cleanedEmail = DOMPurify.sanitize(formData.email);
       const cleanedMessage = DOMPurify.sanitize(formData.message);
-      // alert(
-      //   `Name: ${cleanedName}, LastName: ${cleanedLastName}, Email: ${cleanedEmail}, Message: ${cleanedMessage}`
-      // );
-      fetchForm(cleanedName, cleanedLastName, cleanedEmail, cleanedMessage);
+      alert(
+        `Name: ${cleanedName}, LastName: ${cleanedLastName}, Email: ${cleanedEmail}, Message: ${cleanedMessage}`
+      );
+
+      setLoading(true);
+
+      fetchForm(cleanedName, cleanedLastName, cleanedEmail, cleanedMessage)
+        .then((response) => {
+          if (response.ok) {
+            return response.json();
+          } else {
+            throw new Error("erreur pour la reponse");
+          }
+        })
+        .then((data) => {
+          setLoading(false);
+          alert("Formulaire soumis avec succès");
+        })
+        .catch((error) => {
+          // Gérez les erreurs du fetch ici
+          console.error(error);
+          alert("Erreur dans la soumission du formulaire");
+        });
     } else {
       alert(
         "Le formulaire contient des erreurs. Veuillez corriger les champs."
