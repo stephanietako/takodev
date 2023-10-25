@@ -6,17 +6,19 @@
   width: 100%;
   width: 100%;
   height: 100%;
+  border-top: 1px solid $clear-gray;
 
   .__container {
     display: flex;
     align-items: center;
     bottom: 0;
-    width: 100%;
+    width: auto;
     color: $clear-gray;
-    background: $bg-linear-gradt;
+    background: transparent;
     height: auto;
-    width: 100%;
+    width: 70%;
     flex-wrap: wrap;
+    justify-content: center;
 
     .__logo {
       width: auto;
@@ -38,6 +40,7 @@
       list-style-type: none;
       height: auto;
       width: auto;
+
       li {
         padding: 10px;
         font-size: small;
@@ -57,5 +60,18 @@
     width: 50%;
     height: auto;
     padding: 3rem;
+  }
+}
+//////////////////////// RESPONSIVE ///////////////////////////////
+@media only screen and (max-width: 768px) {
+  .footer {
+    .__container {
+      width: 100%;
+      justify-content: start;
+    }
+    span {
+      width: 100%;
+      padding: 0.5rem;
+    }
   }
 }

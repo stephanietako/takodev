@@ -75,7 +75,9 @@ const Home = () => {
         <div className={styles.sections} id="contact">
           <Contact
             title={"écrivez-moi"}
-            text={"vous avez un projet ?\nDes questions ?"}
+            text={
+              "vous avez un projet ?\nDes questions ?\nVous avez besoin d'un devis ?"
+            }
             logo={logotako}
             altLogo="logo Tako Dev"
           />

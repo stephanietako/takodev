@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
+import MentionsLegales from "./components/MentionsLegales";
 import Page404 from "./components/Page404";
 import Maintenance from "./pages/Maintenance";
 // Styles
@@ -15,6 +16,7 @@ const App = () => (
         ) : (
           <Route path="/" element={<Home />} />
         )}
+        <Route path="/terms" element={<MentionsLegales />} />
         <Route path="*" element={<Page404 />} />
       </Routes>
     </Router>
