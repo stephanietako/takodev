@@ -1,7 +1,7 @@
 import { useState } from "react";
 import DOMPurify from "dompurify";
 // Helpers
-import fetchUserMail from "../../helpers/fetchUserMail";
+// import fetchUserMail from "../../helpers/fetchUserMail";
 // Assets
 import arrowform from "../../assets/icon/arrowform.svg";
 // Styles
@@ -26,13 +26,13 @@ const KeepInTouch = () => {
   const [formData, setFormData] = useState({
     email: "",
   });
-  const [email, setEmail] = useState("");
+  //   const [email, setEmail] = useState("");
   const [result, setResult] = useState("");
   const [errors, setErrors] = useState({});
 
-  const handleChange = (event) => {
-    const { name, value } = event.target;
-    setFormData((prevFormData) => ({ ...prevFormData, [name]: value }));
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
   };
 
   const validateEmail = (email) => {
@@ -53,8 +53,8 @@ const KeepInTouch = () => {
     return Object.keys(newErrors).length === 0;
   };
 
-  const handleSubmit = async (event) => {
-    event.preventDefault();
+  const handleSubmit = async (e) => {
+    e.preventDefault();
 
     if (validateForm()) {
       const cleanedEmail = DOMPurify.sanitize(formData.email);
@@ -66,14 +66,23 @@ const KeepInTouch = () => {
     }
 
     try {
-      const response = await fetchUserMail(email);
-      setEmail("");
-      if (response) {
+      const response = await fetch("/email", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        console.log("Email sent successfully!");
         setResult("Thank you for subscribing to our newsletter!");
       } else {
+        console.error("Failed to send email.");
         setResult("Something went wrong, please try again later.");
       }
-    } catch {
+    } catch (error) {
+      console.error("An error occurred:", error);
       setResult("Something went wrong, please try again later.");
     }
   };

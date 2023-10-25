@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import DOMPurify from "dompurify";
-import fetchForm from "../../helpers/fetchForm";
+
 // Styles
 import styles from "./styles.module.scss";
 
@@ -46,8 +46,6 @@ const TextareaField = ({
 };
 
 const Formulaire = () => {
-  const [loading, setLoading] = useState(false);
-
   const [formData, setFormData] = useState({
     name: "",
     lastName: "",
@@ -57,9 +55,9 @@ const Formulaire = () => {
 
   const [errors, setErrors] = useState({});
 
-  const handleChange = (event) => {
-    const { name, value } = event.target;
-    setFormData((prevFormData) => ({ ...prevFormData, [name]: value }));
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
   };
 
   const validateEmail = (email) => {
@@ -114,8 +112,8 @@ const Formulaire = () => {
     return Object.keys(newErrors).length === 0;
   };
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
+  const handleSubmit = async (e) => {
+    e.preventDefault();
 
     if (validateForm()) {
       const cleanedName = DOMPurify.sanitize(formData.name);
@@ -126,32 +124,25 @@ const Formulaire = () => {
         `Name: ${cleanedName}, LastName: ${cleanedLastName}, Email: ${cleanedEmail}, Message: ${cleanedMessage}`
       );
 
-      setLoading(true);
-
-      fetchForm(cleanedName, cleanedLastName, cleanedEmail, cleanedMessage)
-        .then((response) => {
-          if (response.ok) {
-            return response.json();
-          } else {
-            throw new Error("erreur pour la reponse");
-          }
-        })
-        .then((data) => {
-          setLoading(false);
-          alert("Formulaire soumis avec succès");
-        })
-        .catch((error) => {
-          // Gérez les erreurs du fetch ici
-          console.error(error);
-          alert("Erreur dans la soumission du formulaire");
+      try {
+        const response = await fetch("/contact", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
         });
-    } else {
-      alert(
-        "Le formulaire contient des erreurs. Veuillez corriger les champs."
-      );
+
+        if (response.ok) {
+          console.log("Email sent successfully!");
+        } else {
+          console.error("Failed to send form.");
+        }
+      } catch (error) {
+        console.error("An error occurred:", error);
+      }
     }
   };
-
   return (
     <>
       <form onSubmit={handleSubmit} className={styles.__container_form}>
@@ -201,5 +192,4 @@ const Formulaire = () => {
     </>
   );
 };
-
 export default Formulaire;
