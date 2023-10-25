@@ -1,7 +1,5 @@
 import { useState } from "react";
 import DOMPurify from "dompurify";
-// Helpers
-// import fetchUserMail from "../../helpers/fetchUserMail";
 // Assets
 import arrowform from "../../assets/icon/arrowform.svg";
 // Styles
@@ -52,7 +50,9 @@ const KeepInTouch = () => {
     // La Object.keys()méthode statique renvoie un tableau des noms de propriétés énumérables à clé de chaîne d'un objet donné.
     return Object.keys(newErrors).length === 0;
   };
-
+  //
+  const backendUrl = process.env.REACT_APP_URL_BACK_PROD;
+  //
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -66,7 +66,8 @@ const KeepInTouch = () => {
     }
 
     try {
-      const response = await fetch("/email", {
+      const response = await fetch(`${backendUrl}/email`, {
+        // Utilisez l'URL du backend ici
         method: "POST",
         headers: {
           "Content-Type": "application/json",
