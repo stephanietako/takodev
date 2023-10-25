@@ -26,8 +26,8 @@
       border-radius: 320px;
       padding: 19px;
       letter-spacing: -0.2px;
-      box-shadow: -5px -5px 20px $color-clear-dark,
-        5px 5px 20px $color-shadow-dark;
+      box-shadow: inset 2px 2px 5px #030303,
+        inset -5px -5px 10px $color-clear-dark;
       transition: all 0.2s ease-in-out;
       width: 100%;
       appearance: none;
@@ -42,8 +42,10 @@
       color: #fff;
 
       &:focus {
-        box-shadow: -5px -5px 20px $color-clear-dark,
-          5px 5px 20px $color-shadow-dark;
+        // box-shadow: -5px -5px 20px $color-clear-dark,
+        //   5px 5px 20px $color-shadow-dark;
+        box-shadow: inset 1px 1px 2px $color-clear-dark,
+          inset -1px -1px 2px #030303;
       }
       .__result {
         position: absolute;

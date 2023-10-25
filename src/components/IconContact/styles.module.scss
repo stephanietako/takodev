@@ -24,13 +24,13 @@
     -webkit-appearance: none;
 
     &:hover {
-      box-shadow: -2px -2px 5px $color-clear-dark,
-        2px 2px 5px $color-shadow-dark;
+      box-shadow: -2px -2px 2px $color-clear-dark,
+        2px 2px 2px $color-shadow-dark;
     }
 
     &:active {
       box-shadow: inset 1px 1px 2px $color-shadow-dark,
-        inset -1px -1px 2px $color-clear-dark;
+        inset -1px -1px 1px $color-clear-dark;
     }
 
     .icon {
