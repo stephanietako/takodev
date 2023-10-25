@@ -42,8 +42,6 @@
       color: #fff;
 
       &:focus {
-        // box-shadow: -5px -5px 20px $color-clear-dark,
-        //   5px 5px 20px $color-shadow-dark;
         box-shadow: inset 1px 1px 2px $color-clear-dark,
           inset -1px -1px 2px #030303;
       }
