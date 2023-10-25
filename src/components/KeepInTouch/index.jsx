@@ -7,7 +7,7 @@ import arrowform from "../../assets/icon/arrowform.svg";
 // Styles
 import styles from "./styles.module.scss";
 
-const InputField = ({ name, label, value, onChange, error, placeholder }) => {
+const InputField = ({ name, label, value, onChange, placeholder }) => {
   return (
     <>
       <label htmlFor={name}>{label}:</label>
@@ -19,7 +19,6 @@ const InputField = ({ name, label, value, onChange, error, placeholder }) => {
         onChange={onChange}
         placeholder={placeholder}
       />
-      {error && <div className={styles.error}>{error}</div>}
     </>
   );
 };
@@ -81,7 +80,7 @@ const KeepInTouch = () => {
 
   return (
     <div className={styles.kpintch_container}>
-      <h4>subscribe to our latest updates</h4>
+      <h4>abonnez-vous</h4>
       <form onSubmit={handleSubmit}>
         <div className={styles.__form_element}>
           <InputField

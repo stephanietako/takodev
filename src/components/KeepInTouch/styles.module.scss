@@ -18,7 +18,8 @@
     label {
       font-size: 1.5rem;
       text-align: left;
-      padding: 22px;
+      padding-top: 3rem;
+      padding-right: 1rem;
     }
 
     input {
@@ -40,6 +41,7 @@
       cursor: pointer;
       overflow: auto;
       color: #fff;
+      margin-top: 2rem;
 
       &:focus {
         box-shadow: inset 1px 1px 2px $color-clear-dark,
@@ -49,6 +51,10 @@
         position: absolute;
         color: $clear-gray;
       }
+    }
+
+    .__result {
+      position: absolute;
     }
 
     button {
@@ -64,6 +70,7 @@
       appearance: none;
       -webkit-appearance: none;
       border-radius: 30%;
+      margin-top: 2.7rem;
       &:hover {
         box-shadow: -2px -2px 5px $color-clear-dark,
           2px 2px 5px $color-shadow-dark;
