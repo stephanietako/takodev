@@ -29,7 +29,7 @@ const About = ({ title, subtitle, text, textmobile }) => {
           setImgVisible(false);
         }
       },
-      { root: null, rootMargin: "0px", threshold: 0.8 }
+      { root: null, rootMargin: "10px", threshold: 0.8 }
     );
 
     observer.observe(ref.current);
