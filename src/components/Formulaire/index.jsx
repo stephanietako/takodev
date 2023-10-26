@@ -116,7 +116,12 @@ const Formulaire = () => {
   //
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setForm("");
+    setFormData({
+      firstname: "",
+      lastname: "",
+      email: "",
+      message: "",
+    });
 
     if (validateForm()) {
       const cleanedFirstname = DOMPurify.sanitize(formData.firstname);

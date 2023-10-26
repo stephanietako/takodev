@@ -55,7 +55,10 @@ const KeepInTouch = () => {
   //
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setEmail("");
+    setFormData({
+      email: "",
+    });
+
     if (validateForm()) {
       const cleanedEmail = DOMPurify.sanitize(formData.email);
       alert(` Email: ${cleanedEmail}`);
