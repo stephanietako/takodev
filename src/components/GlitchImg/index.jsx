@@ -19,19 +19,16 @@ const GlitchImg = ({ setImgVisible }) => {
       };
 
       const observer = new IntersectionObserver((entries) => {
-        // console.log("Entries:", entries); // Afficher les valeurs de entries
         entries.forEach((entry) => {
-          // console.log("Entry:", entry); // Afficher les valeurs de chaque entry
+          // Afficher les valeurs de chaque entry
           const { isIntersecting, intersectionRatio } = entry;
           if (isIntersecting && intersectionRatio >= 0.1) {
             setIsAnimating(true);
             glitchContainer.classList.add("active");
-            console.log("Element fully visible");
             setImgVisible(true);
           } else {
             setIsAnimating(false);
             glitchContainer.classList.remove("active"); // / Sinon retire la classe 'active' quand je nettoie
-            console.log("Element not fully visible");
             setImgVisible(false);
           }
         });
@@ -43,7 +40,6 @@ const GlitchImg = ({ setImgVisible }) => {
         observer.unobserve(glitchContainer);
         setIsAnimating(false);
         glitchContainer.classList.remove("active"); // Retire la classe 'active' quand je nettoie
-        console.log("Animation observer cleaned up");
       };
     }, []);
 

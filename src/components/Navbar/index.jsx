@@ -15,7 +15,6 @@ const Navbar = () => {
 
   useEffect(() => {
     navigationHeight.current = navbarElement.current.offsetHeight;
-    console.info("Navbar height:", navbarElement.current.offsetHeight);
     navbarElement.current.style.setProperty(
       "--scroll-padding",
       navigationHeight.current

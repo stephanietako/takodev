@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import DOMPurify from "dompurify";
-
 // Styles
 import styles from "./styles.module.scss";
 
@@ -111,7 +110,9 @@ const Formulaire = () => {
     // La Object.keys()méthode statique renvoie un tableau des noms de propriétés énumérables à clé de chaîne d'un objet donné.
     return Object.keys(newErrors).length === 0;
   };
-
+  //
+  const backendUrl = process.env.REACT_APP_URL_BACK_PROD;
+  //
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -123,26 +124,34 @@ const Formulaire = () => {
       alert(
         `Name: ${cleanedName}, LastName: ${cleanedLastName}, Email: ${cleanedEmail}, Message: ${cleanedMessage}`
       );
+    } else {
+      alert(
+        "Le formulaire contient des erreurs. Veuillez corriger les champs."
+      );
+    }
 
-      try {
-        const response = await fetch("/contact", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(formData),
-        });
+    try {
+      const response = await fetch(`${backendUrl}/contact`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
 
-        if (response.ok) {
-          console.log("Email sent successfully!");
-        } else {
-          console.error("Failed to send form.");
-        }
-      } catch (error) {
-        console.error("An error occurred:", error);
+      if (response.ok) {
+        console.log("Form sent successfully!");
+        alert("Form sent successfully!");
+      } else {
+        console.error("Failed to send form.");
+        alert("Failed to send form.");
       }
+    } catch (error) {
+      console.error("An error occurred:", error);
+      alert("Something went wrong, please try again later. " + error);
     }
   };
+
   return (
     <>
       <form onSubmit={handleSubmit} className={styles.__container_form}>

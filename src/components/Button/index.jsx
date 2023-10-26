@@ -4,7 +4,6 @@ import styles from "./styles.module.scss";
 const ButtonStyle = ({ text, link }) => {
   const handleClick = (e) => {
     e.preventDefault();
-    console.log("Button 'À propos' clicked. Target:", target);
     window.location.href = target;
   };
 

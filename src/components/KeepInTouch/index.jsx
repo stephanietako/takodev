@@ -41,7 +41,6 @@ const KeepInTouch = () => {
 
   const validateForm = () => {
     const newErrors = {};
-    // Validez l'e-mail
     if (!validateEmail(formData.email)) {
       newErrors.email = "Veuillez entrer une adresse e-mail valide";
     }
