@@ -14,7 +14,7 @@ const IconContact = () => {
   const linkedinURL = process.env.REACT_APP_LINKEDIN_URL;
   return (
     <div className={styles.__iconBox}>
-      <a href={`mail:${emailAdress}`}>
+      <a href={`mailto:${emailAdress}`}>
         <button
           type="button"
           className={styles.unit}
