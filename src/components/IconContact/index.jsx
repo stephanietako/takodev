@@ -10,9 +10,11 @@ import styles from "./styles.module.scss";
 const IconContact = () => {
   const [isMailHovered, setIsMailHovered] = useState(false);
   const [isLinkedinHovered, setIsLinkedinHovered] = useState(false);
+  const emailAdress = process.env.REACT_APP_EMAIL;
+  const linkedinURL = process.env.REACT_APP_LINKEDIN_URL;
   return (
     <div className={styles.__iconBox}>
-      <a href="/">
+      <a href={`mail:${emailAdress}`}>
         <button
           type="button"
           className={styles.unit}
@@ -28,7 +30,7 @@ const IconContact = () => {
         </button>
       </a>
 
-      <a href="/">
+      <a href={linkedinURL} target="_blank" rel="noopener noreferrer">
         <button
           type="button"
           className={styles.unit}

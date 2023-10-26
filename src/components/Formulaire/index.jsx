@@ -45,6 +45,8 @@ const TextareaField = ({
 };
 
 const Formulaire = () => {
+  // eslint-disable-next-line
+  const [form, setForm] = useState("");
   const [formData, setFormData] = useState({
     name: "",
     lastName: "",
@@ -115,6 +117,7 @@ const Formulaire = () => {
   //
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setForm("");
 
     if (validateForm()) {
       const cleanedName = DOMPurify.sanitize(formData.name);

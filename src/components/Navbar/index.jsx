@@ -84,7 +84,6 @@ const Navbar = () => {
                 onClick={toggleMenu}
                 isMobileMenuActive={isOpen}
                 className={isOpen ? styles.link_menu : styles.link}
-                // Ajoutez la classe link_menu ici si isOpen est true
               />
             ))}
           </div>

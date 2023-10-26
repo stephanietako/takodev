@@ -24,7 +24,8 @@ const KeepInTouch = () => {
   const [formData, setFormData] = useState({
     email: "",
   });
-  //   const [email, setEmail] = useState("");
+  // eslint-disable-next-line
+  const [email, setEmail] = useState("");
   const [result, setResult] = useState("");
   const [errors, setErrors] = useState({});
 
@@ -54,7 +55,7 @@ const KeepInTouch = () => {
   //
   const handleSubmit = async (e) => {
     e.preventDefault();
-
+    setEmail("");
     if (validateForm()) {
       const cleanedEmail = DOMPurify.sanitize(formData.email);
       alert(` Email: ${cleanedEmail}`);
@@ -66,7 +67,6 @@ const KeepInTouch = () => {
 
     try {
       const response = await fetch(`${backendUrl}/email`, {
-        // Utilisez l'URL du backend ici
         method: "POST",
         headers: {
           "Content-Type": "application/json",
