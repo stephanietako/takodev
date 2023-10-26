@@ -61,12 +61,12 @@ const Formulaire = () => {
     setFormData({ ...formData, [name]: value });
   };
 
-  const validateName = (firstname) => {
+  const validateFirstname = (firstname) => {
     const nameRegex = /^[a-zA-Z]+[a-zA-Z]+$/;
     return nameRegex.test(firstname);
   };
 
-  const validateLastName = (lastname) => {
+  const validateLastname = (lastname) => {
     const nameRegex = /^[a-zA-Z]+[a-zA-Z]+$/;
     return nameRegex.test(lastname);
   };
@@ -84,6 +84,17 @@ const Formulaire = () => {
 
   const validateForm = () => {
     const newErrors = {};
+    // Validez le firstname
+    if (!validateFirstname(formData.firstname)) {
+      newErrors.fistname =
+        "Le prénom n'est pas valide, il comporte moins de lettres et/ou des chiffres";
+    }
+
+    // Validez le lastname
+    if (!validateLastname(formData.lastname)) {
+      newErrors.lastname =
+        "Le nom n'est pas valide, il comporte moins de lettres et/ou des chiffres";
+    }
 
     // Validez l'e-mail
     if (!validateEmail(formData.email)) {
@@ -94,18 +105,6 @@ const Formulaire = () => {
     if (!validateMessage(formData.message)) {
       newErrors.message =
         "Votre message doit comporter au moins 10 mots et pas plus de 1000";
-    }
-
-    // Validez le name
-    if (!validateName(formData.firstname)) {
-      newErrors.name =
-        "Le prénom n'est pas valide, il comporte moins de lettres et/ou des chiffres";
-    }
-
-    // Validez le lastname
-    if (!validateLastName(formData.lastname)) {
-      newErrors.lastName =
-        "Le nom n'est pas valide, il comporte moins de lettres et/ou des chiffres";
     }
 
     setErrors(newErrors);
