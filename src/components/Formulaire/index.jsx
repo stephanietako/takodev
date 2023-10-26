@@ -48,8 +48,8 @@ const Formulaire = () => {
   // eslint-disable-next-line
   const [form, setForm] = useState("");
   const [formData, setFormData] = useState({
-    name: "",
-    lastName: "",
+    firstname: "",
+    lastname: "",
     email: "",
     message: "",
   });
@@ -61,6 +61,16 @@ const Formulaire = () => {
     setFormData({ ...formData, [name]: value });
   };
 
+  const validateName = (firstname) => {
+    const nameRegex = /^[a-zA-Z]+[a-zA-Z]+$/;
+    return nameRegex.test(firstname);
+  };
+
+  const validateLastName = (lastname) => {
+    const nameRegex = /^[a-zA-Z]+[a-zA-Z]+$/;
+    return nameRegex.test(lastname);
+  };
+
   const validateEmail = (email) => {
     // eslint-disable-next-line
     const emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
@@ -70,16 +80,6 @@ const Formulaire = () => {
   const validateMessage = (message) => {
     const messageRegex = /^[\s\S]{10,1000}$/;
     return messageRegex.test(message);
-  };
-
-  const validateName = (name) => {
-    const nameRegex = /^[a-zA-Z]+[a-zA-Z]+$/;
-    return nameRegex.test(name);
-  };
-
-  const validateLastName = (lastname) => {
-    const nameRegex = /^[a-zA-Z]+[a-zA-Z]+$/;
-    return nameRegex.test(lastname);
   };
 
   const validateForm = () => {
@@ -97,15 +97,15 @@ const Formulaire = () => {
     }
 
     // Validez le name
-    if (!validateName(formData.name)) {
+    if (!validateName(formData.firstname)) {
       newErrors.name =
         "Le prénom n'est pas valide, il comporte moins de lettres et/ou des chiffres";
     }
 
     // Validez le lastname
-    if (!validateLastName(formData.lastName)) {
+    if (!validateLastName(formData.lastname)) {
       newErrors.lastName =
-        "Le prénom n'est pas valide, il comporte moins de lettres et/ou des chiffres";
+        "Le nom n'est pas valide, il comporte moins de lettres et/ou des chiffres";
     }
 
     setErrors(newErrors);
@@ -120,12 +120,12 @@ const Formulaire = () => {
     setForm("");
 
     if (validateForm()) {
-      const cleanedName = DOMPurify.sanitize(formData.name);
-      const cleanedLastName = DOMPurify.sanitize(formData.lastName);
+      const cleanedFirstname = DOMPurify.sanitize(formData.firstname);
+      const cleanedLastname = DOMPurify.sanitize(formData.lastname);
       const cleanedEmail = DOMPurify.sanitize(formData.email);
       const cleanedMessage = DOMPurify.sanitize(formData.message);
       alert(
-        `Name: ${cleanedName}, LastName: ${cleanedLastName}, Email: ${cleanedEmail}, Message: ${cleanedMessage}`
+        `Firstname: ${cleanedFirstname}, Lastname: ${cleanedLastname}, Email: ${cleanedEmail}, Message: ${cleanedMessage}`
       );
     } else {
       alert(
@@ -160,21 +160,21 @@ const Formulaire = () => {
       <form onSubmit={handleSubmit} className={styles.__container_form}>
         <div className={styles.__form_element}>
           <InputField
-            name="name"
-            label="Name"
-            value={formData.name}
+            name="firstname"
+            label="Prénom"
+            value={formData.firstname}
             onChange={handleChange}
-            error={errors.name}
+            error={errors.firstname}
             placeholder="Ton Prénom ici"
           />
         </div>
         <div className={styles.__form_element}>
           <InputField
-            name="lastName"
-            label="LastName"
-            value={formData.lastName}
+            name="lastname"
+            label="Nom"
+            value={formData.lastname}
             onChange={handleChange}
-            error={errors.lastName}
+            error={errors.lastname}
             placeholder="Ton Nom de Famille ici"
           />
         </div>
