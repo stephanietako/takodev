@@ -19,10 +19,10 @@ const Home = () => {
           <Welcome
             title={"Votre créateur de solutions web "}
             text={
-              "La technologie comme un puissant levier de créativité\nQue vous souhaitiez concevoir un site web réactif\nDévelopper une application web sur mesure\nTako Dev possède l'expertise nécessaire"
+              "La technologie comme un puissant levier de créativité\nDe la conception d'un site web réactif\nAu développement d'une application web sur mesure\nTako Dev possède l'expertise nécessaire"
             }
             textmobile={
-              "La technologie comme un puissant levier de créativité\nQue vous souhaitiez concevoir un site web réactif\nDévelopper une application web sur mesure\nTako Dev possède l'expertise nécessaire"
+              "La technologie comme un puissant levier de créativité\nDe la conception d'un site web réactif\nAu développement d'une application web sur mesure\nTako Dev possède l'expertise nécessaire"
             }
             logo={logotako}
             altLogo="logo Tako Dev"
@@ -41,10 +41,10 @@ const Home = () => {
               "Mettre l'art et la technologie au service de vos projets"
             }
             text={
-              "Je suis Stéphanie, la fondatrice de Tako Dev, un studio de développement web.\nGrâce à ma maîtrise technique de la programmation JavaScript spécialisée dans l'utilisation de technologies performantes comme React et Node.js, je suis en mesure de concevoir des solutions numériques alliant performance, esthétique et fonctionnalité. Dotées d’un système conçu de manière à être évolutif, ce qui signifie qu'il peut facilement s'adapter à vos besoins futurs sans nécessiter de refonte majeure.\nReact est utilisé par des entreprises de renom telles que Facebook, Instagram, Airbnb, Uber, Netflix, Spotify ou encore Gmail. Et Node.js se distingue par sa stabilité, sa sécurité et sa rapidité.\nMon parcours dans le domaine artistique me permet de comprendre les enjeux culturels et esthétiques de chaque projet.\nCette combinaison unique de compétences apporte une perspective innovante tout en tenant compte de vos préférences et de vos désirs en matière de design."
+              "Je suis Stéphanie, la fondatrice de Tako Dev, un studio de développement web.\nMa maîtrise technique de la programmation JavaScript spécialisée dans l'utilisation de technologies performantes comme React et Node.js me permet de concevoir des solutions numériques alliant performance, esthétique et fonctionnalité.\nCelles-ci sont dotées d'un système conçu de manière à être évolutif. Cela signifie que votre projet pourra facilement s'adapter à vos besoins futurs sans nécessiter de refonte majeure.\nReact est utilisé par des entreprises de renom telles que Facebook, Instagram, Airbnb, Uber, Netflix, Spotify ou Gmail.\nEt Node.js se distingue par sa stabilité, sa sécurité et sa rapidité.\nMon parcours dans le domaine artistique me permet de comprendre les enjeux culturels et esthétiques de chaque projet.\nCette combinaison unique de compétences apporte une perspective innovante tout en tenant compte de vos préférences et désirs en matière de design."
             }
             textmobile={
-              "Je suis Stéphanie, la fondatrice de Tako Dev, un studio de développement web.\nGrâce à ma maîtrise technique de la programmation JavaScript spécialisée dans l'utilisation de technologies performantes comme React et Node.js, je suis en mesure de concevoir des solutions numériques alliant performance, esthétique et fonctionnalité. Dotées d’un système conçu de manière à être évolutif, ce qui signifie qu'il peut facilement s'adapter à vos besoins futurs sans nécessiter de refonte majeure.\nReact est utilisé par des entreprises de renom telles que Facebook, Instagram, Airbnb, Uber, Netflix, Spotify ou encore Gmail. Et Node.js se distingue par sa stabilité, sa sécurité et sa rapidité.\nMon parcours dans le domaine artistique me permet de comprendre les enjeux culturels et esthétiques de chaque projet.\nCette combinaison unique de compétences apporte une perspective innovante tout en tenant compte de vos préférences et de vos désirs en matière de design."
+              "Je suis Stéphanie, la fondatrice de Tako Dev, un studio de développement web.\nMa maîtrise technique de la programmation JavaScript spécialisée dans l'utilisation de technologies performantes comme React et Node.js me permet de concevoir des solutions numériques alliant performance, esthétique et fonctionnalité.\nCelles-ci sont dotées d'un système conçu de manière à être évolutif. Cela signifie que votre projet pourra facilement s'adapter à vos besoins futurs sans nécessiter de refonte majeure.\nReact est utilisé par des entreprises de renom telles que Facebook, Instagram, Airbnb, Uber, Netflix, Spotify ou Gmail.\nEt Node.js se distingue par sa stabilité, sa sécurité et sa rapidité.\nMon parcours dans le domaine artistique me permet de comprendre les enjeux culturels et esthétiques de chaque projet.\nCette combinaison unique de compétences apporte une perspective innovante tout en tenant compte de vos préférences et désirs en matière de design."
             }
             logo={logotako}
             altLogo="logo Tako Dev"
@@ -59,7 +59,7 @@ const Home = () => {
         <div className={styles.sections} id="projects">
           <Projects
             text={
-              "Conception du design personnalisé à la création de sites web réactifs sur tous les écrans\nOptimisation du référencement SEO\nTako Dev offre une approche globale à votre projet \nEt une expérience utilisateur réactive pour une visibilité en ligne réussie"
+              "Conception du design personnalisé\nCréation de sites web réactifs sur tous les écrans\nOptimisation du référencement SEO\nTako Dev offre une approche globale à votre projet \nUne expérience utilisateur réactive pour une visibilité en ligne réussie"
             }
             logo={logotako}
             altLogo="logo Tako Dev"

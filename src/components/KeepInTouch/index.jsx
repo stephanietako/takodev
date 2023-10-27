@@ -20,6 +20,7 @@ const InputField = ({ name, label, value, onChange, placeholder }) => {
     </>
   );
 };
+
 const KeepInTouch = () => {
   const [formData, setFormData] = useState({
     email: "",
@@ -104,7 +105,6 @@ const KeepInTouch = () => {
             placeholder="Ton e-mail ici"
           />
           <div className={styles.__result}>{result}</div>
-
           <button type="submit">
             <img className={styles.__arrow} src={arrowform} alt="icon arrow" />
           </button>

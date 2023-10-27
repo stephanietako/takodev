@@ -4,7 +4,6 @@ const MentionsLegales = () => {
   return (
     <div className={styles.terms_section} id="terms">
       <>
-        {/* <button className={styles.__btn_home}>Retour sur le site</button> */}
         <a href="/">
           <button className={styles.__btn_home}>Retour sur le site</button>
         </a>

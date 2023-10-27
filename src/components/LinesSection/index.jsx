@@ -13,7 +13,6 @@ const LinesSection = ({ sections }) => {
               }}
             />
           )}{" "}
-          {/* Ligne de séparation */}
         </div>
       ))}
     </div>

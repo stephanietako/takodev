@@ -12,6 +12,7 @@ const IconContact = () => {
   const [isLinkedinHovered, setIsLinkedinHovered] = useState(false);
   const emailAdress = process.env.REACT_APP_EMAIL;
   const linkedinURL = process.env.REACT_APP_LINKEDIN_URL;
+
   return (
     <div className={styles.__iconBox}>
       <a href={`mailto:${emailAdress}`}>

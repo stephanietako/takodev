@@ -50,6 +50,7 @@ const Projects = ({ title, text, logo, altLogo }) => {
       />
     ));
   };
+
   return (
     <div className={styles.projects}>
       <div className={styles.__container}>

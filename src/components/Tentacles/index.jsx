@@ -5,7 +5,6 @@ const Tentacles = () => {
   const renderDivs = (n) => {
     if (n > 0) {
       return (
-        // <div className={styles.__renderTentacles} key={n}>
         <div
           className={`${styles.__renderTentacles} ${styles.__tentacles} `}
           key={n}
@@ -14,7 +13,7 @@ const Tentacles = () => {
         </div>
       ); // Rendu récursif
     }
-    return null; // Retourne null lorsque n atteint 0
+    return null; // Retourne null quand n atteint 0
   };
 
   const tentacles = 1;
