@@ -15,7 +15,11 @@ const About = ({ title, subtitle, text, textmobile }) => {
   const triggerAbout = () => {
     timer = setTimeout(() => {
       scrollToRef(ref);
+<<<<<<< HEAD
     }, 2000);
+=======
+    }, 4000); // Déclenche le défilement après 2 secondes
+>>>>>>> main
   };
 
   const scrollToRef = () => ref.current?.scrollIntoView({ behavior: "smooth" });
