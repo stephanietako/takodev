@@ -26,13 +26,13 @@
         display: flex;
         width: 100%;
         height: auto;
-        border: 3px solid $clear-gray;
         border-radius: 22px;
 
         &.__anime_container {
           width: 49%;
           overflow: hidden;
           height: auto;
+          border: 3px solid $clear-gray;
 
           .__anime {
             display: block;
@@ -57,26 +57,19 @@
             width: 100%;
             justify-content: center;
 
-            .__icon_left {
-              position: relative;
-              pointer-events: none;
-              width: 2rem;
-              justify-content: center;
-              height: 34px;
-            }
-
             .__slash {
               width: 2px;
               background: $clear-gray;
               transform: rotate(16deg);
               height: 33px;
-              margin-left: 9px;
+              margin-left: 14px;
             }
-            .__icon_right {
+            .__icon_right,
+            .__icon_left {
               position: relative;
               pointer-events: none;
               width: 2rem;
-              height: 36px;
+              height: 34px;
             }
           }
 
@@ -98,32 +91,39 @@
             }
           }
 
-          .__text_mobile {
-            flex-direction: column;
-            width: auto;
-            text-align: start;
-            align-self: center;
-            justify-content: center;
-            display: none;
-            padding: 30px 12px;
+          .__bloc_txt_mobile {
             width: 100%;
-            line-height: 29px;
+            height: auto;
+            display: none;
+            flex-direction: column;
 
-            p {
-              font-size: 16px;
-              color: #fff;
-            }
+            .__text_mobile {
+              flex-direction: column;
+              width: auto;
+              text-align: start;
+              align-self: center;
+              justify-content: center;
+              display: none;
+              padding: 30px 0;
+              width: 100%;
+              line-height: 29px;
+              margin-top: 43px;
 
-            h1 {
-              font-size: 18px;
-              line-height: 25px;
-            }
+              p {
+                font-size: 16px;
+                color: #fff;
+              }
 
-            h2 {
-              padding: 0 17px 0;
-              font-size: 17px;
-              line-height: 25px;
-              white-space: pre-wrap;
+              h1 {
+                font-size: 18px;
+                line-height: 25px;
+              }
+
+              h2 {
+                font-size: 17px;
+                line-height: 25px;
+                white-space: pre-wrap;
+              }
             }
           }
         }
@@ -131,7 +131,6 @@
     }
   }
 }
-
 //////////////////RESPONSIVE//////////////////////
 @media only screen and (max-width: 1440px) and (min-width: 1200px) {
   .about {
@@ -143,8 +142,11 @@
               padding: 1rem;
               display: flex;
             }
-            .__text_mobile {
+            .__bloc_txt_mobile {
               display: none;
+              .__text_mobile {
+                display: none;
+              }
             }
           }
         }
@@ -169,14 +171,17 @@
           }
           &.__text {
             width: 100%;
-            margin-top: 22px;
+            margin-top: 43px;
             .__regular_text {
               display: none;
             }
-            .__text_mobile {
+            .__bloc_txt_mobile {
               display: block;
-              padding: 30px;
-              height: auto;
+              .__text_mobile {
+                display: block;
+                padding: 30px;
+                height: auto;
+              }
             }
           }
         }
@@ -197,8 +202,11 @@
               display: block;
               padding: 1rem;
             }
-            .__text_mobile {
+            .__bloc_txt_mobile {
               display: none;
+              .__text_mobile {
+                display: none;
+              }
             }
           }
         }
@@ -217,16 +225,33 @@
         .box {
           &.__anime_container {
             width: 100%;
+            height: 75vh;
           }
           &.__text {
             width: 100%;
-            margin-top: 28px;
+            span {
+              .__slash {
+                width: 1.4px;
+                height: 23px;
+                margin-left: 11px;
+              }
+
+              .__icon_right,
+              .__icon_left {
+                width: 1.3rem;
+                height: 25px;
+              }
+            }
+
             .__regular_text {
               display: none;
             }
 
-            .__text_mobile {
+            .__bloc_txt_mobile {
               display: block;
+              .__text_mobile {
+                display: block;
+              }
             }
           }
         }
@@ -263,8 +288,11 @@
               display: block;
               padding: 1rem;
             }
-            .__text_mobile {
+            .__bloc_txt_mobile {
               display: none;
+              .__text_mobile {
+                display: none;
+              }
             }
           }
         }

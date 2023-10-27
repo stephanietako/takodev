@@ -15,7 +15,7 @@ const About = ({ title, subtitle, text, textmobile }) => {
   const triggerAbout = () => {
     timer = setTimeout(() => {
       scrollToRef(ref);
-    }, 4000); // Déclenche le défilement après 2 secondes
+    }, 4000);
   };
 
   const scrollToRef = () => ref.current?.scrollIntoView({ behavior: "smooth" });
@@ -75,25 +75,27 @@ const About = ({ title, subtitle, text, textmobile }) => {
               </span>
               <p>{text}</p>
             </div>
-            <div ref={ref} className={styles.__text_mobile}>
-              <span>
-                <img
-                  className={styles.__icon_left}
-                  src={chevronleft}
-                  alt="icon left chevron "
-                />
-                <h1>{title}</h1>
-                <span className={styles.__slash}></span>
-                <img
-                  className={styles.__icon_right}
-                  src={chevronright}
-                  alt="icon right chevron "
-                />
-              </span>
-              <span>
-                <h2>{subtitle}</h2>
-              </span>
-              <p>{textmobile}</p>
+            <div ref={ref} className={styles.__bloc_txt_mobile}>
+              <div className={styles.__text_mobile}>
+                <span>
+                  <img
+                    className={styles.__icon_left}
+                    src={chevronleft}
+                    alt="icon left chevron "
+                  />
+                  <h1>{title}</h1>
+                  <span className={styles.__slash}></span>
+                  <img
+                    className={styles.__icon_right}
+                    src={chevronright}
+                    alt="icon right chevron "
+                  />
+                </span>
+                <span>
+                  <h2>{subtitle}</h2>
+                </span>
+                <p>{textmobile}</p>
+              </div>
             </div>
           </div>
         </div>
