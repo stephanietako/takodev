@@ -1,5 +1,8 @@
 import { useState } from "react";
 import DOMPurify from "dompurify";
+import fetch from "node-fetch";
+import { toast, ToastContainer, Zoom } from "../Toasts";
+
 // Assets
 import arrowform from "../../assets/icon/arrowform.svg";
 // Styles
@@ -48,23 +51,29 @@ const KeepInTouch = () => {
     }
 
     setErrors(newErrors);
+
     // La Object.keys()méthode statique renvoie un tableau des noms de propriétés énumérables à clé de chaîne d'un objet donné.
     return Object.keys(newErrors).length === 0;
   };
-  //
+
   const backendUrl = process.env.REACT_APP_URL_BACK_PROD;
-  //
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     setFormData({
       email: "",
     });
+    if (!formData.email) {
+      toast.error("Veuillez entrer une adresse e-mail");
+      return; // Quittez la fonction s'il n'y a pas d'email
+    }
 
     if (validateForm()) {
       const cleanedEmail = DOMPurify.sanitize(formData.email);
-      alert(` Email: ${cleanedEmail}`);
+      setResult("Email envoyé !");
+      toast.info(` Email: ${cleanedEmail}`);
     } else {
-      alert(
+      toast.error(
         "Le formulaire contient des erreurs. Veuillez corriger les champs."
       );
     }
@@ -80,14 +89,15 @@ const KeepInTouch = () => {
 
       if (response.ok) {
         console.log("Email sent successfully!");
-        setResult("Thank you for subscribing to our newsletter!");
+        toast.success("Email envoyé !");
+        setResult("Merci pour votre inscription !");
       } else {
         console.error("Failed to send email.");
-        setResult("Something went wrong, please try again later.");
+        toast.error("Une erreur est survenue, essayez plus tard.");
       }
     } catch (error) {
       console.error("An error occurred:", error);
-      setResult("Something went wrong, please try again later.");
+      toast.error("Une erreur est survenue, essayez plus tard. ");
     }
   };
 
@@ -110,6 +120,19 @@ const KeepInTouch = () => {
           </button>
         </div>
       </form>
+      <ToastContainer
+        transition={Zoom}
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="dark"
+      />
     </div>
   );
 };

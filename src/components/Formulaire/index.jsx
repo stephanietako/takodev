@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import DOMPurify from "dompurify";
+import fetch from "node-fetch";
+import { toast, ToastContainer, Zoom } from "../Toasts";
 // Styles
 import styles from "./styles.module.scss";
 
@@ -46,7 +48,7 @@ const TextareaField = ({
 
 const Formulaire = () => {
   // eslint-disable-next-line
-  const [form, setForm] = useState("");
+  // const [form, setForm] = useState("");
   const [formData, setFormData] = useState({
     firstname: "",
     lastname: "",
@@ -86,7 +88,7 @@ const Formulaire = () => {
     const newErrors = {};
     // Validez le firstname
     if (!validateFirstname(formData.firstname)) {
-      newErrors.fistname =
+      newErrors.firstname =
         "Le prénom n'est pas valide, il comporte moins de lettres et/ou des chiffres";
     }
 
@@ -111,9 +113,9 @@ const Formulaire = () => {
     // La Object.keys()méthode statique renvoie un tableau des noms de propriétés énumérables à clé de chaîne d'un objet donné.
     return Object.keys(newErrors).length === 0;
   };
-  //
+
   const backendUrl = process.env.REACT_APP_URL_BACK_PROD;
-  //
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     setFormData({
@@ -124,15 +126,14 @@ const Formulaire = () => {
     });
 
     if (validateForm()) {
-      const cleanedFirstname = DOMPurify.sanitize(formData.firstname);
-      const cleanedLastname = DOMPurify.sanitize(formData.lastname);
-      const cleanedEmail = DOMPurify.sanitize(formData.email);
-      const cleanedMessage = DOMPurify.sanitize(formData.message);
-      alert(
-        `Firstname: ${cleanedFirstname}, Lastname: ${cleanedLastname}, Email: ${cleanedEmail}, Message: ${cleanedMessage}`
-      );
+      DOMPurify.sanitize(formData.firstname);
+      DOMPurify.sanitize(formData.lastname);
+      DOMPurify.sanitize(formData.email);
+      DOMPurify.sanitize(formData.message);
+
+      toast.success("Formulaire envoyé !");
     } else {
-      alert(
+      toast.error(
         "Le formulaire contient des erreurs. Veuillez corriger les champs."
       );
     }
@@ -148,14 +149,13 @@ const Formulaire = () => {
 
       if (response.ok) {
         console.log("Form sent successfully!");
-        alert("Form sent successfully!");
       } else {
         console.error("Failed to send form.");
-        alert("Failed to send form.");
+        toast.error("Une erreur est survenue, essayez plus tard.");
       }
     } catch (error) {
       console.error("An error occurred:", error);
-      alert("Something went wrong, please try again later. " + error);
+      toast.error("Une erreur est survenue, essayez plus tard.");
     }
   };
 
@@ -205,6 +205,19 @@ const Formulaire = () => {
         </div>
         <button type="submit">Submit</button>
       </form>
+      <ToastContainer
+        transition={Zoom}
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="dark"
+      />
     </>
   );
 };
