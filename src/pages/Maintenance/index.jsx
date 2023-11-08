@@ -1,6 +1,5 @@
 // Assets
 import logo from "../../assets/logo/takodev-logo-white.png";
-
 // Styles
 import styles from "./styles.module.scss";
 

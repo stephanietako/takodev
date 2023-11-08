@@ -41,10 +41,10 @@ const Home = () => {
               "Mettre l'art et la technologie au service de vos projets"
             }
             text={
-              "Je suis Stéphanie, la fondatrice de Tako Dev, un studio de développement web.\nMa maîtrise technique de la programmation JavaScript spécialisée dans l'utilisation de technologies performantes comme React et Node.js me permet de concevoir des solutions numériques alliant performance, esthétique et fonctionnalité.\nCelles-ci sont dotées d'un système conçu de manière à être évolutif. Cela signifie que votre projet pourra facilement s'adapter à vos besoins futurs sans nécessiter de refonte majeure.\nReact est utilisé par des entreprises de renom telles que Facebook, Instagram, Airbnb, Uber, Netflix, Spotify ou Gmail.\nEt Node.js se distingue par sa stabilité, sa sécurité et sa rapidité.\nMon parcours dans le domaine artistique me permet de comprendre les enjeux culturels et esthétiques de chaque projet.\nCette combinaison unique de compétences apporte une perspective innovante tout en tenant compte de vos préférences et désirs en matière de design."
+              "Je suis Stéphanie, la fondatrice de Tako Dev, un studio de développement web.\nMa maîtrise technique de la programmation JavaScript spécialisée dans l'utilisation de technologies performantes comme React et Node.js me permet de concevoir des solutions numériques alliant performance, esthétique et fonctionnalité.\nCelles-ci sont dotées d'un système conçu de manière à être évolutif.\nCela signifie que votre projet pourra facilement s'adapter à vos besoins futurs sans nécessiter de refonte majeure.\nReact est utilisé par des entreprises de renom telles que Facebook, Instagram, Airbnb, Uber, Netflix, Spotify ou Gmail.\nEt Node.js se distingue par sa stabilité, sa sécurité et sa rapidité.\nMon parcours dans le domaine artistique me permet de comprendre les enjeux culturels et esthétiques de chaque projet.\nCette combinaison unique de compétences apporte une perspective innovante tout en tenant compte de vos préférences et désirs en matière de design."
             }
             textmobile={
-              "Je suis Stéphanie, la fondatrice de Tako Dev, un studio de développement web.\nMa maîtrise technique de la programmation JavaScript spécialisée dans l'utilisation de technologies performantes comme React et Node.js me permet de concevoir des solutions numériques alliant performance, esthétique et fonctionnalité.\nCelles-ci sont dotées d'un système conçu de manière à être évolutif. Cela signifie que votre projet pourra facilement s'adapter à vos besoins futurs sans nécessiter de refonte majeure.\nReact est utilisé par des entreprises de renom telles que Facebook, Instagram, Airbnb, Uber, Netflix, Spotify ou Gmail.\nEt Node.js se distingue par sa stabilité, sa sécurité et sa rapidité.\nMon parcours dans le domaine artistique me permet de comprendre les enjeux culturels et esthétiques de chaque projet.\nCette combinaison unique de compétences apporte une perspective innovante tout en tenant compte de vos préférences et désirs en matière de design."
+              "Je suis Stéphanie, la fondatrice de Tako Dev, un studio de développement web.\nMa maîtrise technique de la programmation JavaScript spécialisée dans l'utilisation de technologies performantes comme React et Node.js me permet de concevoir des solutions numériques alliant performance, esthétique et fonctionnalité.\nCelles-ci sont dotées d'un système conçu de manière à être évolutif.\nCela signifie que votre projet pourra facilement s'adapter à vos besoins futurs sans nécessiter de refonte majeure.\nReact est utilisé par des entreprises de renom telles que Facebook, Instagram, Airbnb, Uber, Netflix, Spotify ou Gmail.\nEt Node.js se distingue par sa stabilité, sa sécurité et sa rapidité.\nMon parcours dans le domaine artistique me permet de comprendre les enjeux culturels et esthétiques de chaque projet.\nCette combinaison unique de compétences apporte une perspective innovante tout en tenant compte de vos préférences et désirs en matière de design."
             }
             logo={logotako}
             altLogo="logo Tako Dev"
@@ -74,9 +74,9 @@ const Home = () => {
       content: (
         <div className={styles.sections} id="contact">
           <Contact
-            title={"écrivez-moi"}
+            title={"contact"}
             text={
-              "vous avez un projet ?\nDes questions ?\nVous avez besoin d'un devis ?"
+              "Vous avez des questions ?\nUn projet ?\nVous avez besoin d'un devis ?\nÉcrivez-moi"
             }
             logo={logotako}
             altLogo="logo Tako Dev"

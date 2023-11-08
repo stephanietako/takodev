@@ -29,7 +29,7 @@ const Cards = ({ title, content, image, alt, link }) => {
   let domain = "";
   // Gérer les erreurs potentielles liées à la construction de l'objet URL
   try {
-    const url = new URL(link); //ajouter un target blank
+    const url = new URL(link);
     domain = url.hostname;
   } catch (error) {
     domain = "URL en attente";
@@ -53,7 +53,7 @@ const Cards = ({ title, content, image, alt, link }) => {
             <a
               href={isValidUrl(link) ? link : "#"}
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               className={styles.__btn_link}
             >
               {domain}

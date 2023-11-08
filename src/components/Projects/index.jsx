@@ -23,7 +23,7 @@ const Projects = ({ title, text, logo, altLogo }) => {
       {
         title: "B&B Italia Saint-Tropez",
         content:
-          " Site web Showroom de mobilier design contemporain indoor et outdoor",
+          " Site web Showroom de mobilier design contemporain indoor et outdoor.\nRéalisé avec React js",
         image: imgCard1,
         link: "https://www.bebitaliasainttropez.com/",
       },
