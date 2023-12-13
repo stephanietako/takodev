@@ -31,7 +31,7 @@ const IconContact = () => {
         </button>
       </a>
 
-      <a href={linkedinURL} target="_blank" rel="noopener noreferrer">
+      <a href={linkedinURL} rel="noopener noreferrer">
         <button
           type="button"
           className={styles.unit}

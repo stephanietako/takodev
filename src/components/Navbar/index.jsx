@@ -81,6 +81,7 @@ const Navbar = () => {
               <Links
                 key={uuidv4()}
                 link={link}
+                link_menu
                 onClick={toggleMenu}
                 isMobileMenuActive={isOpen}
                 className={isOpen ? styles.link_menu : styles.link}

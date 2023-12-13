@@ -52,7 +52,6 @@ const Cards = ({ title, content, image, alt, link }) => {
             <p>{content}</p>
             <a
               href={isValidUrl(link) ? link : "#"}
-              target="_blank"
               rel="noopener noreferrer"
               className={styles.__btn_link}
             >

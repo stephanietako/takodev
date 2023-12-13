@@ -4,8 +4,8 @@ import Cards from "../Cards";
 import Arrows from "../Arrows";
 // Assets
 import imgCard1 from "../../assets/logo/bb-logo-noir-crop.png";
-import imgCard2 from "../../assets/images/nasa.jpg";
-import imgCard3 from "../../assets/images/nasa.jpg";
+import imgCard2 from "../../assets/logo/logoblack.png";
+import imgCard3 from "../../assets/logo/jmlogo.png";
 
 const Projects = ({ title, text, logo, altLogo }) => {
   const [visible, setVisible] = useState(false);
@@ -23,21 +23,23 @@ const Projects = ({ title, text, logo, altLogo }) => {
       {
         title: "B&B Italia Saint-Tropez",
         content:
-          " Site web Showroom de mobilier design contemporain indoor et outdoor.\nRéalisé avec React js",
+          " Site web Showroom de mobilier design contemporain indoor et outdoor.\nRéalisé avec React js et Node js.",
         image: imgCard1,
-        link: "https://www.bebitaliasainttropez.com/",
+        link: "https://www.bebitaliasainttropez.com",
       },
       {
-        title: "Projet",
-        content: "Projet en cours",
+        title: "Lise Braun art",
+        content:
+          "Site web vitrine de Lise Braun, curation et évènements artistiques.\nRéalisé avec React js et Node js.",
         image: imgCard2,
-        link: "/",
+        link: "https://www.lisebraun.art",
       },
       {
-        title: "Projet",
-        content: "Projet en cours",
+        title: "Jean-Marc Eliette",
+        content:
+          "Site web vitrine de Jean-Marc Eliette, graphisme, direction artistique et motion design.\nRéalisé avec React js et Three js.",
         image: imgCard3,
-        link: "/",
+        link: "https://jmsite.vercel.app",
       },
     ];
     return cardData.map((data, index) => (

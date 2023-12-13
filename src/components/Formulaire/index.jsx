@@ -87,13 +87,13 @@ const Formulaire = () => {
     // Validez le firstname
     if (!validateFirstname(formData.firstname)) {
       newErrors.firstname =
-        "Le prénom n'est pas valide, il comporte moins de lettres et/ou des chiffres";
+        "Le prénom n'est pas valide, il ne comporte pas suffisemment de lettres et/ou des chiffres";
     }
 
     // Validez le lastname
     if (!validateLastname(formData.lastname)) {
       newErrors.lastname =
-        "Le nom n'est pas valide, il comporte moins de lettres et/ou des chiffres";
+        "Le nom n'est pas valide, il ne comporte pas suffisemment de lettres et/ou des chiffres";
     }
 
     // Validez l'e-mail
